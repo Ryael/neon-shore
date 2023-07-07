@@ -8,6 +8,8 @@
 /*///   6.1 Swiper Images ///*/
 /*///   6.2 Swiper Transitions ///*/
 /*///   6.3 Swiper Navigation ///*/
+/*///   6.4 Swiper Pagination ///*/
+
 
 /* 1. Fonts */
 
@@ -382,4 +384,38 @@ body {
 
 .navigation-arrow-container .navigation-arrows li.arrow-right:active {
   transform: rotate(45deg) scale(0.9);
+}
+
+/* 6.4 Swiper Pagination */
+
+.container .swiper-pagination {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.container .swiper-pagination-bullet {
+  background: #000;
+  opacity: 0.2;
+  width: 12px;
+  height: 12px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.container .swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 5px;
+}
+
+.container .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+  top: auto;
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.container .swiper-pagination > .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--font-color);
+  transition-delay: 0.2s;
 }
