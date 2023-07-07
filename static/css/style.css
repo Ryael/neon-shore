@@ -286,3 +286,33 @@ body {
   height: auto;
   vertical-align: middle;
 }
+
+/* 6.2 Swiper Transitions */
+
+.swiper-slide {
+  opacity: 0 !important;
+  transition: 0.4s;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+}
+
+.swiper-slide .main-wrapper > *,
+.swiper-slide .hero-content > * {
+  transform: translateY(-30px);
+  opacity: 0;
+  transition-duration: 0.8s;
+}
+
+.swiper-slide .main-wrapper > *,
+.swiper-slide .hero-content > .hero-btn {
+  transition-duration: 1.2s;
+  transition-timing-function: ease;
+}
+
+.swiper-slide-active .main-wrapper > *,
+.swiper-slide-active .hero-content > * {
+  transform: none;
+  opacity: 1;
+}
