@@ -3,6 +3,8 @@
 /*/// 2. Global Variables ///*/
 /*/// 3. Common Styles ///*/
 /*/// 4. Navigation ///*/
+/*/// 5. Search ///*/
+/*/// 6. Hero Section ///*/
 
 /* 1. Fonts */
 
@@ -100,7 +102,7 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-/* Search */
+/* 5. Search */
 
 #search {
   display: table;
@@ -170,3 +172,5 @@ body {
 ::-moz-selection {
   background: rgba(255, 255, 255, 0.2);
 }
+
+/* 6. Hero Section */
