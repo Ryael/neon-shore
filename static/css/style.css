@@ -3,12 +3,13 @@
 /*/// 2. Global Variables ///*/
 /*/// 3. Common Styles ///*/
 /*/// 4. Navigation ///*/
-/*/// 5. Search ///*/
-/*/// 6. Swiper ///*/
-/*///   6.1 Swiper Images ///*/
-/*///   6.2 Swiper Transitions ///*/
-/*///   6.3 Swiper Navigation ///*/
-/*///   6.4 Swiper Pagination ///*/
+/*/// 5. Buttons ///*/
+/*/// 6. Search ///*/
+/*/// 7. Swiper ///*/
+/*///   7.1 Swiper Images ///*/
+/*///   7.2 Swiper Transitions ///*/
+/*///   7.3 Swiper Navigation ///*/
+/*///   7.4 Swiper Pagination ///*/
 
 
 /* 1. Fonts */
@@ -55,7 +56,6 @@ body {
   overflow-x: hidden;
   position: relative;
 }
-
 
 /* 4. Navigation */
 
@@ -119,7 +119,40 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-/* 5. Search */
+/* 5. Buttons */
+
+.cta-btn {
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 0;
+  color: var(--font-color);
+  font-weight: bold;
+  font-size: 0.678rem;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  text-decoration: none;
+  background: linear-gradient(
+    to right,
+    rgba(178, 135, 111, 0) 25%,
+    rgba(178, 135, 111, 0.8) 75%
+  );
+  background-position: 1% 50%;
+  background-size: 400% 300%;
+  border: 1px solid var(--font-color);
+  transition: 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cta-btn:hover {
+  transition: 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cta-btn:hover {
+  color: white;
+  color: #fff;
+  background-position: 99% 50%;
+}
+
+/* 6. Search */
 
 #search {
   display: table;
@@ -190,7 +223,7 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* 6. Swiper */
+/* 7. Swiper */
 
 .mySwiper {
   display: flex;
@@ -275,7 +308,7 @@ body {
   margin: auto 100px auto 0px;
 }
 
-/* 6.1 Swiper Images */
+/* 7.1 Swiper Images */
 
 .cover {
   width: min(500px, 100%);
@@ -291,7 +324,7 @@ body {
   mask: url("https://raw.githubusercontent.com/supahfunk/supah-codepen/master/painting-sprite-2.png");
 }
 
-/* 6.2 Swiper Transitions */
+/* 7.2 Swiper Transitions */
 
 .swiper-slide {
   opacity: 0 !important;
@@ -330,7 +363,7 @@ body {
   opacity: 1;
 }
 
-/* 6.3 Swiper Navigation */
+/* 7.3 Swiper Navigation */
 
 .navigation-arrow-container {
   position: absolute;
@@ -396,7 +429,7 @@ body {
   transform: rotate(45deg) scale(0.9);
 }
 
-/* 6.4 Swiper Pagination */
+/* 7.4 Swiper Pagination */
 
 .container .swiper-pagination {
   position: relative;
