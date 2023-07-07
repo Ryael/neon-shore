@@ -7,6 +7,7 @@
 /*/// 6. Swiper ///*/
 /*///   6.1 Swiper Images ///*/
 /*///   6.2 Swiper Transitions ///*/
+/*///   6.3 Swiper Navigation ///*/
 
 /* 1. Fonts */
 
@@ -315,4 +316,70 @@ body {
 .swiper-slide-active .hero-content > * {
   transform: none;
   opacity: 1;
+}
+
+/* 6.3 Swiper Navigation */
+
+.navigation-arrow-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation-arrow-container .navigation-arrows {
+  margin: 0;
+  list-style-type: none;
+}
+
+.navigation-arrow-container .navigation-arrows li {
+  position: absolute;
+  bottom: calc(46.5%);
+  width: 2em;
+  height: 2em;
+  border: 6px solid var(--font-color);
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  padding: 2px;
+  z-index: 5;
+}
+
+.navigation-arrow-container .navigation-arrows li.arrow-left {
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(-45deg);
+  transition: 0.3s ease-in-out;
+  left: 12%;
+}
+
+.navigation-arrow-container .navigation-arrows li.arrow-right {
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(45deg);
+  transition: 0.3s ease-in-out;
+  right: 12%;
+}
+
+.navigation-arrow-container .navigation-arrows li.arrow-left:hover {
+  border-left-color: var(--font-color);
+  border-top-color: var(--font-color);
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
+}
+
+.navigation-arrow-container .navigation-arrows li.arrow-right:hover {
+  border-right-color: var(--font-color);
+  border-top-color: var(--font-color);
+  opacity: 0.7;
+  transition: 0.3s ease-out;
+}
+
+.navigation-arrow-container .navigation-arrows li.arrow-left:active {
+  transform: rotate(-45deg) scale(0.9);
+}
+
+.navigation-arrow-container .navigation-arrows li.arrow-right:active {
+  transform: rotate(45deg) scale(0.9);
 }
