@@ -1,0 +1,17 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* Global Variables */
+
+:root {
+  --font-color: #4f5356;
+  --body-color: #edeade;
+  --font: "Montserrat", sans-serif;
+}
+
+/* Common */
+
+#background {
+  background: var(--body-color);
+}
