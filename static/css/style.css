@@ -4,7 +4,7 @@
 /*/// 3. Common Styles ///*/
 /*/// 4. Navigation ///*/
 /*/// 5. Search ///*/
-/*/// 6. Hero Section ///*/
+/*/// 6. Swiper ///*/
 
 /* 1. Fonts */
 
@@ -186,4 +186,18 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* 6. Hero Section */
+/* 6. Swiper */
+
+.mySwiper {
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+}
+
+.hero-section {
+  padding: 90px 0 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-grow: 1;
+  position: relative;
+}
