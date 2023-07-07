@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "neon-shore/templates/layout/head.html" %}
+
+    <title>{% block title %}{% endblock %} | neon shore</title>
+
+  </head>
+  <body>
+    {% include "neon-shore/templates/components/navigation.html" %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include "neon-shore/templates/layout/scripts.html" %}
+  </body>
+</html>
