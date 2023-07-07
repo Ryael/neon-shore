@@ -201,3 +201,61 @@ body {
   flex-grow: 1;
   position: relative;
 }
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  margin: auto 110px auto 100px;
+}
+
+.hero-wrapper {
+  width: 390px;
+}
+
+.hero-content {
+  max-width: 390px;
+}
+
+.hero-header {
+  font-size: 14px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  transition-delay: 0.2s;
+  margin-left: 5px;
+}
+
+.hero-title {
+  font-family: var(--font);
+  font-size: 80px;
+  font-weight: 400;
+  margin-top: 10px;
+  line-height: 1em;
+  transition-delay: 0.3s;
+}
+
+.hero-subtitle {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition-delay: 0.4s;
+}
+
+.hero-content__title {
+  font-size: 22px;
+  font-family: var(--font);
+  font-style: italic;
+  margin-bottom: 20px;
+  transition-delay: 0.2s;
+}
+
+.hero-content__subtitle {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  letter-spacing: -0.01em;
+  transition-delay: 0.3s;
+}
