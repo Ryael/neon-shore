@@ -288,6 +288,7 @@ body {
   width: 100%;
   height: auto;
   vertical-align: middle;
+  mask: url("https://raw.githubusercontent.com/supahfunk/supah-codepen/master/painting-sprite-2.png");
 }
 
 /* 6.2 Swiper Transitions */
