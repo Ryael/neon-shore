@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% include "neon-shore/templates/layout/head.html" %}
+    {% block head %}
 
     <title>{% block title %}{% endblock %} | neon shore</title>
 
+    {% endblock %}
   </head>
   <body>
-    {% include "neon-shore/templates/components/navigation.html" %}
+    {% include 'components/navigation.html' %}
 
     {% if messages %}
       <div class="flash-message-container"></div>
@@ -17,6 +18,7 @@
 
     {% endblock %}
 
-    {% include "neon-shore/templates/layout/scripts.html" %}
+    {% block scripts %}
+    {% endblock %}
   </body>
 </html>
