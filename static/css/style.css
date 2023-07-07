@@ -5,6 +5,8 @@
 /*/// 4. Navigation ///*/
 /*/// 5. Search ///*/
 /*/// 6. Swiper ///*/
+/*///   6.1 Swiper Images ///*/
+/*///   6.2 Swiper Transitions ///*/
 
 /* 1. Fonts */
 
@@ -269,6 +271,8 @@ body {
   flex-direction: column;
   margin: auto 100px auto 0px;
 }
+
+/* 6.1 Swiper Images */
 
 .cover {
   width: min(500px, 100%);
