@@ -9,6 +9,10 @@
   <body>
     {% include "neon-shore/templates/components/navigation.html" %}
 
+    {% if messages %}
+      <div class="flash-message-container"></div>
+    {% endif %}
+
     {% block content %}
 
     {% endblock %}
