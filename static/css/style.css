@@ -71,3 +71,18 @@ body {
 #navigation-menu a:not(:first-child) {
   margin-left: 30px;
 }
+
+#navigation-icons {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+#shopping-bag svg {
+  height: 20px;
+}
+
+#profile-icon {
+  width: 18px;
+  margin-right: 20px;
+}
