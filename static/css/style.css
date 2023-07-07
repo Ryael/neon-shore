@@ -269,3 +269,16 @@ body {
   flex-direction: column;
   margin: auto 100px auto 0px;
 }
+
+.cover {
+  width: min(500px, 100%);
+  margin: 20px 0;
+  border: 20px solid #fff;
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6);
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
