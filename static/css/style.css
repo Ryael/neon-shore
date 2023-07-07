@@ -320,6 +320,15 @@ body {
   opacity: 1;
 }
 
+.swiper-slide .cover {
+  transition-duration: 0.8s;
+  opacity: 0;
+}
+
+.swiper-slide-active .cover {
+  opacity: 1;
+}
+
 /* 6.3 Swiper Navigation */
 
 .navigation-arrow-container {
