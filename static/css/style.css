@@ -1,8 +1,14 @@
-/* Fonts */
+/*/// Table of Contents ///*/
+/*/// 1. Fonts ///*/
+/*/// 2. Global Variables ///*/
+/*/// 3. Common Styles ///*/
+/*/// 4. Navigation ///*/
+
+/* 1. Fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
-/* Global Variables */
+/* 2. Global Variables */
 
 :root {
   --font-color: #4f5356;
@@ -10,8 +16,49 @@
   --font: "Montserrat", sans-serif;
 }
 
-/* Common */
+/* 3. Common Styles */
 
-#background {
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font);
+  text-transform: lowercase;
+  color: var(--font-color);
   background: var(--body-color);
+}
+
+/* 4. Navigation */
+
+#navigation-bar {
+  height: 62px;
+  width: 100vw;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  white-space: nowrap;
+  position: sticky;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(44, 45, 42, 0.25);
+  background-color: var(--body-color);
+  padding: 0 30px;
+}
+
+#logo-text {
+  font-size: 15px;
+  letter-spacing: 2px;
 }
