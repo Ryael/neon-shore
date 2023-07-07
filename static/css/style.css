@@ -42,7 +42,6 @@ body {
 
 #navigation-bar {
   height: 62px;
-  width: 100vw;
   display: flex;
   flex-shrink: 0;
   align-items: center;
@@ -61,4 +60,14 @@ body {
 #logo-text {
   font-size: 15px;
   letter-spacing: 2px;
+}
+
+#navigation-menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+#navigation-menu a:not(:first-child) {
+  margin-left: 30px;
 }
