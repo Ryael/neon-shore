@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% block head %}
+    {% include 'head.html' %}
 
     <title>{% block title %}{% endblock %} | neon shore</title>
-
-    {% endblock %}
   </head>
-  <body>
+  <body id="background">
     {% include 'components/navigation.html' %}
 
     {% if messages %}
@@ -18,7 +16,6 @@
 
     {% endblock %}
 
-    {% block scripts %}
-    {% endblock %}
+    {% include 'scripts.html' %}
   </body>
 </html>
