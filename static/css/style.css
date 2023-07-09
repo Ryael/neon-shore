@@ -81,9 +81,18 @@ body {
   padding: 0 30px;
 }
 
-#logo-text {
+#logo {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  align-items: center;
   font-size: 15px;
   letter-spacing: 2px;
+}
+
+#logo-image {
+  width: 30px;
+  padding-right: 10px;
 }
 
 #navigation-menu {
