@@ -329,6 +329,7 @@ body.mobile-navigation-active .mobile-logo {
   opacity: 1;
   transform: translateX(0%);
   transition: opacity 0.5s ease, transform 0.5s ease, color 0.5s ease;
+  transition-delay: 0.3s;
 }
 
 body.mobile-navigation-active #mobile-navigation-icons {
