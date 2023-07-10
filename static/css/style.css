@@ -177,14 +177,14 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: rgba(1, 1, 1, .2);
+  background: #faf9f5;
   z-index: -1;
   transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
   transform: translateX(0%) translateY(-100%);
 }
 
 .mobile-navigation:after {
-  background: rgba(255, 255, 255, 1);
+  background: #fffffe;
   transition-delay: 0s;
 }
 
@@ -205,20 +205,22 @@ body {
 
 .mobile-list-item {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   transition-delay: 0.8s;
+  color: #aaa;
   opacity: 0;
   transform: translate(0%, 100%);
   transition: opacity 0.2s ease, transform 0.3s ease;
-  margin-right: 25px;
+  margin-bottom: 25px;
 }
 
 .mobile-list-item:before {
   content: "";
   position: absolute;
-  background: var(--font-color);
-  width: 20px;
-  height: 1px;
+  background: #d9d9d9;
+  width: 0px;
+  height: 2px;
   top: 100%;
   transform: translate(0%, 0%);
   transition: all 0.3s ease;
@@ -226,11 +228,11 @@ body {
 }
 
 .mobile-list-item:hover:before {
-  width: 100%;
+  width: 10%;
 }
 
 body.mobile-navigation-active .line {
-  background-color: var(--font-color);
+  background-color: #aaa;
   transform: translateX(0px) rotate(-45deg);
 }
 
