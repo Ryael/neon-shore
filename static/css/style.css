@@ -6,17 +6,18 @@
 /*/// 5. Mobile Navigation ///*/
 /*/// 6. Buttons ///*/
 /*/// 7. Search ///*/
-/*/// 8. Swiper ///*/
-/*///   8.1 Swiper Images ///*/
-/*///   8.2 Swiper Transitions ///*/
-/*///   8.3 Swiper Navigation ///*/
-/*///   8.4 Swiper Pagination ///*/
-/*/// 9. Footer ///*/
-/*///   9.1 Footer Animation ///*/
-/*///   9.2 Footer Mobile ///*/
-/*///   9.3 Footer Social Media icons ///*/
-/*/// 10. Media Query ///*/
-/*///   10.1 Navigation Query ///*/
+/*/// 8. Mobile Search ///*/
+/*/// 9. Swiper ///*/
+/*///   9.1 Swiper Images ///*/
+/*///   9.2 Swiper Transitions ///*/
+/*///   9.3 Swiper Navigation ///*/
+/*///   9.4 Swiper Pagination ///*/
+/*/// 10. Footer ///*/
+/*///   10.1 Footer Animation ///*/
+/*///   10.2 Footer Mobile ///*/
+/*///   10.3 Footer Social Media icons ///*/
+/*/// 11. Media Query ///*/
+/*///   11.1 Navigation Query ///*/
 
 /* 1. Fonts */
 
@@ -270,28 +271,28 @@ body.mobile-navigation-active .mobile-list-item {
   transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
-body.mobile-navigation-active .mobile-list-item:nth-child(0) {
-  transition-delay: 0.5s;
-}
-
 body.mobile-navigation-active .mobile-list-item:nth-child(1) {
-  transition-delay: 0.6s;
-}
-
-body.mobile-navigation-active .mobile-list-item:nth-child(2) {
   transition-delay: 0.7s;
 }
 
-body.mobile-navigation-active .mobile-list-item:nth-child(3) {
+body.mobile-navigation-active .mobile-list-item:nth-child(2) {
   transition-delay: 0.8s;
 }
 
-body.mobile-navigation-active .mobile-list-item:nth-child(4) {
+body.mobile-navigation-active .mobile-list-item:nth-child(3) {
   transition-delay: 0.9s;
 }
 
-body.mobile-navigation-active .mobile-list-item:nth-child(5) {
+body.mobile-navigation-active .mobile-list-item:nth-child(4) {
   transition-delay: 1.0s;
+}
+
+body.mobile-navigation-active .mobile-list-item:nth-child(5) {
+  transition-delay: 1.1s;
+}
+
+body.mobile-navigation-active .mobile-list-item:nth-child(6) {
+  transition-delay: 1.2s;
 }
 
 /* 6. Buttons */
@@ -398,7 +399,29 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* 8. Swiper */
+/* 8. Mobile Search */
+
+#mobile-search {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+}
+
+#mobile-search-box {
+  border: none;
+  padding: 1.5em 3em;
+  border-radius: 3px;
+  width: 12em;
+  transition: all 0.5s ease;
+}
+
+#mobile-search-box::placeholder {
+  color: #a0a0a0;
+  font-size: 16px;
+}
+
+/* 9. Swiper */
 
 .mySwiper {
   display: flex;
@@ -483,7 +506,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   margin: auto 100px auto 0px;
 }
 
-/* 8.1 Swiper Images */
+/* 9.1 Swiper Images */
 
 .cover {
   width: min(500px, 100%);
@@ -499,7 +522,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   mask: url("https://raw.githubusercontent.com/supahfunk/supah-codepen/master/painting-sprite-2.png");
 }
 
-/* 8.2 Swiper Transitions */
+/* 9.2 Swiper Transitions */
 
 .swiper-slide {
   opacity: 0 !important;
@@ -538,7 +561,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   opacity: 1;
 }
 
-/* 8.3 Swiper Navigation */
+/* 9.3 Swiper Navigation */
 
 .navigation-arrow-container {
   position: absolute;
@@ -604,7 +627,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   transform: rotate(45deg) scale(0.9);
 }
 
-/* 8.4 Swiper Pagination */
+/* 9.4 Swiper Pagination */
 
 .container .swiper-pagination {
   position: relative;
@@ -638,7 +661,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   transition-delay: 0.2s;
 }
 
-/* 9. Footer */
+/* 10. Footer */
 
 .waves {
   position: relative;
@@ -665,7 +688,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   margin-bottom: 50px;
 }
 
-/* 9.1 Footer Animation */
+/* 10.1 Footer Animation */
 
 .parallax > use {
   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
@@ -695,7 +718,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   }
 }
 
-/* 9.2 Footer Mobile */
+/* 10.2 Footer Mobile */
 
 @media (max-width: 768px) {
   .waves {
@@ -704,7 +727,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   }
 }
 
-/* 9.3 Footer Social Icons */
+/* 10.3 Footer Social Icons */
 
 #footer-icons {
   display: flex;
@@ -773,9 +796,9 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   transform: translate(-50%);
 }
 
-/* 10. Media Query */
+/* 11. Media Query */
 
-/* 10.1 Navigation Query */
+/* 11.1 Navigation Query */
 
 @media screen and (max-width: 1000px) {
   #navigation-bar {
