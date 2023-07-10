@@ -3,19 +3,18 @@
 /*/// 2. Global Variables ///*/
 /*/// 3. Common Styles ///*/
 /*/// 4. Navigation ///*/
-/*/// 5. Buttons ///*/
-/*/// 6. Search ///*/
-/*/// 7. Swiper ///*/
-/*///   7.1 Swiper Images ///*/
-/*///   7.2 Swiper Transitions ///*/
-/*///   7.3 Swiper Navigation ///*/
-/*///   7.4 Swiper Pagination ///*/
-/*/// 8. Footer ///*/
-/*///   8.1 Footer Animation ///*/
-/*///   8.2 Footer Mobile ///*/
-/*///   8.3 Footer Social Media icons ///*/
-
-
+/*/// 5. Mobile Navigation ///*/
+/*/// 6. Buttons ///*/
+/*/// 7. Search ///*/
+/*/// 8. Swiper ///*/
+/*///   8.1 Swiper Images ///*/
+/*///   8.2 Swiper Transitions ///*/
+/*///   8.3 Swiper Navigation ///*/
+/*///   8.4 Swiper Pagination ///*/
+/*/// 9. Footer ///*/
+/*///   9.1 Footer Animation ///*/
+/*///   9.2 Footer Mobile ///*/
+/*///   9.3 Footer Social Media icons ///*/
 
 /* 1. Fonts */
 
@@ -133,7 +132,163 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-/* 5. Buttons */
+/* 5. Mobile Navigation */
+
+#fullscreen-navigation {
+  position: relative;
+  z-index: 15;
+}
+
+.menu-icon {
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  z-index: 2;
+  left: 50px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.line {
+  height: 2px;
+  width: 30px;
+  display: block;
+  background-color: var(--font-color);
+  margin-bottom: 4px;
+  transition: transform 0.2s ease, 0.5s ease;
+}
+
+.line-left {
+  width: 15px;
+}
+
+.line-right {
+  width: 15px;
+  float: right;
+}
+
+.mobile-navigation {
+  position: fixed;
+  z-index: 1;
+}
+
+.mobile-navigation:before, .mobile-navigation:after {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(1, 1, 1, .2);
+  z-index: -1;
+  transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+  transform: translateX(0%) translateY(-100%);
+}
+
+.mobile-navigation:after {
+  background: rgba(255, 255, 255, 1);
+  transition-delay: 0s;
+}
+
+.mobile-navigation:before {
+  transition-delay: 0.1s;
+}
+
+.mobile-content {
+  position: fixed;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: calc(2vw + 10px);
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.mobile-list-item {
+  position: relative;
+  display: inline-block;
+  transition-delay: 0.8s;
+  opacity: 0;
+  transform: translate(0%, 100%);
+  transition: opacity 0.2s ease, transform 0.3s ease;
+  margin-right: 25px;
+}
+
+.mobile-list-item:before {
+  content: "";
+  position: absolute;
+  background: var(--font-color);
+  width: 20px;
+  height: 1px;
+  top: 100%;
+  transform: translate(0%, 0%);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.mobile-list-item:hover:before {
+  width: 100%;
+}
+
+body.mobile-navigation-active .line {
+  background-color: var(--font-color);
+  transform: translateX(0px) rotate(-45deg);
+}
+
+body.mobile-navigation-active .line-left {
+  transform: translateX(1px) rotate(45deg);
+}
+
+body.mobile-navigation-active .line-right {
+  transform: translateX(-2px) rotate(45deg);
+}
+
+body.mobile-navigation-active .mobile-navigation {
+  visibility: visible;
+}
+
+body.mobile-navigation-active .mobile-navigation:before, body.mobile-navigation-active .mobile-navigation:after {
+  transform: translateX(0%) translateY(0%);
+}
+
+body.mobile-navigation-active .mobile-navigation:after {
+  transition-delay: 0.1s;
+}
+
+body.mobile-navigation-active .mobile-navigation:before {
+  transition-delay: 0s;
+}
+
+body.mobile-navigation-active .mobile-list-item {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+body.mobile-navigation-active .mobile-list-item:nth-child(0) {
+  transition-delay: 0.5s;
+}
+
+body.mobile-navigation-active .mobile-list-item:nth-child(1) {
+  transition-delay: 0.6s;
+}
+
+body.mobile-navigation-active .mobile-list-item:nth-child(2) {
+  transition-delay: 0.7s;
+}
+
+body.mobile-navigation-active .mobile-list-item:nth-child(3) {
+  transition-delay: 0.8s;
+}
+
+body.mobile-navigation-active .mobile-list-item:nth-child(4) {
+  transition-delay: 0.9s;
+}
+
+body.mobile-navigation-active .mobile-list-item:nth-child(5) {
+  transition-delay: 1.0s;
+}
+
+/* 6. Buttons */
 
 .cta-btn {
   display: inline-block;
@@ -166,7 +321,7 @@ body {
   background-position: 99% 50%;
 }
 
-/* 6. Search */
+/* 7. Search */
 
 #search {
   display: table;
@@ -237,7 +392,7 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* 7. Swiper */
+/* 8. Swiper */
 
 .mySwiper {
   display: flex;
@@ -322,7 +477,7 @@ body {
   margin: auto 100px auto 0px;
 }
 
-/* 7.1 Swiper Images */
+/* 8.1 Swiper Images */
 
 .cover {
   width: min(500px, 100%);
@@ -338,7 +493,7 @@ body {
   mask: url("https://raw.githubusercontent.com/supahfunk/supah-codepen/master/painting-sprite-2.png");
 }
 
-/* 7.2 Swiper Transitions */
+/* 8.2 Swiper Transitions */
 
 .swiper-slide {
   opacity: 0 !important;
@@ -377,7 +532,7 @@ body {
   opacity: 1;
 }
 
-/* 7.3 Swiper Navigation */
+/* 8.3 Swiper Navigation */
 
 .navigation-arrow-container {
   position: absolute;
@@ -443,7 +598,7 @@ body {
   transform: rotate(45deg) scale(0.9);
 }
 
-/* 7.4 Swiper Pagination */
+/* 8.4 Swiper Pagination */
 
 .container .swiper-pagination {
   position: relative;
@@ -477,7 +632,7 @@ body {
   transition-delay: 0.2s;
 }
 
-/* 8. Footer */
+/* 9. Footer */
 
 .waves {
   position: relative;
@@ -504,7 +659,7 @@ body {
   margin-bottom: 28px;
 }
 
-/* 8.1 Footer Animation */
+/* 9.1 Footer Animation */
 
 .parallax > use {
   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
@@ -534,7 +689,7 @@ body {
   }
 }
 
-/* 8.2 Footer Mobile */
+/* 9.2 Footer Mobile */
 
 @media (max-width: 768px) {
   .waves {
@@ -543,7 +698,7 @@ body {
   }
 }
 
-/* 8.3 Footer Social Icons */
+/* 9.3 Footer Social Icons */
 
 #social-icons {
   display: flex;
