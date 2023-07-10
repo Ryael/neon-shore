@@ -83,7 +83,7 @@ body {
   padding: 0 30px;
 }
 
-#logo {
+.logo {
   display: flex;
   align-content: center;
   flex-direction: row;
@@ -92,7 +92,7 @@ body {
   letter-spacing: 2px;
 }
 
-#logo-image {
+.logo-image {
   width: 30px;
   padding-right: 10px;
 }
@@ -123,13 +123,13 @@ body {
 }
 
 #navigation-menu a,
-#logo-text,
+.logo-text,
 #navigation-icons svg {
   transition: 0.3s ease-in-out;
 }
 
 #navigation-menu a:hover,
-#logo-text:hover,
+.logo-text:hover,
 #navigation-icons svg:hover {
   opacity: 0.6;
   transition: 0.3s ease-in-out;
@@ -209,6 +209,23 @@ body {
   cursor: pointer;
 }
 
+.mobile-logo {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  transition-delay: 0.8s;
+  opacity: 0;
+  transform: translate(0%, 100%);
+  transition: opacity 0.2s ease, transform 0.3s ease;
+  top: 42px;
+  left: 50px;
+  z-index: 2;
+}
+
+.mobile-logo a {
+  color: #aaa;
+}
+
 .mobile-list-item {
   position: relative;
   display: flex;
@@ -270,7 +287,8 @@ body.mobile-navigation-active .mobile-navigation:before {
   transition-delay: 0s;
 }
 
-body.mobile-navigation-active .mobile-list-item {
+body.mobile-navigation-active .mobile-list-item,
+body.mobile-navigation-active .mobile-logo {
   opacity: 1;
   transform: translateX(0%);
   transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
