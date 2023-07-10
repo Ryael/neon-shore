@@ -731,12 +731,6 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 
 /* 10. Footer */
 
-footer {
-  position: absolute;
-  width: 100vw;
-  bottom: 0;
-}
-
 .waves {
   position: relative;
   width: 100%;
