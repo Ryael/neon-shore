@@ -33,3 +33,33 @@ tl.to(".cover img", {
   maskPosition: `-${(frames - 1) * 100}% 0%`,
   ease: `steps(${frames - 1})`
 });
+
+/* Mobile Navigation */
+
+const app = (() => {
+  let body;
+  let menu;
+  let menuItems;
+
+  const init = () => {
+    body = document.querySelector('body');
+    menu = document.querySelector('.menu-icon');
+    menuItems = document.querySelectorAll('.mobile-list-item');
+
+    applyListeners();
+  }
+
+  const applyListeners = () => {
+    menu.addEventListener('click', () => toggleClass(body, 'mobile-navigation-active'));
+  }
+
+  const toggleClass = (element, stringClass) => {
+    if(element.classList.contains(stringClass))
+      element.classList.remove(stringClass);
+    else
+      element.classList.add(stringClass);
+  }
+
+  init();
+})();
+
