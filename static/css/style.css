@@ -15,6 +15,8 @@
 /*///   9.1 Footer Animation ///*/
 /*///   9.2 Footer Mobile ///*/
 /*///   9.3 Footer Social Media icons ///*/
+/*/// 10. Media Query ///*/
+/*///   10.1 Navigation Query ///*/
 
 /* 1. Fonts */
 
@@ -144,9 +146,10 @@ body {
   width: 30px;
   position: fixed;
   z-index: 2;
-  left: 50px;
-  top: 30px;
+  right: 50px;
+  top: 50px;
   cursor: pointer;
+  display: none;
 }
 
 .line {
@@ -156,6 +159,7 @@ body {
   background-color: var(--font-color);
   margin-bottom: 4px;
   transition: transform 0.2s ease, 0.5s ease;
+  display: none;
 }
 
 .line-left {
@@ -767,4 +771,19 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
 .c-tooltip:hover::after {
   opacity: 1;
   transform: translate(-50%);
+}
+
+/* 10. Media Query */
+
+/* 10.1 Navigation Query */
+
+@media screen and (max-width: 1000px) {
+  #navigation-bar {
+    display: none;
+  }
+  .line,
+  .menu-icon,
+  #fullscreen-navigation {
+    display: block;
+  }
 }
