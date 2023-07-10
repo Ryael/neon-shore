@@ -233,6 +233,10 @@ body {
 }
 
 .mobile-list-item:hover:before {
+  width: 0;
+}
+
+body.mobile-navigation-active .mobile-list-item ~ .mobile-list-item:hover:before {
   width: 10%;
 }
 
