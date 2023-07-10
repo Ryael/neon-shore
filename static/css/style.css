@@ -662,7 +662,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
 
 #footer-text p {
   color: #bbb;
-  margin-bottom: 28px;
+  margin-bottom: 50px;
 }
 
 /* 9.1 Footer Animation */
@@ -706,7 +706,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
 
 /* 9.3 Footer Social Icons */
 
-#social-icons {
+#footer-icons {
   display: flex;
   position: relative;
   align-items: center;
@@ -714,35 +714,35 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   margin: 25px 0px;
 }
 
-.c-icon {
-  width:  36px;
-  height: 36px;
+.social-icon-icon {
+  width:  30px;
+  height: 30px;
   fill: currentColor;
   transition: .5s;
 }
 
-.c-icon:hover {
+.social-icon-icon:hover {
   transition: .5s;
 }
 
-.c-link--twitter:hover   { color: #55acee }
-.c-link--pixiv:hover    { color: #009cff }
-.c-link--weibo:hover    { color: #ea0f1f }
-.c-link--twitter:hover::after   { background: #55acee }
-.c-link--pixiv:hover::after  { background: #009cff }
-.c-link--weibo:hover::after  { background: #ea0f1f }
+.social-icon-link--twitter:hover   { color: #55acee }
+.social-icon-link--pixiv:hover    { color: #009cff }
+.social-icon-link--weibo:hover    { color: #ea0f1f }
+.social-icon-link--twitter:hover::after   { background: #55acee }
+.social-icon-link--pixiv:hover::after  { background: #009cff }
+.social-icon-link--weibo:hover::after  { background: #ea0f1f }
 
-.c-link {
+.social-icon-link {
   position: relative;
   color: #bbb;
 }
 
-.c-link:not(:last-of-type) {
+.social-icon-link:not(:last-of-type) {
   margin-right: 15px;
 }
 
-.c-tooltip::before,
-.c-tooltip::after {
+.social-icon-tooltip::before,
+.social-icon-tooltip::after {
   display: block;
   position: absolute;
   left: 50%;
@@ -751,14 +751,14 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   transition: .4s;
 }
 
-.c-tooltip::before {
+.social-icon-tooltip::before {
   content: '';
   bottom: calc(100% + 2px);
   border: solid 5px transparent;
   border-top-color: currentColor;
 }
 
-.c-tooltip::after {
+.social-icon-tooltip::after {
   content: attr(aria-label);
   bottom: calc(100% + 12px);
   padding: .61em .93em;
@@ -767,8 +767,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(5) {
   border-radius: 3px;
 }
 
-.c-tooltip:hover::before,
-.c-tooltip:hover::after {
+.social-icon-tooltip:hover::before,
+.social-icon-tooltip:hover::after {
   opacity: 1;
   transform: translate(-50%);
 }
