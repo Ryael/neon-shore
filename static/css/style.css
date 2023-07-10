@@ -140,6 +140,7 @@ body {
 #fullscreen-navigation {
   position: relative;
   z-index: 15;
+  display: none;
 }
 
 .menu-icon {
