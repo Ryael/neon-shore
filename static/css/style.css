@@ -287,11 +287,16 @@ body.mobile-navigation-active .mobile-navigation:before {
   transition-delay: 0s;
 }
 
-body.mobile-navigation-active .mobile-list-item,
-body.mobile-navigation-active .mobile-logo {
+body.mobile-navigation-active .mobile-list-item {
   opacity: 1;
   transform: translateX(0%);
   transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+body.mobile-navigation-active .mobile-logo {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 0.5s ease, transform 0.5s ease, color 0.5s ease;
 }
 
 body.mobile-navigation-active .mobile-list-item:nth-child(1) {
