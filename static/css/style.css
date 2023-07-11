@@ -16,8 +16,9 @@
 /*///   10.1 Footer Animation ///*/
 /*///   10.2 Footer Mobile ///*/
 /*///   10.3 Footer Social Media icons ///*/
-/*/// 11. Media Query ///*/
-/*///   11.1 Navigation Query ///*/
+/*/// 11. Forms ///*/
+/*/// 12. Media Query ///*/
+/*///   12.1 Navigation Query ///*/
 
 /* 1. Fonts */
 
@@ -365,7 +366,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 
 /* 6. Buttons */
 
-.cta-btn {
+.btn {
   display: inline-block;
   padding: 1em 2em;
   border-radius: 0;
@@ -377,8 +378,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   text-decoration: none;
   background: linear-gradient(
     to right,
-    rgba(178, 135, 111, 0) 25%,
-    rgba(178, 135, 111, 0.8) 75%
+    rgba(0, 171, 253, 0) 25%,
+    rgba(0, 171, 253, 0.8) 75%
   );
   background-position: 1% 50%;
   background-size: 400% 300%;
@@ -386,11 +387,11 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   transition: 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.cta-btn:hover {
+.btn:hover {
   transition: 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.cta-btn:hover {
+.btn:hover {
   color: white;
   color: #fff;
   background-position: 99% 50%;
@@ -862,6 +863,91 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 .social-icon-tooltip:hover::after {
   opacity: 1;
   transform: translate(-50%);
+}
+
+/* 11. Forms */
+
+#form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 100px 0;
+}
+
+#form-container input {
+  border-width: 0px;
+  outline: none;
+  font-weight: 400;
+  width: 90%;
+  height: 43px;
+  font-size: 16px;
+  font-family: var(--font);
+  color: var(--font-color);
+  background-color: #fff;
+  padding: 0 15px;
+  box-shadow: 0px 4px 4px #9f9f9f;
+  margin: 14px 0 30px 0;
+  border-radius: 4px;
+}
+
+#form-container input::placeholder {
+  color: transparent;
+}
+
+#form-container label {
+  padding-left: 3px;
+  font-weight: 400;
+}
+
+#form-container h2 {
+  font-size: 16px;
+  width: 280px;
+  margin: 0 auto;
+  font-weight: bold;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 65px;
+  letter-spacing: 2px;
+}
+
+#signup-form {
+  font-size: 17px;
+  width: 340px;
+}
+
+#signup-form span {
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+
+#signup-form span:hover {
+  opacity: 0.7;
+  transition: 0.2s ease-in-out;
+}
+
+#signup-form ul {
+  color: var(--font-color);
+  list-style: none;
+  margin: 0px 12.5px 25px 12.5px;
+}
+
+#signup-form li {
+  padding: 12.5px 0px;
+}
+
+#signup-form .btn {
+  width: 99%;
+  height: 50px;
+  font-weight: 600;
+  margin: 10px 0 30px 0;
+  font-size: 0.778rem;
+}
+
+#end-form p {
+  text-align: center;
 }
 
 /* 11. Media Query */
