@@ -913,32 +913,38 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   letter-spacing: 2px;
 }
 
-#signup-form {
+#signup-form,
+#login-form {
   font-size: 17px;
   width: 340px;
 }
 
-#signup-form span {
+#signup-form span,
+#login-form span {
   font-weight: 500;
   transition: 0.2s ease-in-out;
 }
 
-#signup-form span:hover {
+#signup-form span:hover,
+#login-form span:hover {
   opacity: 0.7;
   transition: 0.2s ease-in-out;
 }
 
-#signup-form ul {
+#signup-form ul,
+#login-form ul {
   color: var(--font-color);
   list-style: none;
   margin: 0px 12.5px 25px 12.5px;
 }
 
-#signup-form li {
+#signup-form li,
+#login-form li {
   padding: 12.5px 0px;
 }
 
-#signup-form .btn {
+#signup-form .btn,
+#login-form .btn {
   width: 99%;
   height: 50px;
   font-weight: 600;
@@ -946,8 +952,20 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   font-size: 0.778rem;
 }
 
+#login-form #id_remember {
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  margin-left: 5px;
+}
+
 #end-form p {
   text-align: center;
+}
+
+#body-form p {
+  text-align: left;
+  padding: 12.5px 0;
 }
 
 /* 11. Media Query */
