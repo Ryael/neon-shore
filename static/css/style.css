@@ -378,8 +378,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   text-decoration: none;
   background: linear-gradient(
     to right,
-    rgba(0, 171, 253, 0) 25%,
-    rgba(0, 171, 253, 0.8) 75%
+    rgba(210, 238, 249, 0) 25%,
+    rgba(210, 238, 249, 0.8) 75%
   );
   background-position: 1% 50%;
   background-size: 400% 300%;
@@ -392,8 +392,6 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 }
 
 .btn:hover {
-  color: white;
-  color: #fff;
   background-position: 99% 50%;
 }
 
@@ -914,9 +912,15 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 }
 
 #signup-form,
-#login-form {
+#login-form,
+#logout-form {
   font-size: 17px;
   width: 340px;
+}
+
+#logout-form form {
+  display: flex;
+  justify-content: center;
 }
 
 #signup-form span,
@@ -952,11 +956,25 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   font-size: 0.778rem;
 }
 
+#logout-form .btn {
+  text-align: center;
+  width: 49%;
+  height: 50px;
+  font-weight: 600;
+  margin: 10px 0 30px 0;
+  font-size: 0.778rem;
+}
+
 #login-form #id_remember {
   width: auto;
   height: auto;
   box-shadow: none;
   margin-left: 5px;
+}
+
+#logout-form p {
+  margin-bottom: 65px;
+  text-align: center;
 }
 
 #end-form p {
