@@ -9,7 +9,7 @@
     {% for product in products %}
       <div class="product">
         {% if product.image %}
-        <a href="">
+        <a href="{% url 'product_detail' product.id %}">
           <img class="product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
         </a>
         {% endif %}
@@ -23,7 +23,7 @@
           <p class="price">${{ product.price }}</p>
         </div>
         <div class="product-button">
-          <a class="btn" href="">Purchase</a>
+          <a class="btn" href="{% url 'product_detail' product.id %}">buy now</a>
         </div>
       </div>
     {% endfor %}
