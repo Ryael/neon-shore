@@ -17,8 +17,10 @@
 /*///   10.2 Footer Mobile ///*/
 /*///   10.3 Footer Social Media icons ///*/
 /*/// 11. Forms ///*/
-/*/// 12. Media Query ///*/
-/*///   12.1 Navigation Query ///*/
+/*/// 12. Store ///*/
+/*/// 13. Media Query ///*/
+/*///   13.1 Navigation Query ///*/
+/*///   13.2 Store Query ///*/
 
 /* 1. Fonts */
 
@@ -994,7 +996,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   padding: 12.5px 0;
 }
 
-/* 11. Store */
+/* 12. Store */
 
 #store-grid {
   display: grid;
@@ -1069,9 +1071,9 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   margin-top: 22px;
 }
 
-/* 12. Media Query */
+/* 13. Media Query */
 
-/* 12.1 Navigation Query */
+/* 13.1 Navigation Query */
 
 @media screen and (max-width: 1000px) {
   #navigation-bar {
@@ -1084,7 +1086,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   }
 }
 
-/* 12.2 Store Query */
+/* 13.2 Store Query */
 
 @media screen and (min-width: 640px) {
   #store-grid {
