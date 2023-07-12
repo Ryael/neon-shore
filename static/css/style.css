@@ -18,9 +18,10 @@
 /*///   10.3 Footer Social Media icons ///*/
 /*/// 11. Forms ///*/
 /*/// 12. Store ///*/
-/*/// 13. Media Query ///*/
-/*///   13.1 Navigation Query ///*/
-/*///   13.2 Store Query ///*/
+/*/// 13. Product Details ///*/
+/*/// 14. Media Query ///*/
+/*///   14.1 Navigation Query ///*/
+/*///   14.2 Store Query ///*/
 
 /* 1. Fonts */
 
@@ -73,6 +74,16 @@ body {
   align-items: center;
   padding: 120px 4%;
   box-sizing: border-box;
+}
+
+.detailed-product-container {
+  display: flex;
+  padding: 120px 4%;
+  width: auto;
+  max-width: 900px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* 4. Navigation */
@@ -1071,25 +1082,116 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   margin-top: 22px;
 }
 
-/* 13. Media Query */
+/* 13. Product Details */
 
-/* 13.1 Navigation Query */
+#detailed-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-height: 320px;
+  max-width: 360px;
+  margin: auto;
+  padding: 0;
+}
+
+#detailed-image {
+  border: 20px solid #fff;
+  box-shadow: 0 10px 20px -15px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  position: relative;
+}
+
+#product-details {
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6);
+}
+
+#product-details .category {
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+#product-details .name {
+  font-size: 2.5em;
+}
+
+#product-details .price {
+  font-size: 23px;
+  margin-bottom: 50px;
+}
+
+#product-details .description-title {
+  font-size: 20px;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+#product-details .description {
+  font-size: 15px;
+}
+
+#product-details .product-button {
+  margin: 58px 0 50px 0;
+}
+
+#product-details .product-button .btn {
+  padding: 1.2em 4em;
+  font-size: 0.778rem;
+}
+
+/* 14. Media Query */
+
+/* 14.1 Navigation Query */
 
 @media screen and (max-width: 1000px) {
+
   #navigation-bar {
     display: none;
   }
+
   .line,
   .menu-icon,
   #fullscreen-navigation {
     display: block;
   }
+
 }
 
-/* 13.2 Store Query */
+/* 14.2 Store Query */
 
 @media screen and (min-width: 640px) {
+
   #store-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+}
+
+/* 14.3 Product Details Query */
+
+@media (min-width: 900px) {
+
+  .detailed-product-container {
+    flex-direction: row;
+    align-items: normal;
+    margin: auto;
+  }
+
+  #detailed-image-container {
+    padding: 79px 20px 119px 0px;
+    max-width: 360px;
+    margin-left: 20px;
+  }
+
+  #detailed-image {
+    z-index: -1;
+    box-shadow: 0 10px 20px -20px rgba(0, 0, 0, 0.6);
+  }
+
+  #product-details {
+    width: 100%;
+  }
+
 }
