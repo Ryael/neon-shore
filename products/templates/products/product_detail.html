@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %} {{ product.name }} {% endblock %}
+
+{% block content %}
+
+<div class="detailed-product-container">
+  {% if product.image %}
+  <div id="detailed-image-container">
+    <a href="{{ product.image.url }}" target="_blank">
+      <img id="detailed-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+    </a>
+  </div>
+  {% endif %}
+  <div id="product-details">
+    <div class="product-category">
+      <p class="category">{{ product.category.singular_name }}</p>
+    </div>
+    <div class="product-name">
+      <p class="name">{{ product.name }}</p>
+    </div>
+    <div class="product-price">
+      <p class="price">${{ product.price }}</p>
+    </div>
+    <div class="product-description">
+      <p class="description-title">Description</p>
+      <p class="description">{{ product.description }}</p>
+    </div>
+    <div class="product-button">
+      <a class="btn" href="{% url 'product_detail' product.id %}">buy now</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
