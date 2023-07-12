@@ -4,8 +4,30 @@
 
 {% block content %}
 
-<div class="container">
-  {{products}}
+<div class="products-container">
+  <div id="store-grid">
+    {% for product in products %}
+      <div class="product">
+        {% if product.image %}
+        <a href="">
+          <img class="product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+        </a>
+        {% endif %}
+        <div class="product-category">
+          <p class="category">{{ product.category.friendly_name }}</p>
+        </div>
+        <div class="product-name">
+          <p class="name">{{ product.name }}</p>
+        </div>
+        <div class="product-price">
+          <p class="price">${{ product.price }}</p>
+        </div>
+        <div class="product-button">
+          <a class="btn" href="">Purchase</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 {% endblock %}
