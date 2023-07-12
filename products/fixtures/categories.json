@@ -4,7 +4,8 @@
     "model": "products.category",
     "fields": {
       "name": "prints",
-      "friendly_name": "Prints"
+      "friendly_name": "Prints",
+      "singular_name": "Print"
     }
   },
   {
@@ -12,7 +13,8 @@
     "model": "products.category",
     "fields": {
       "name": "charms",
-      "friendly_name": "Charms"
+      "friendly_name": "Charms",
+      "singular_name": "Charm"
     }
   },
   {
@@ -20,7 +22,8 @@
     "model": "products.category",
     "fields": {
       "name": "artbooks",
-      "friendly_name": "Artbooks"
+      "friendly_name": "Artbooks",
+      "singular_name": "Artbook"
     }
   },
   {
@@ -28,7 +31,8 @@
     "model": "products.category",
     "fields": {
       "name": "pins",
-      "friendly_name": "Pins"
+      "friendly_name": "Pins",
+      "singular_name": "Pin"
     }
   },
   {
@@ -36,7 +40,8 @@
     "model": "products.category",
     "fields": {
       "name": "stickers",
-      "friendly_name": "Stickers"
+      "friendly_name": "Stickers",
+      "singular_name": "Sticker"
     }
   },
   {
@@ -44,7 +49,8 @@
     "model": "products.category",
     "fields": {
       "name": "bundles",
-      "friendly_name": "Bundles"
+      "friendly_name": "Bundles",
+      "singular_name": "Bundle"
     }
   },
   {
@@ -52,7 +58,8 @@
     "model": "products.category",
     "fields": {
       "name": "new_arrivals",
-      "friendly_name": "New Arrivals"
+      "friendly_name": "New Arrivals",
+      "singular_name": "New Arrival"
     }
   }
 ]
