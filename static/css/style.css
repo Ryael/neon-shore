@@ -1141,6 +1141,47 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   font-size: 0.778rem;
 }
 
+#product-categories {
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+  flex-direction: column;
+  width: 100%;
+}
+
+#product-categories h2 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+#product-categories ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+#product-categories li {
+  display: flex;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+
+#product-categories li:not(:nth-last-child(-n+2)) {
+  padding-bottom: 30px;
+}
+
+#product-categories li a {
+  transition: 0.3s ease-in-out;
+}
+
+#product-categories li a:hover {
+  transition: 0.3s ease-in-out;
+  opacity: 0.6;
+}
+
 /* 14. Media Query */
 
 /* 14.1 Navigation Query */
@@ -1192,6 +1233,22 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 
   #product-details {
     width: 100%;
+  }
+
+  #product-categories ul {
+    display: inline-flex;
+  }
+
+  #product-categories h2 {
+    padding-bottom: 30px;
+  }
+
+  #product-categories li:not(:nth-last-child(-n+2)) {
+    padding-bottom: 0px;
+  }
+
+  #product-categories li:not(:first-child) {
+    padding-left: 30px;
   }
 
 }
