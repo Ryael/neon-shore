@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}home{% endblock %}
+
+{% block content %}
+
+<div class="bag-container">
+  <div id="bag-title">
+    <h2>My Bag</h2>
+    <div class="product-button">
+      <a class="btn" href="{% url 'products' %}">Keep Shopping</a>
+    </div>
+  </div>
+  {% if bag_items %}
+    <div id="bag">
+    </div>
+  {% else %}
+    <div id="empty-bag">
+      <p>Your bag is currently empty.</p>
+    </div>
+  {% endif %}
+</div>
+
+{% endblock %}
