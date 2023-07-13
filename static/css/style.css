@@ -1228,6 +1228,27 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 #product-details .product-button .btn {
   padding: 1.2em 4em;
   font-size: 0.778rem;
+  width: 195px;
+}
+
+#product-details .product-button .form-control {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 34px;
+  padding-left: 12px;
+  border: 1px solid black;
+  margin-left: 15px;
+}
+
+#product-details .product-button .input-group {
+  display: flex;
+}
+
+#product-details .product-button form {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
 }
 
 /* 14. Bag */
