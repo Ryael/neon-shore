@@ -4,6 +4,29 @@
 
 {% block content %}
 
+<div id="product-categories">
+  <h2>categories</h2>
+    <ul>
+      <li>
+        <a href="{% url 'products' %}?category=prints">prints</a>
+      </li>
+      <li>
+        <a href="{% url 'products' %}?category=artbooks">artbooks</a>
+      </li>
+      <li>
+        <a href="{% url 'products' %}?category=charms">charms</a>
+      </li>
+      <li>
+        <a href="{% url 'products' %}?category=pins">pins</a>
+      </li>
+      <li>
+        <a href="{% url 'products' %}?category=stickers">stickers</a>
+      </li>
+      <li>
+        <a href="{% url 'products' %}?category=bundles">bundles</a>
+      </li>
+    </ul>
+</div>
 <div class="products-container">
   <div id="store-grid">
     {% for product in products %}
