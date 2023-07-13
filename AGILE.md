@@ -46,3 +46,12 @@ The objective of the second sprint was to finish some basic UI elements and styl
 - Working with the mobile navigation menu proved to be challenging as it was difficult to manipulate some of the unordered list elements but not all. This was solved by using sibling selectors after some troubleshooting.
 - The User Management pages proved to be relatively straight forward thanks to having worked with allauth prior as part of the previous project.
 - A total of five bugs were discovered but four were resolved. The remaining one will be solved during future sprints as priority is complete a MVP.
+
+### Sprint #3:
+
+https://i.imgur.com/IUBFeea.png
+
+The main goal of this sprint was to set-up and style the Store page and all its related contents, including the search, sort, categorise functionalities, as well as the detailed product view.
+
+- This spring began on 11/09/23 at 20:00 and ended on 13/09/23 at 20:00. The estimated story point total for this sprint was 21 points but the only 20 story points were completed. This was due to a bug that I was not able to solve within the time-frame I had set aside for it. Overall, this sprint was a success but it did take longer than estimated due to my not being familiar with Django's workflow for an e-commerce website. The total time taken was close to 20 hours but the sprint went on for longer due to my falling ill.
+- The most challenging aspect of this sprint was thinking of designs that would suit the brand of the client and overall aesthetic of the website, but once those were established it wasn't too difficult to work through the rest, especially with the help of Boutique Ado.
