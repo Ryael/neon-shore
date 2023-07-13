@@ -5,7 +5,11 @@
 {% block content %}
 
 <div id="product-categories">
-  <h2>categories</h2>
+  <h2 id="product-title">store</h2>
+  <h3>categories</h3>
+    {% if search_term or current_categories or current_sorting != 'None_None' %}
+      <a id="product-home" href="{% url 'products' %}">show all</a>
+    {% endif %}
     <ul>
       <li>
         <a href="{% url 'products' %}?category=prints">prints</a>
@@ -26,6 +30,9 @@
         <a href="{% url 'products' %}?category=bundles">bundles</a>
       </li>
     </ul>
+    <p id="product-result">
+      <span id=total>{{ products|length }}</span> Products {% if search_term %} found for <strong> "{{ search_term }}"</strong>{% endif %}
+    </p>
 </div>
 <div class="products-container">
   <div id="store-grid">
