@@ -1236,10 +1236,31 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   justify-content: center;
   align-content: center;
   align-items: center;
-  width: 34px;
-  padding-left: 12px;
-  border: 1px solid black;
-  margin-left: 15px;
+  width: 48px;
+  font-size: 15px;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  text-align: center;
+}
+
+#product-details .product-button  .decrement-qty,
+#product-details .product-button  .increment-qty {
+  width: 48px;
+  cursor: pointer;
+  border: 1px solid #111;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#product-details .product-button  .decrement-qty {
+  margin-left: 30px;
+}
+
+.fa-minus,
+.fa-plus {
+  font-size: 10px;
 }
 
 #product-details .product-button .input-group {
@@ -1249,6 +1270,14 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 #product-details .product-button form {
   display: grid;
   grid-template-columns: 1fr 5fr;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button,
+input[type='number'] {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
 }
 
 /* 14. Bag */
