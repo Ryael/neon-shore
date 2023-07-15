@@ -210,6 +210,7 @@ body {
 .mobile-navigation {
   position: fixed;
   z-index: 1;
+  pointer-events: none;
 }
 
 .mobile-navigation:before, .mobile-navigation:after {
@@ -339,6 +340,7 @@ body.mobile-navigation-active .line-right {
 
 body.mobile-navigation-active .mobile-navigation {
   visibility: visible;
+  pointer-events: auto;
 }
 
 body.mobile-navigation-active .mobile-navigation:before, body.mobile-navigation-active .mobile-navigation:after {
