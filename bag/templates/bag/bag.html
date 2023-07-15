@@ -19,12 +19,30 @@
                 <p class="item-number">SKU: {{ item.product.sku|upper }}</p>
                 <h3>{{ item.product.name }}</h3>
                 <p class="bag-category"> {{ item.product.category.singular_name }}</p>
+                <p class="product-price-mobile">${{ item.product.price }}</p>
               </div>
               <div class="product-total bag-section">
                 <p>${{ item.product.price }}</p>
+                <form action="" method="POST">
+                  {% csrf_token %}
+                    <div class="input-group">
+                      <button class="decrement-qty" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                        <i class="fa-solid fa-minus"></i>
+                      </button>
+                      <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                      <button class="increment-qty" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                        <i class="fa-solid fa-plus"></i>
+                      </button>
+                    </div>
+                     <a href="#" class="remove remove-item" id="remove_{{ item.item_id }}" data-size="{{ item.size }}">
+                       <i class="fa-solid fa-x"></i>
+                     </a>
+                </form>
               </div>
               <div class="bag-section remove-wrap">
-               <a href="#" class="remove">x</a>
+               <a href="#" class="remove">
+                 <i class="fa-solid fa-x"></i>
+               </a>
               </div>
             </div>
           </li>
