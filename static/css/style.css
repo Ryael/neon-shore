@@ -1302,6 +1302,7 @@ input[type='number'] {
 #bag .items .bag-section {
   display: table-cell;
   vertical-align: middle;
+  width: 90%;
   }
 
 #bag .items .item-image {
@@ -1340,9 +1341,12 @@ input[type='number'] {
   font-size: 1.25em;
 }
 
-#bag .items .bag-section .product-price-mobile,
-#bag .items .bag-section.product-total .remove {
+#bag .items .bag-section .product-price-mobile {
   display: none;
+}
+
+#bag .items .bag-section.product-total {
+  display: grid;
 }
 
 .product-total .input-group {
@@ -1371,6 +1375,12 @@ input[type='number'] {
 
 .product-total p {
   padding-left: 5px;
+}
+
+#bag .items .bag-section.remove-wrap {
+  margin-left: 25px;
+  display: block;
+  margin-top: 32px;
 }
 
 a.remove {
@@ -1618,8 +1628,7 @@ a.remove:hover {
     font-size: 1em;
   }
 
-  #bag .items .bag-section.product-total p,
-  #bag .items .bag-section.remove-wrap {
+  #bag .items .bag-section.product-total p {
     display: none;
   }
 
