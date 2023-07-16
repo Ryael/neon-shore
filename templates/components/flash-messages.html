@@ -1,9 +1,9 @@
 {% with message.level as level %}
   {% if level == 40 %}
     <script>;
-      swal.fire({
+      Swal.fire({
         title: "error!",
-        text: "{{message}}",
+        html: "{{message}}",
         icon: "error",
         toast: "true",
         position: 'top-end',
@@ -14,9 +14,9 @@
     </script>
   {% elif level == 30 %}
     <script>;
-      swal.fire({
+      Swal.fire({
         title: "warning!",
-        text: "{{message}}",
+        html: "{{message}}",
         icon: "warning",
         toast: "true",
         position: 'top-end',
@@ -27,9 +27,9 @@
     </script>
   {% elif level == 25 %}
     <script>;
-      swal.fire({
+      Swal.fire({
         title: "success!",
-        text: "{{message}}",
+        html: "{{message}}",
         icon: "success",
         toast: "true",
         position: 'top-end',
@@ -40,9 +40,9 @@
     </script>
   {% else %}
     <script>;
-      swal.fire({
+      Swal.fire({
         title: "info!",
-        text: "{{message}}",
+        html: "{{message}}",
         icon: "info",
         toast: "true",
         position: 'top-end',
