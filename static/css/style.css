@@ -1432,11 +1432,6 @@ a.save:hover {
   transition: all 0.25s linear;
 }
 
-.update-link,
-.remove-item {
-
-}
-
 .remove .fa-x,
 .save .fa-check {
   display: flex;
