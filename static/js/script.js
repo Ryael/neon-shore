@@ -65,6 +65,23 @@ const app = (() => {
 
 /* Quantity Input */
 
+// Gets a cookie by name.
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
 // Disable +/- buttons outside 1-99 range.
 function handleEnableDisable(itemId) {
     var currentValue = parseInt($(`#id_qty_${itemId}`).val());
@@ -115,7 +132,7 @@ $('.update-link').click(function(e) {
 
 // Remove item and reload on click
 $('.remove-item').click(function(e) {
-    var csrfToken = "{{ csrf_token }}";
+    var csrfToken = getCookie('csrftoken');
     var itemId = $(this).attr('id').split('remove_')[1];
     var url = `/bag/remove/${itemId}/`;
     var data = {'csrfmiddlewaretoken': csrfToken};
