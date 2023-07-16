@@ -23,26 +23,25 @@
               </div>
               <div class="product-total bag-section">
                 <p>${{ item.product.price }}</p>
-                <form action="" method="POST">
+                <form class="update-form" action="{% url 'adjust_bag' item.item_id %}" method="POST">
                   {% csrf_token %}
-                    <div class="input-group">
-                      <button class="decrement-qty" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                        <i class="fa-solid fa-minus"></i>
-                      </button>
-                      <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                      <button class="increment-qty" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                        <i class="fa-solid fa-plus"></i>
-                      </button>
-                    </div>
-                     <a href="#" class="remove remove-item" id="remove_{{ item.item_id }}" data-size="{{ item.size }}">
-                       <i class="fa-solid fa-x"></i>
-                     </a>
+                  <div class="input-group">
+                    <button class="decrement-qty" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                      <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                    <button class="increment-qty" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
                 </form>
+                <a class="btn update-link"></a>
+                <a class="remove-item remove" id="remove_{{ item.item_id }}">
+                  <i class="fa-solid fa-x"></i>
+                </a>
               </div>
               <div class="bag-section remove-wrap">
-               <a href="#" class="remove">
-                 <i class="fa-solid fa-x"></i>
-               </a>
+
               </div>
             </div>
           </li>
