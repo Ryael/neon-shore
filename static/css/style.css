@@ -1311,7 +1311,7 @@ input[type='number'] {
   width: 7.5em;
   float: left;
   border: 8px solid #fff;
-  margin-right: 0.5em;
+  margin-right: 0.7em;
 }
 
 #bag .items .bag-section .item-number {
@@ -1349,6 +1349,8 @@ input[type='number'] {
 
 #bag .items .bag-section.product-total {
   display: grid;
+  align-items: center;
+  margin-top: 1.4em;
 }
 
 .product-total .input-group {
@@ -1385,7 +1387,8 @@ input[type='number'] {
   margin-top: 32px;
 }
 
-a.remove {
+a.remove,
+a.save {
   width: 18px;
   height: 18px;
   text-decoration: none;
@@ -1400,6 +1403,19 @@ a.remove {
   transition: all 0.25s linear;
 }
 
+a.remove {
+  grid-column: 2;
+  grid-row: 1;
+  margin-left: 2em;
+  cursor: pointer;
+}
+
+a.save {
+  margin-left: 2em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
 .remove span {
   display: flex;
   align-content: center;
@@ -1408,9 +1424,21 @@ a.remove {
 
 a.remove:hover {
   background: #f30;
+  transition: all 0.25s linear;
 }
 
-.remove .fa-x {
+a.save:hover {
+  background: #2cff00;
+  transition: all 0.25s linear;
+}
+
+.update-link,
+.remove-item {
+
+}
+
+.remove .fa-x,
+.save .fa-check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1597,6 +1625,7 @@ a.remove:hover {
   #bag .items .item-image {
     width: 11.5em;
     float: none;
+    margin-right: 0;
   }
 
   #bag .items .info {
@@ -1636,7 +1665,16 @@ a.remove:hover {
 
   #bag .items .bag-section.product-total .remove {
     display: grid;
-    margin-left: 20px;
+  }
+
+  a.save {
+    grid-row: 3;
+    margin: 1.5em 1.5em 0 0;
+  }
+
+  a.remove {
+    grid-row: 3;
+    margin: 1.5em 0em 0 7.5em;
   }
 
   #bag .items .bag-section.product-total form {
