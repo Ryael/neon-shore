@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load bag_tools %}
+
 {% block title %}bag{% endblock %}
 
 {% block content %}
@@ -19,10 +21,10 @@
                 <p class="item-number">SKU: {{ item.product.sku|upper }}</p>
                 <h3>{{ item.product.name }}</h3>
                 <p class="bag-category"> {{ item.product.category.singular_name }}</p>
-                <p class="product-price-mobile">${{ item.product.price }}</p>
+                <p class="product-price-mobile">${{ item.product.price | calc_subtotal:item.quantity }}</p>
               </div>
               <div class="product-total bag-section">
-                <p>${{ item.product.price }}</p>
+                <p>${{ item.product.price | calc_subtotal:item.quantity }}</p>
                 <form class="update-form" action="{% url 'adjust_bag' item.item_id %}" method="POST">
                   {% csrf_token %}
                   <div class="input-group">
