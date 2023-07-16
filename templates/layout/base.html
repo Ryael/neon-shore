@@ -9,7 +9,19 @@
     {% include 'components/navigation.html' %}
 
     {% if messages %}
-      <div class="flash-message-container"></div>
+      {% for message in messages %}
+        {% with message.level as level %}
+          {% if level == 40 %}
+            {% include 'components/flash-message-error.html' %}
+          {% elif level == 30 %}
+            {% include 'components/flash-message-warning.html' %}
+          {% elif level == 25 %}
+            {% include 'components/flash-message-success.html' %}
+          {% else %}
+            {% include 'components/flash-message-info.html' %}
+          {% endif %}
+        {% endwith %}
+      {% endfor %}
     {% endif %}
 
     {% block content %}
