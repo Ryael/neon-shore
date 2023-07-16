@@ -10,17 +10,7 @@
 
     {% if messages %}
       {% for message in messages %}
-        {% with message.level as level %}
-          {% if level == 40 %}
-            {% include 'components/flash-message-error.html' %}
-          {% elif level == 30 %}
-            {% include 'components/flash-message-warning.html' %}
-          {% elif level == 25 %}
-            {% include 'components/flash-message-success.html' %}
-          {% else %}
-            {% include 'components/flash-message-info.html' %}
-          {% endif %}
-        {% endwith %}
+        {% include 'components/flash-messages.html' %}
       {% endfor %}
     {% endif %}
 

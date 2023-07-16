@@ -1,0 +1,56 @@
+{% with message.level as level %}
+  {% if level == 40 %}
+    <script>;
+      swal.fire({
+        title: "error!",
+        text: "{{message}}",
+        icon: "error",
+        toast: "true",
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+    </script>
+  {% elif level == 30 %}
+    <script>;
+      swal.fire({
+        title: "warning!",
+        text: "{{message}}",
+        icon: "warning",
+        toast: "true",
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+    </script>
+  {% elif level == 25 %}
+    <script>;
+      swal.fire({
+        title: "success!",
+        text: "{{message}}",
+        icon: "success",
+        toast: "true",
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+    </script>
+  {% else %}
+    <script>;
+      swal.fire({
+        title: "info!",
+        text: "{{message}}",
+        icon: "info",
+        toast: "true",
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
+    </script>
+
+  {% endif %}
+{% endwith %}
