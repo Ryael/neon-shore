@@ -53,5 +53,16 @@ https://i.imgur.com/IUBFeea.png
 
 The main goal of this sprint was to set-up and style the Store page and all its related contents, including the search, sort, categorise functionalities, as well as the detailed product view.
 
-- This spring began on 11/09/23 at 20:00 and ended on 13/09/23 at 20:00. The estimated story point total for this sprint was 21 points but the only 20 story points were completed. This was due to a bug that I was not able to solve within the time-frame I had set aside for it. Overall, this sprint was a success but it did take longer than estimated due to my not being familiar with Django's workflow for an e-commerce website. The total time taken was close to 20 hours but the sprint went on for longer due to my falling ill.
+- This sprint began on 11/09/23 at 20:00 and ended on 13/09/23 at 20:00. The estimated story point total for this sprint was 21 points but the only 20 story points were completed. This was due to a bug that I was not able to solve within the time-frame I had set aside for it. Overall, this sprint was a success but it did take longer than estimated due to my not being familiar with Django's workflow for an e-commerce website. The total time taken was close to 20 hours but the sprint went on for longer due to my falling ill.
 - The most challenging aspect of this sprint was thinking of designs that would suit the brand of the client and overall aesthetic of the website, but once those were established it wasn't too difficult to work through the rest, especially with the help of Boutique Ado.
+
+### Sprint #4:
+
+https://i.imgur.com/FCk9TSr.png
+
+The aim of this sprint was to set-up and style the Bag page, implement being able to add a select quantity to the bag, and then adjusting the quantity within the bag itself alongside being able to remove items altogether.
+
+- This sprint began on 13/07/23 at 21:31 and ended on 15/07/23 at 1:30. The estimated story point total was 7 at first but bugs were brought into it bringing the total to 20. All of these issues were resolved in time, although it proved to be far longer than anticapted. While still a success, the remove button's bug in the missing or invalid CSRF error caused me a lot of trouble.
+- This bug was resolved by finding a solution on Code Institute's Slack from over 3 years ago, which suggested implementing and passing CSRF as a cookie instead. This solution can also be found on Django's official documentation.
+- While stuck on the aforementioned issue, time was instead diverted to other bugs, almost all of which were fixed.
+- Overall, the time spent was approxtimately 18 hours and matched the assigned story points.
