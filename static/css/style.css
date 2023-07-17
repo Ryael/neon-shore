@@ -26,6 +26,7 @@
 /*///   16.2 Store Query ///*/
 /*///   16.3 Product Details Query ///*/
 /*///   16.4 Bag Query ///*/
+/*///   16.5 Checkout Query ///*/
 
 /* 1. Fonts */
 
@@ -1588,7 +1589,7 @@ a.save:hover {
 }
 
 #checkout-grid .back-btn {
-  font-size: 0.72rem;
+  font-size: 0.69rem;
 }
 
 #checkout-grid #submit-btn {
@@ -1736,7 +1737,7 @@ a.save:hover {
 
   #product-home {
     padding-bottom: 30px;
-}
+  }
 
 }
 
@@ -1824,6 +1825,21 @@ a.save:hover {
     display: flex;
     flex-direction: row;
     align-items: end;
+  }
+
+}
+
+/* 16.5 Checkout Query */
+
+@media (max-width: 970px) {
+
+  #checkout-summary {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #checkout-grid {
+    grid-template-columns: 1fr;
   }
 
 }
