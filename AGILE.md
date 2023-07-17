@@ -66,3 +66,14 @@ The aim of this sprint was to set-up and style the Bag page, implement being abl
 - This bug was resolved by finding a solution on Code Institute's Slack from over 3 years ago, which suggested implementing and passing CSRF as a cookie instead. This solution can also be found on Django's official documentation.
 - While stuck on the aforementioned issue, time was instead diverted to other bugs, almost all of which were fixed.
 - Overall, the time spent was approxtimately 18 hours and matched the assigned story points.
+
+### Sprint #5:
+
+https://i.imgur.com/rlWguhU.png
+
+This sprint was used to find an alternative to Bootstrap's Toasts and use it as flash messages that inform the user that their actions have either have or haven't been successful. As that alone seemed difficult, only one other task was added in the setting-up and styling of the Checkout page.
+
+- This sprint began on 16/07/23 at 8:59 and finished on 17/07/23 at approximately 5:00. The estimated story point total was 6, all of which were completed alongside a bug that had been discovered, bringing the total to 7. It took approximately the estimated time to finish all these tasks, causing this sprint to be a total success.
+- The greatest difficulty with this sprint was finding an alternative to Bootstrap's Toast system and finding a way of intregrating it with Django. SweetAlerts were chosen as the flash message method of choice, and it took repreat-read throughs of the documentation to successfully implement it. At first, a center-screen modal pop-up approach was employed but then was later changed to be a much less distracting Toast-like notification.
+- The special characters not rendering properly bug was resolved by replacing the `text` field with a `html` field, although this allows for XSS attacks on the website. However, as this website won't be deployed for a commercial purpose until much later, this was was deemed a satisfactory compromise. This, will, however be dealt with in the future with input sanitation.
+
