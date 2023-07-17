@@ -1,6 +1,6 @@
 # neon shore
 
-A website for managing armies for tabletop board gaming.
+WIP - Work in Progress. The content is simply lifted from the previous project and the readme itself is in a greatly unfinished state. However, permission was obtained for use of all pieces of artwork on the website and will be elaborated in great detail later. Additionally, code from other places was used but heavily modified and commented, and it also will be attributed properly in the Credits section later.
 
 [neon shore - Live Website](https://paradise-lost-app.herokuapp.com/)
 
