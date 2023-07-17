@@ -20,11 +20,12 @@
 /*/// 12. Store ///*/
 /*/// 13. Product Details ///*/
 /*/// 14. Bag ///*/
-/*/// 15. Media Query ///*/
-/*///   15.1 Navigation Query ///*/
-/*///   15.2 Store Query ///*/
-/*///   15.3 Product Details Query ///*/
-/*///   15.4 Bag Query ///*/
+/*/// 15. Checkout ///*/
+/*/// 16. Media Query ///*/
+/*///   16.1 Navigation Query ///*/
+/*///   16.2 Store Query ///*/
+/*///   16.3 Product Details Query ///*/
+/*///   16.4 Bag Query ///*/
 
 /* 1. Fonts */
 
@@ -910,7 +911,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   padding: 100px 0;
 }
 
-#form-container input {
+#form-container input,
+#payment-form input {
   border-width: 0px;
   outline: none;
   font-weight: 400;
@@ -930,7 +932,12 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   color: transparent;
 }
 
-#form-container label {
+#checkout-form input::placeholder {
+  text-transform: lowercase;
+}
+
+#form-container label,
+#checkout-form label {
   padding-left: 3px;
   font-weight: 400;
 }
@@ -951,6 +958,10 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 #logout-form {
   font-size: 17px;
   width: 340px;
+}
+
+#payment-form {
+  font-size: 17px;
 }
 
 #logout-form form {
@@ -1000,11 +1011,16 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   font-size: 0.778rem;
 }
 
-#login-form #id_remember {
+#login-form #id_remember,
+#payment-form .form-check-input {
   width: auto;
   height: auto;
   box-shadow: none;
   margin-left: 5px;
+}
+
+#payment-form .form-check-input {
+  margin-bottom: 17px;
 }
 
 #logout-form p {
@@ -1517,9 +1533,141 @@ a.save:hover {
   padding-top: 15px;
 }
 
-/* 15. Media Query */
+/* 15. Checkout */
 
-/* 15.1 Navigation Query */
+#checkout-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#checkout-summary {
+  grid-column: 2;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+#checkout-title {
+  border-bottom: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 30px;
+}
+
+#checkout-form {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+#checkout-top {
+  padding: 45px 0;
+  font-weight: 500;
+}
+
+#checkout-form p {
+  padding: 45px 0;
+}
+
+#checkout-form legend {
+  font-weight: 400;
+  padding-left: 3px;
+  margin-bottom: 10.5px;
+}
+
+#payment-text {
+  padding: 12.5px 0;
+}
+
+#checkout-grid .back-btn {
+  font-size: 0.72rem;
+}
+
+#checkout-grid #submit-btn {
+  cursor: pointer;
+}
+
+#checkout-summary img {
+  max-width: 7em;
+  border: 6px solid #fff;
+  margin-bottom: 15px;
+}
+
+#checkout-summary-title {
+  padding: 45px 0;
+  font-weight: 500;
+}
+
+#checkout-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid #fafafa;
+}
+
+.preview-price {
+  display: flex;
+  justify-content: end;
+}
+
+.preview-details {
+  margin-left: 10px;
+}
+
+.preview-details p:nth-child(2) {
+  margin-top: 10px;
+}
+
+.preview-total {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-items: end;
+  margin-top: 15px;
+}
+
+.subtotal-preview,
+.subtotal-cost {
+  text-align: right;
+}
+
+.preview-total p {
+  padding: 5px 0;
+}
+
+.subtotal-cost p:nth-child(3) {
+  font-weight: 600;
+}
+
+#checkout-summary-headings {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #fafafa;
+  padding-bottom: 15px;
+}
+
+#checkout-summary-headings p:nth-child(2) {
+  text-align: right;
+}
+
+.exclaimation-icon {
+  margin-right: 5px;
+}
+
+#checkout-form p:last-child {
+  padding: 30px 0;
+}
+
+/* 16. Media Query */
+
+/* 16.1 Navigation Query */
 
 @media screen and (max-width: 1000px) {
 
@@ -1535,7 +1683,7 @@ a.save:hover {
 
 }
 
-/* 15.2 Store Query */
+/* 16.2 Store Query */
 
 @media screen and (min-width: 640px) {
 
@@ -1545,7 +1693,7 @@ a.save:hover {
 
 }
 
-/* 15.3 Product Details Query */
+/* 16.3 Product Details Query */
 
 @media (min-width: 900px) {
 
@@ -1592,7 +1740,7 @@ a.save:hover {
 
 }
 
-/* 15.4 Bag Query */
+/* 16.4 Bag Query */
 
 @media (min-width: 900px) {
 
