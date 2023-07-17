@@ -84,3 +84,6 @@ udiskie==2.4.2
 urllib3==1.26.15
 validate-pyproject==0.12.2.post1.dev0+g2940279.d20230508
 webencodings==0.5.1
+
+
+#Add pillow and crispy_forms
