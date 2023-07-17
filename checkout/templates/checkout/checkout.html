@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% load bag_tools %}
+
+{% block title %}checkout{% endblock %}
+
+{% block content %}
+
+<div class="bag-container">
+  <div id="checkout-title">
+    <h2>Checkout</h2>
+  </div>
+  <div id="checkout-grid">
+    <div id="checkout-form">
+      <p id="checkout-top">Please fill the below form</p>
+      <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+        {% csrf_token %}
+        <fieldset>
+          <legend>Details:</legend>
+          {{ order_form.full_name | as_crispy_field }}
+          {{ order_form.email | as_crispy_field }}
+        </fieldset>
+        <fieldset>
+          <legend>Delivery:</legend>
+          {{ order_form.phone_number | as_crispy_field }}
+          {{ order_form.country | as_crispy_field }}
+          {{ order_form.postcode | as_crispy_field }}
+          {{ order_form.town_or_city | as_crispy_field }}
+          {{ order_form.street_address1 | as_crispy_field }}
+          {{ order_form.street_address2 | as_crispy_field }}
+          {{ order_form.county | as_crispy_field }}
+          <div class="form-details-save">
+            {% if user.is_authenticated %}
+              <label for="id-save-info">Save delivery details:</label>
+              <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
+            {% else %}
+              <label>
+                <a href="{% url 'account_signup' %}">Register</a> or
+                <a href="{% url 'account_login' %}">Login</a> to save this information
+              </label>
+            {% endif %}
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend id="payment-text">Payment</legend>
+          <!-- A Stripe card element will go here -->
+          <div id="card-element"></div>
+           <!-- Used to display form errors -->
+          <div id="card-errors"></div>
+          <div class="payment buttons">
+            <a href="{% url 'view_bag' %}" class="back-btn btn">
+              <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+              </span>
+              <span class="">Adjust Bag</span>
+            </a>
+            <button id="submit-btn" class="btn">
+              <span class="">Complete Order</span>
+              <span class="icon">
+                <i class="fas fa-lock"></i>
+              </span>
+            </button>
+            <p>
+              <span class="exclaimation-icon">
+                <i class="fas fa-exclamation-circle"></i>
+              </span>
+              <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+            </p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div id="checkout-summary">
+      <p id="checkout-summary-title">Order Summary ({{ product_count }})</p>
+      <div id="checkout-summary-headings">
+        <p>Item:</p>
+        <p>Subtotal:</p>
+      </div>
+      <div id="checkout-preview">
+        {% for item in bag_items %}
+          <div id>
+            <a href="{% url 'product_detail' item.product.id %}">
+              {% if item.product.image %}
+                  <img class="" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+              {% else %}
+                  <img class="" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+              {% endif %}
+            </a>
+          </div>
+          <div class="preview-details">
+            <p class=""><strong>{{ item.product.name }}</strong></p>
+            <p class="">Qty: {{ item.quantity }}</p>
+          </div>
+          <div class="preview-price">
+            <p class="">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="preview-total">
+        <div class="subtotal-preview">
+          <p>Bag Total:</p>
+          <p>Delivery:</p>
+          <p>Grand Total:</p>
+        </div>
+        <div class="subtotal-cost">
+          <p>${{ total|floatformat:2 }}</p>
+          <p>${{ delivery|floatformat:2 }}</p>
+          <p>${{ grand_total|floatformat:2 }}</p>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}
