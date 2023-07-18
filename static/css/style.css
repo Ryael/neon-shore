@@ -913,7 +913,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 }
 
 #form-container input,
-#payment-form input {
+#payment-form input,
+#card-element {
   border-width: 0px;
   outline: none;
   font-weight: 400;
@@ -927,6 +928,10 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   box-shadow: 0px 4px 4px #9f9f9f;
   margin: 14px 0 30px 0;
   border-radius: 4px;
+}
+
+#card-element {
+  margin-bottom: 36px;
 }
 
 #form-container input::placeholder {
@@ -1585,15 +1590,17 @@ a.save:hover {
 }
 
 #payment-text {
-  padding: 12.5px 0;
+  padding-top: 14.5px;
 }
 
 #checkout-grid .back-btn {
   font-size: 0.69rem;
+  padding: 1em 2.5em;
 }
 
 #checkout-grid #submit-btn {
   cursor: pointer;
+  padding: 1em 2.5em;
 }
 
 #checkout-summary img {
@@ -1664,6 +1671,10 @@ a.save:hover {
 
 #checkout-form p:last-child {
   padding: 30px 0;
+}
+
+#card-errors {
+  padding: 12.5px 0;
 }
 
 /* 16. Media Query */
