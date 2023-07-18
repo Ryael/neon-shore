@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}thank you{% endblock %}
+
+{% block content %}
+
+<div class="bag-container">
+  <div id="order-success-title">
+    <h2>thank you</h2>
+  </div>
+    <div id="order-success">
+      <p>Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+      <div class="product-button">
+        <a class="btn" href="{% url 'products' %}">Keep Shopping</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
