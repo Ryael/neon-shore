@@ -87,3 +87,4 @@ webencodings==0.5.1
 
 
 #Add pillow and crispy_forms
+#Add stripe

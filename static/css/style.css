@@ -931,7 +931,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 }
 
 #card-element {
-  margin-bottom: 36px;
+  margin-bottom: 0px;
 }
 
 #form-container input::placeholder {
@@ -1673,8 +1673,17 @@ a.save:hover {
   padding: 30px 0;
 }
 
+.payment-buttons {
+  margin-top: 12.5px;
+}
+
 #card-errors {
-  padding: 12.5px 0;
+  padding: 25.5px 0 12.5px 0
+}
+
+#card-errors .icon {
+  font-size: 12px;
+  margin-right: 5px;
 }
 
 /* 16. Media Query */
