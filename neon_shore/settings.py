@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['neon-shore-a156870f9760.herokuapp.com']
+ALLOWED_HOSTS = ['neon-shore-a156870f9760.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'allauth',
-    'allauth.account'
+    'allauth.account',
     'allauth.socialaccount',
     'home',
     'products',
