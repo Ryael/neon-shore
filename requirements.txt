@@ -3,7 +3,7 @@ chardet==5.1.0
 Django==3.2.20
 django-allauth==0.41.0
 django-countries==6.0
-django-crispy-forms==1.14.1
+django-crispy-forms==1.14.0
 gunicorn==21.1.0
 idna==3.4
 oauthlib==3.2.2
