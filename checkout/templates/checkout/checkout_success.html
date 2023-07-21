@@ -31,14 +31,22 @@
           <p class="order-right">{{ order.full_name }}</p>
           <p class="order-left">Address 1:</p>
           <p class="order-right">{{ order.street_address1 }}</p>
-          <p class="order-left">Address 2:</p>
-          <p class="order-right">{{ order.street_address2 }}</p>
-          <p class="order-left">County:</p>
-          <p class="order-right">{{ order.county }}</p>
+          {% if order.street_address2 %}
+            <p class="order-left">Address 2:</p>
+            <p class="order-right">{{ order.street_address2 }}</p>
+          {% endif %}
+
+          {% if order.county %}
+            <p class="order-left">County:</p>
+            <p class="order-right">{{ order.county }}</p>
+          {% endif %}
           <p class="order-left">Town/City:</p>
           <p class="order-right">{{ order.town_or_city }}</p>
-          <p class="order-left">Postal Code:</p>
-          <p class="order-right">{{ order.postcode }}</p>
+
+          {% if order.postcode %}
+            <p class="order-left">Postal Code:</p>
+            <p class="order-right">{{ order.postcode }}</p>
+          {% endif %}
           <p class="order-left">Country:</p>
           <p class="order-right">{{ order.country }}</p>
           <p class="order-left">Phone Number:</p>
