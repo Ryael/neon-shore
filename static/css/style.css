@@ -21,7 +21,8 @@
 /*/// 13. Product Details ///*/
 /*/// 14. Bag ///*/
 /*/// 15. Checkout ///*/
-/*///   15.1 Checkout ///*/
+/*///   15.1 Checkout Sucess ///*/
+/*///   15.2 Checkout Overlay ///*/
 /*/// 16. Media Query ///*/
 /*///   16.1 Navigation Query ///*/
 /*///   16.2 Store Query ///*/
@@ -1753,6 +1754,27 @@ a.save:hover {
 .order-right {
   display: flex;
   justify-content: end;
+}
+
+/* 15.1 Checkout Sucess */
+
+#loading-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
 }
 
 /* 16. Media Query */
