@@ -23,13 +23,14 @@
 /*/// 15. Checkout ///*/
 /*///   15.1 Checkout Sucess ///*/
 /*///   15.2 Checkout Overlay ///*/
-/*/// 16. Media Query ///*/
-/*///   16.1 Navigation Query ///*/
-/*///   16.2 Store Query ///*/
-/*///   16.3 Product Details Query ///*/
-/*///   16.4 Bag Query ///*/
-/*///   16.5 Checkout Query ///*/
-/*///   16.6 Checkout Success Query ///*/
+/*/// 17. SweetAlert Toast Modal ///*/
+/*/// 17. Media Query ///*/
+/*///   17.1 Navigation Query ///*/
+/*///   17.2 Store Query ///*/
+/*///   17.3 Product Details Query ///*/
+/*///   17.4 Bag Query ///*/
+/*///   17.5 Checkout Query ///*/
+/*///   17.6 Checkout Success Query ///*/
 
 /* 1. Fonts */
 
@@ -1777,9 +1778,16 @@ a.save:hover {
   height: 100%;
 }
 
-/* 16. Media Query */
+/* SweetAlert Toast Modal */
 
-/* 16.1 Navigation Query */
+.swal2-popup.swal2-toast.swal2-show {
+  position: relative;
+  top: 60px;
+}
+
+/* 17. Media Query */
+
+/* 17.1 Navigation Query */
 
 @media screen and (max-width: 1000px) {
 
@@ -1795,7 +1803,7 @@ a.save:hover {
 }
 
 
-/* 16.2 Store Query */
+/* 17.2 Store Query */
 
 @media screen and (min-width: 640px) {
 
@@ -1805,7 +1813,7 @@ a.save:hover {
 
 }
 
-/* 16.3 Product Details Query */
+/* 17.3 Product Details Query */
 
 @media (min-width: 900px) {
 
@@ -1852,7 +1860,7 @@ a.save:hover {
 
 }
 
-/* 16.4 Bag Query */
+/* 17.4 Bag Query */
 
 @media (min-width: 900px) {
 
@@ -1940,7 +1948,7 @@ a.save:hover {
 
 }
 
-/* 16.5 Checkout Query */
+/* 17.5 Checkout Query */
 
 @media (max-width: 970px) {
 
@@ -1955,7 +1963,7 @@ a.save:hover {
 
 }
 
-/* 16.6 Checkout Success Query */
+/* 17.6 Checkout Success Query */
 
 @media (max-width: 620px) {
 
