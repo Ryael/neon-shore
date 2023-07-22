@@ -1331,7 +1331,7 @@ input[type='number'] {
 #bag .items .bag-section {
   display: table-cell;
   vertical-align: middle;
-  width: 90%;
+  width: 100%;
   }
 
 #bag .items .item-image {
@@ -1876,6 +1876,10 @@ a.save:hover {
     margin: 1em 0 0.5em 0;
   }
 
+  #bag .items {
+    padding: 1.5em 1.5em 0 1.5em;
+  }
+
   .bag-wrapper {
     display: flex;
     justify-content: center;
@@ -1932,12 +1936,16 @@ a.save:hover {
 
   a.save {
     grid-row: 3;
-    margin: 1.5em 1.5em 0 0;
+    margin: 2em 1.5em 0 0;
   }
 
   a.remove {
     grid-row: 3;
-    margin: 1.5em 0em 0 7.5em;
+    margin: 2em 0em 0 7.5em;
+  }
+
+  #bag .items .bag-section.product-total {
+    margin: auto;
   }
 
   #bag .items .bag-section.product-total form {
