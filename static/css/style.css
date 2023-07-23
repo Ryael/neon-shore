@@ -918,7 +918,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 
 #form-container input,
 #payment-form input,
-#card-element {
+#card-element,
+#id_country {
   border-width: 0px;
   outline: none;
   font-weight: 400;
@@ -932,6 +933,12 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   box-shadow: 0px 4px 4px #9f9f9f;
   margin: 14px 0 30px 0;
   border-radius: 4px;
+}
+
+#id_country {
+  width: 99%;
+  color: #9b9b9b;
+  text-transform: lowercase;
 }
 
 #card-element {
@@ -1757,7 +1764,7 @@ a.save:hover {
   justify-content: end;
 }
 
-/* 15.1 Checkout Sucess */
+/* 15.2 Checkout Overlay */
 
 #loading-overlay {
   display: none;
@@ -1801,7 +1808,6 @@ a.save:hover {
     display: block;
   }
 }
-
 
 /* 17.2 Store Query */
 

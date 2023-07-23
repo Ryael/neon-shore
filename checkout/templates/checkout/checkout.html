@@ -24,12 +24,12 @@
         <fieldset>
           <legend>Delivery:</legend>
           {{ order_form.phone_number | as_crispy_field }}
-          {{ order_form.country | as_crispy_field }}
-          {{ order_form.postcode | as_crispy_field }}
-          {{ order_form.town_or_city | as_crispy_field }}
           {{ order_form.street_address1 | as_crispy_field }}
           {{ order_form.street_address2 | as_crispy_field }}
+          {{ order_form.town_or_city | as_crispy_field }}
           {{ order_form.county | as_crispy_field }}
+          {{ order_form.postcode | as_crispy_field }}
+          {{ order_form.country | as_crispy_field }}
           <div class="form-details-save">
             {% if user.is_authenticated %}
               <label for="id-save-info">Save delivery details:</label>
@@ -48,6 +48,7 @@
           <div id="card-element"></div>
            <!-- Used to display form errors -->
           <div id="card-errors"></div>
+          <input type="hidden" value="{{ client_secret }}" name="client_secret">
         </fieldset>
         <div class="payment-buttons">
           <a href="{% url 'view_bag' %}" class="back-btn btn">
