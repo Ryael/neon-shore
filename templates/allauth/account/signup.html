@@ -4,31 +4,27 @@
 
 {% block title %}register{% endblock %}
 
-{% block content %}
-
-<div id="form-container">
-  <div id="signup-form">
-    <h2>{% trans "Register" %}</h2>
-    <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-      {% csrf_token %}
-      {{ form.as_p }}
-      {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
-      {% endif %}
-      <button type="submit" class="btn">{% trans "Register" %}
-      </button>
-    </form>
-    <div id="end-form">
-      <p>
-        {% blocktrans %}
-          Already have an account?
-          <a href="{{ login_url }}">
-            <span>Login here.</span>
-          </a>
-        {% endblocktrans %}
-      </p>
-    </div>
+{% block inner_content %}
+<div id="signup-form">
+  <h2>{% trans "Register" %}</h2>
+  <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+    {% endif %}
+    <button type="submit" class="btn">{% trans "Register" %}
+    </button>
+  </form>
+  <div id="body-form">
+    <p>
+      {% blocktrans %}
+        Already have an account?
+        <a href="{{ login_url }}">
+          <span>Login here.</span>
+        </a>
+      {% endblocktrans %}
+    </p>
   </div>
 </div>
-
 {% endblock %}
