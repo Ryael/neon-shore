@@ -974,7 +974,9 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 #signup-form,
 #login-form,
 #logout-form,
-#email-form {
+#email-form,
+#account-info,
+#password-form {
   font-size: 17px;
   width: 340px;
   border-bottom: 1px solid #ccc;
@@ -1003,14 +1005,16 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 }
 
 #signup-form ul,
-#login-form ul {
+#login-form ul,
+#password-form ul {
   color: var(--font-color);
   list-style: none;
   margin: 0px 12.5px 25px 12.5px;
 }
 
 #signup-form li,
-#login-form li {
+#login-form li,
+#password-form li {
   padding: 12.5px 0px;
 }
 
@@ -1077,7 +1081,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 }
 
 .buttonHolder,
-.add_email {
+.add_email,
+.password_change {
   display: flex;
   flex-direction: column;
 }
@@ -1087,7 +1092,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 }
 
 .buttonHolder .btn,
-.add_email .btn {
+.add_email .btn,
+#password-form .btn {
   margin: 12.5px 0 12.5px 0;
   font-size: 0.778rem;
   padding: 1.5em 2em;
