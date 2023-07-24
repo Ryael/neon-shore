@@ -906,17 +906,17 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 
 /* 11. Forms */
 
-#form-container {
+#allauth-container {
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   width: 100vw;
   min-height: 100vh;
-  padding: 100px 0;
+  padding: 162px 0;
 }
 
-#form-container input,
+#allauth-container input,
 #payment-form input,
 #card-element,
 #id_country {
@@ -945,7 +945,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   margin-bottom: 0px;
 }
 
-#form-container input::placeholder {
+#allauth-container input::placeholder {
   color: transparent;
 }
 
@@ -953,21 +953,22 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   text-transform: lowercase;
 }
 
-#form-container label,
+#allauth-container label,
 #checkout-form label {
   padding-left: 3px;
   font-weight: 400;
 }
 
-#form-container h2 {
+#allauth-container h2 {
   font-size: 16px;
-  width: 280px;
   margin: 0 auto;
   font-weight: bold;
   text-align: center;
   font-size: 32px;
-  margin-bottom: 65px;
+  margin-bottom: 35px;
   letter-spacing: 2px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
 }
 
 #signup-form,
@@ -975,6 +976,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 #logout-form {
   font-size: 17px;
   width: 340px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
 }
 
 #payment-form {
@@ -1041,7 +1044,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 }
 
 #logout-form p {
-  margin-bottom: 65px;
+  padding: 30px 0 35px 0;
   text-align: center;
 }
 
