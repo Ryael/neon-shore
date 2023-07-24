@@ -1027,7 +1027,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   font-size: 0.778rem;
 }
 
-#logout-form .btn {
+#logout-form .btn,
+.confirm-email .btn {
   text-align: center;
   width: 49%;
   height: 50px;
@@ -1072,6 +1073,10 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   padding: 12.5px 0;
 }
 
+#email-form .opening-pg {
+  padding: 30px 0 35px 0;
+}
+
 #email-form h3 {
   padding: 15px 0;
 }
@@ -1085,9 +1090,14 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 .buttonHolder,
 .add_email,
 .password_change,
-.password_reset {
+.password_reset,
+.confirm-email {
   display: flex;
   flex-direction: column;
+}
+
+.confirm-email {
+  align-items: center;
 }
 
 .buttonHolder {
