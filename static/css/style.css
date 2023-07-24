@@ -1065,7 +1065,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 }
 
 #body-form p,
-#email-form p {
+#email-form p,
+#password-form p {
   text-align: left;
   padding: 12.5px 0;
 }
@@ -1082,7 +1083,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 
 .buttonHolder,
 .add_email,
-.password_change {
+.password_change,
+.password_reset {
   display: flex;
   flex-direction: column;
 }
@@ -1103,8 +1105,20 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   margin-bottom: 17.5px;
 }
 
+#password-form .password_change .btn {
+  margin-bottom: 20px;
+}
+
+#password-form .password_reset .btn {
+  margin-top: 0;
+}
+
 .ctrlHolder {
   padding-top: 5px;
+}
+
+#password-form p:last-child {
+  padding: 15px 0 17.5px 0;
 }
 
 /* 12. Store */
