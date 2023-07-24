@@ -973,7 +973,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 
 #signup-form,
 #login-form,
-#logout-form {
+#logout-form,
+#email-form {
   font-size: 17px;
   width: 340px;
   border-bottom: 1px solid #ccc;
@@ -1043,6 +1044,13 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   margin-bottom: 17px;
 }
 
+#allauth-container .email_list input {
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  margin: 0;
+}
+
 #logout-form p {
   padding: 30px 0 35px 0;
   text-align: center;
@@ -1052,9 +1060,45 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   text-align: center;
 }
 
-#body-form p {
+#body-form p,
+#email-form p {
   text-align: left;
   padding: 12.5px 0;
+}
+
+#email-form h3 {
+  padding: 15px 0;
+}
+
+.verified,
+.unverified,
+.primary {
+  font-weight: 500;
+}
+
+.buttonHolder,
+.add_email {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonHolder {
+  padding-top: 17.5px;
+}
+
+.buttonHolder .btn,
+.add_email .btn {
+  margin: 12.5px 0 12.5px 0;
+  font-size: 0.778rem;
+  padding: 1.5em 2em;
+}
+
+.add_email .btn {
+  margin-bottom: 17.5px;
+}
+
+.ctrlHolder {
+  padding-top: 5px;
 }
 
 /* 12. Store */
