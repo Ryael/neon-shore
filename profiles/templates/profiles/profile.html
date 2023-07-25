@@ -4,11 +4,33 @@
 
 {% block content %}
 
-<div class="bag-container">
-  <div id="bag-title">
-    <h2>My Profile</h2>
-    <p>{{ profile }}</p>
+<section class="profile-container">
+  <div id="profile-wrapper">
+    <div id="profile">
+      <div class="profile-navigation">
+        <span class="profile-icon profile-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <div id="profile-links-container">
+            <div class="profile-link active"><span>Profile</span></div>
+            <div class="profile-link"><span>Details</span></div>
+            <div class="profile-link"><span>Orders</span></div>
+            <div class="profile-link"><span>Account</span></div>
+        </div>
+      </div>
+      <div class="profile-details">
+        <div class="general">
+            <h2 class="title">Profile</h2>
+            <p>Welcome, {{profile}}!</p>
+            <p>This is your profile dashboard, where you can add, modify, and delete addresses, view all orders, and change your account details such as your password and e-mail.</p>
+            <p>We hope you have a pleasant shopping experience!</p>
+            <button class="btn">Store</button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 {% endblock %}
