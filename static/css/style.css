@@ -32,6 +32,7 @@
 /*///   18.4 Bag Query ///*/
 /*///   18.5 Checkout Query ///*/
 /*///   18.6 Checkout Success Query ///*/
+/*///   18.7 Profile Query ///*/
 
 /* 1. Fonts */
 
@@ -2017,25 +2018,43 @@ a.save:hover {
 
 .profile-navigation.show:before {
   transition: all 0.6s ease;
-  width: calc(100vw - 220px);
+  width: calc(90vw - 220px);
 }
 
-.profile-icon {
+.profile-navigation.show .profile-menu {
   right: 10px;
 }
 
-.profile-icon span:nth-child(1) {
+.profile-navigation.show .profile-menu span:nth-child(1) {
   width: 13px;
   transform: translate(-8px, -4px) rotate(-45deg);
 }
 
-.profile-icon span:nth-child(3) {
+.profile-navigation.show .profile-menu span:nth-child(3) {
   width: 13px;
   transform: translate(-8px, 4px) rotate(45deg);
 }
 
-#profile-links-container {
-  display: flex;
+.profile-navigation.show .profile-link {
+  transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.15);
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.profile-navigation.show .profile-link:nth-child(1) {
+  transition-delay: 0.4s;
+}
+
+.profile-navigation.show .profile-link:nth-child(2) {
+  transition-delay: 0.6s;
+}
+
+.profile-navigation.show .profile-link:nth-child(3) {
+  transition-delay: 0.8s;
+}
+
+.profile-navigation.show .profile-link:nth-child(4) {
+  transition-delay: 1s;
 }
 
 .profile-link {
@@ -2299,6 +2318,67 @@ a.save:hover {
 
   .order-right {
     justify-content: flex-start;
+  }
+
+}
+
+/* 18.7 Profile Query */
+
+@media screen and (max-width: 799px) {
+
+  #profile {
+    position: relative;
+  }
+
+  .profile-container {
+    padding: 113px 5%;
+  }
+
+  #profile-wrapper {
+    height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .profile-navigation {
+    max-width: 50px;
+    position: absolute;
+    height: 100%;
+  }
+
+  .profile-navigation:before {
+    content: '';
+    position: absolute;
+    background: #c4c4c4;
+    width: 0;
+    height: 100%;
+    left: 100%;
+    border-radius: 0px 3px 3px 0px;
+    transition: all 0.6s ease;
+    opacity: 0.8;
+  }
+
+  .profile-menu {
+    display: flex;
+  }
+
+  .profile-navigation .profile-link {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .profile-details {
+    padding: 50px 70px 50px 120px;
+  }
+
+  .general {
+    margin-bottom: 50px;
+  }
+
+@media screen and (max-width: 600px) {
+
+  .profile-details {
+    padding: 50px 30px 50px 80px;
   }
 
 }
