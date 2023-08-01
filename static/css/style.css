@@ -1978,6 +1978,10 @@ a.save:hover {
   z-index: 1;
 }
 
+.profile-link a {
+  color: inherit;
+}
+
 .profile-link:before {
   content: '';
   position: absolute;
