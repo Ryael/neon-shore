@@ -162,3 +162,16 @@ window.addEventListener("load", event => {
         }
     }
 });
+
+let countrySelected = $('#id_default_country').val();
+if(!countrySelected) {
+    $('#id_default_country').css('color', '#9b9b9b');
+};
+$('#id_default_country').change(function() {
+    countrySelected = $(this).val();
+    if(!countrySelected) {
+        $(this).css('color', '#9b9b9b');
+    } else {
+        $(this).css('color', '#4f5356');
+    }
+});
