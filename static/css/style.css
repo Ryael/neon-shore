@@ -921,7 +921,9 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 #allauth-container input,
 #payment-form input,
 #card-element,
-#id_country {
+#id_country,
+.profile-details input,
+#id_default_country {
   border-width: 0px;
   outline: none;
   font-weight: 400;
@@ -937,10 +939,28 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   border-radius: 4px;
 }
 
-#id_country {
-  width: 99%;
-  color: #9b9b9b;
+.profile-details input,
+#id_default_country {
   text-transform: lowercase;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  margin: 15px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#id_country,
+#id_default_country {
+  color: var(--font-color);
+  text-transform: lowercase;
+}
+
+#id_default_country option:not(:first-child) {
+  color: var(--font-color);
+}
+
+#id_default_country option:first-child {
+  color: #9b9b9b;
 }
 
 #card-element {
@@ -978,11 +998,18 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 #logout-form,
 #email-form,
 #account-info,
-#password-form {
+#password-form,
+#profile-update-form {
   font-size: 17px;
   width: 340px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
+}
+
+#profile-update-form {
+  width: auto;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 #payment-form {
@@ -1021,7 +1048,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 }
 
 #signup-form .btn,
-#login-form .btn {
+#login-form .btn,
+#profile-update-form .btn {
   width: 99%;
   height: 50px;
   font-weight: 600;
@@ -2118,6 +2146,10 @@ a.save:hover {
   font-size: 0.778rem;
   width: 195px;
   margin-top: 15px;
+}
+
+.profile-details h3 {
+  padding: 12.5px 0;
 }
 
 /* 18. Media Query */
