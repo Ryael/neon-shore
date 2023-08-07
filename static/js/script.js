@@ -163,6 +163,8 @@ window.addEventListener("load", event => {
     }
 });
 
+/* Country Field */
+
 let countrySelected = $('#id_default_country').val();
 if(!countrySelected) {
     $('#id_default_country').css('color', '#9b9b9b');
