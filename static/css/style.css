@@ -25,6 +25,7 @@
 /*///   15.2 Checkout Overlay ///*/
 /*/// 16. SweetAlert Toast Modal ///*/
 /*/// 17. Profile ///*/
+/*///   17.1 Profile Order History ///*/
 /*/// 18. Media Query ///*/
 /*///   18.1 Navigation Query ///*/
 /*///   18.2 Store Query ///*/
@@ -2104,10 +2105,6 @@ a.save:hover {
   flex-direction: column;
 }
 
-.general {
-   margin-bottom: 50px;
-}
-
 .title {
   color: var(--font-color);
   font-weight: 500;
@@ -2150,6 +2147,43 @@ a.save:hover {
 
 .profile-details h3 {
   padding: 12.5px 0;
+}
+
+/* 17.1 Profile Order History */
+
+#order-history {
+  display: flex;
+}
+
+#order-table {
+  width: 80%;
+  text-align: left;
+}
+
+#order-table td,
+#order-table th {
+  padding: 10px;
+}
+
+#order-table th {
+  white-space: nowrap;
+}
+
+#order-table td {
+  vertical-align: middle;
+}
+
+#order-table i {
+  transition: 0.2s ease-in-out;
+}
+
+#order-table i:hover {
+  opacity: 0.6;
+  transition: 0.2s ease-in-out;
+}
+
+#smaller-title {
+  font-size: 18px;
 }
 
 /* 18. Media Query */
@@ -2417,4 +2451,121 @@ a.save:hover {
     padding: 50px 30px 50px 80px;
   }
 
+}
+
+/* 18.8 Profile Order Query */
+
+@media screen and (max-width: 650px) {
+
+  #order-table {
+    width: auto;
+    border: none;
+  }
+
+  #order-table tr {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px #ccc solid;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  #order-table tr:nth-child(2n) {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  #order-table tr:nth-child(2n + 1) {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  #order-table,
+  tr,
+  td {
+    display: block;
+  }
+
+  #order-table td:first-child {
+    background-color: transparent;
+    border-bottom: 1px rgba(210, 238, 249, 0.8) dashed;
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    width: auto;
+    font-weight: 500;
+    padding-left: 14px;
+  }
+
+  #order-table tr:first-child {
+    display: none;
+  }
+
+  #order-table td:not(:first-child) {
+    clear: both;
+    margin-left: 100px;
+    padding: 4px 20px 4px 90px;
+    position: relative;
+    text-align: left;
+  }
+
+  #order-table td:not(:first-child):before {
+    font-weight: 600;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+  }
+
+  #order-table td:nth-child(2):before {
+    content: "Date:";
+  }
+
+  #order-table td:nth-child(3):before {
+    content: "Price:";
+  }
+
+  #order-table tr {
+    padding: 20px 0;
+    position: relative;
+    border-bottom: 1px rgba(210, 238, 249, 0.8) dashed;
+  }
+
+  #order-table tr:first-child {
+    display: none;
+  }
+
+  #order-table td {
+    padding-bottom: 8px;
+  }
+
+  #order-table tr {
+    border: 1px rgba(210, 238, 249, 0.8) solid;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 0;
+    width: 200px;
+  }
+
+  #order-table td:first-child {
+    background-color: transparent;
+    border-bottom: 1px rgba(210, 238, 249, 0.8) dashed;
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    width: auto;
+  }
+
+  #order-table td:not(:first-child) {
+    margin: 0;
+    padding: 5px 1em;
+    width: 100%;
+  }
+
+  #order-table td:not(:first-child):before {
+    font-size: 0.8em;
+    padding-top: 0.3em;
+    position: relative;
+  }
+
+  #order-table td:last-child {
+    padding-bottom: 1rem;
+  }
 }
