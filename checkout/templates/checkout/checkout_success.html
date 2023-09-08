@@ -55,14 +55,18 @@
         <h3 class="billing-title">Billing Details:</h3>
         <div class="billing-info">
           <p class="order-left">Order Total:</p>
-          <p class="order-right">{{ order.order_total }}</p>
+          <p class="order-right">${{ order.order_total }}</p>
           <p class="order-left">Delivery:</p>
-          <p class="order-right">{{ order.delivery_cost }}</p>
+          <p class="order-right">${{ order.delivery_cost }}</p>
           <p>Grand Total:</p>
-          <p class="order-right">{{ order.grand_total }}</p>
+          <p class="order-right">${{ order.grand_total }}</p>
         </div>
         <div class="product-button">
-          <a class="btn" href="{% url 'products' %}">Keep Shopping</a>
+          {% if from_profile %}
+            <a class="btn" href="{% url 'profile_orders' %}">Back to Profile</a>
+          {% else %}
+            <a class="btn" href="{% url 'products' %}">Keep Shopping</a>
+          {% endif %}
         </div>
       </div>
     </div>

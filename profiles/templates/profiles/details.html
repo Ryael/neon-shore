@@ -33,7 +33,7 @@
             <h2 class="title">Details</h2>
             <p>Welcome, {{profile}}!</p>
             <p> Here you can add new delivery details, or add or even delete existing details.</p>
-            <h3>Delivery Information</h3>
+            <h3 class="title" id="smaller-title">Delivery Information</h3>
             <form id="profile-update-form" action="{% url 'profile_details' %}" method="POST">
               {% csrf_token %}
               {{ form|crispy }}
