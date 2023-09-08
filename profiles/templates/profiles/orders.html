@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}my profile{% endblock %}
+{% block title %}orders{% endblock %}
 
 {% block content %}
 
@@ -30,11 +30,35 @@
       </div>
       <div class="profile-details">
         <div class="general">
-            <h2 class="title">Orders</h2>
-            <p>Welcome, {{profile}}!</p>
-            <p>This is your profile dashboard, where you can add, modify, and delete addresses, view all orders, and change your account details such as your password and e-mail.</p>
-            <p>We hope you have a pleasant shopping experience!</p>
-            <button class="btn">Store</button>
+          <h2 class="title">Orders</h2>
+          <p>Welcome, {{profile}}!</p>
+          <p>Here you can view all past orders, including full details, order totals, and the date of purchase.</p>
+          <p>We hope you have a pleasant shopping experience!</p>
+          <h3 class="title" id="smaller-title">Order History</h3>
+          <div id="order-history">
+            <table id="order-table">
+              <tbody>
+                <tr>
+                  <th>Order No.</th>
+                  <th>Date</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+                {% for order in orders %}
+                  <tr>
+                    <td>
+                      {{ order.order_number|truncatechars:8 }}
+                    </td>
+                    <td>{{ order.date|date:"SHORT_DATE_FORMAT" }}</td>
+                    <td>${{ order.grand_total }}</td>
+                    <td>
+                      <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}"><i class="fa-solid fa-eye"></i></a>
+                    </td>
+                  </tr>
+              {% endfor %}
+              <tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
