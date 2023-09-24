@@ -1813,6 +1813,10 @@ a.save:hover {
   margin-right: 5px;
 }
 
+#payment-form #id_country {
+  width: 98.88%;
+}
+
 /* 15.1 Checkout Success */
 
 #order-success-title {
