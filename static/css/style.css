@@ -421,6 +421,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   letter-spacing: 2px;
   text-transform: lowercase;
   text-decoration: none;
+  cursor: pointer;
   background: linear-gradient(
     to right,
     rgba(210, 238, 249, 0) 25%,
@@ -438,6 +439,12 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 
 .btn:hover {
   background-position: 99% 50%;
+}
+
+#profile-password-btn {
+  width: 142px;
+  margin-top: 15px;
+  font-weight: 500;
 }
 
 /* 7. Search */
@@ -1049,8 +1056,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 }
 
 #signup-form .btn,
-#login-form .btn,
-#profile-update-form .btn {
+#login-form .btn {
   width: 99%;
   height: 50px;
   font-weight: 600;
@@ -1377,6 +1383,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   padding: 1.2em 4em;
   font-size: 0.778rem;
   width: 195px;
+  font-weight: 500;
 }
 
 #product-details .product-button .form-control {
@@ -2145,12 +2152,27 @@ a.save:hover {
 .profile-details .btn {
   padding: 1.2em 4em;
   font-size: 0.778rem;
-  width: 195px;
   margin-top: 15px;
+  font-weight: 500;
 }
 
 .profile-details h3 {
   padding: 12.5px 0;
+}
+
+#password-reset {
+  display: block;
+}
+
+#password-reset span {
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+
+#password-reset span:hover {
+  opacity: 0.6;
+
+  transition: 0.3s ease-in-out;
 }
 
 /* 17.1 Profile Order History */

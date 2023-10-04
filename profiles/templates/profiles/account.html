@@ -32,9 +32,12 @@
         <div class="general">
             <h2 class="title">Account</h2>
             <p>Welcome, {{profile}}!</p>
-            <p>This is your profile dashboard, where you can add, modify, and delete addresses, view all orders, and change your account details such as your password and e-mail.</p>
-            <p>We hope you have a pleasant shopping experience!</p>
-            <button class="btn">Store</button>
+            <p>This is the account management part of your profile where you're able to modify your password as you wish.</p>
+            <p id="password-reset">Please note that you'll need to remember your current password. If you do not, then you may <a href="{% url 'account_reset_password' %}"><span>reset it here.</span></a>
+            </p>
+            <a href="{% url 'account_change_password' %}" class="btn" id="profile-password-btn">
+              Change Password
+            </a>
         </div>
       </div>
     </div>
