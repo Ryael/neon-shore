@@ -26,14 +26,15 @@
 /*/// 16. SweetAlert Toast Modal ///*/
 /*/// 17. Profile ///*/
 /*///   17.1 Profile Order History ///*/
-/*/// 18. Media Query ///*/
-/*///   18.1 Navigation Query ///*/
-/*///   18.2 Store Query ///*/
-/*///   18.3 Product Details Query ///*/
-/*///   18.4 Bag Query ///*/
-/*///   18.5 Checkout Query ///*/
-/*///   18.6 Checkout Success Query ///*/
-/*///   18.7 Profile Query ///*/
+/*/// 18. Error Pages ///*/
+/*/// 19. Media Query ///*/
+/*///   19.1 Navigation Query ///*/
+/*///   19.2 Store Query ///*/
+/*///   19.3 Product Details Query ///*/
+/*///   19.4 Bag Query ///*/
+/*///   19.5 Checkout Query ///*/
+/*///   19.6 Checkout Success Query ///*/
+/*///   19.7 Profile Query ///*/
 
 /* 1. Fonts */
 
@@ -463,6 +464,11 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 
 #profile-logout-btn {
   text-align: center;
+}
+
+.error-btn {
+  font-size: 0.850rem;
+  padding: 1em 3.5em;
 }
 
 /* 7. Search */
@@ -1219,7 +1225,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-#product-title {
+#product-title,
+#error-title {
   font-size: 32px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -2233,9 +2240,41 @@ a.save:hover {
   font-size: 18px;
 }
 
-/* 18. Media Query */
+/* 18. Error Pages */
 
-/* 18.1 Navigation Query */
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 162px 40px 100px 40px;
+  flex-direction: column;
+  height: 50vh;
+}
+
+#error-title {
+  font-size: 80px;
+  padding-bottom: 30px;
+}
+
+#error-message {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+#error-message h3 {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  padding-bottom: 45px;
+}
+
+#error-message p {
+  padding-bottom: 10px;
+}
+
+/* 19. Media Query */
+
+/* 19.1 Navigation Query */
 
 @media screen and (max-width: 1000px) {
 
@@ -2250,7 +2289,7 @@ a.save:hover {
   }
 }
 
-/* 18.2 Store Query */
+/* 19.2 Store Query */
 
 @media screen and (min-width: 640px) {
 
@@ -2260,7 +2299,7 @@ a.save:hover {
 
 }
 
-/* 18.3 Product Details Query */
+/* 19.3 Product Details Query */
 
 @media (min-width: 900px) {
 
@@ -2307,7 +2346,7 @@ a.save:hover {
 
 }
 
-/* 18.4 Bag Query */
+/* 19.4 Bag Query */
 
 @media (min-width: 900px) {
 
@@ -2403,7 +2442,7 @@ a.save:hover {
 
 }
 
-/* 18.5 Checkout Query */
+/* 19.5 Checkout Query */
 
 @media (max-width: 970px) {
 
@@ -2418,7 +2457,7 @@ a.save:hover {
 
 }
 
-/* 18.6 Checkout Success Query */
+/* 19.6 Checkout Success Query */
 
 @media (max-width: 620px) {
 
@@ -2439,7 +2478,7 @@ a.save:hover {
 
 }
 
-/* 18.7 Profile Query */
+/* 19.7 Profile Query */
 
 @media screen and (max-width: 799px) {
 
@@ -2500,7 +2539,7 @@ a.save:hover {
 
 }
 
-/* 18.8 Profile Order Query */
+/* 19.8 Profile Order Query */
 
 @media screen and (max-width: 650px) {
 
@@ -2614,5 +2653,14 @@ a.save:hover {
 
   #order-table td:last-child {
     padding-bottom: 1rem;
+  }
+}
+
+/* 19.9 Errors Query */
+
+@media screen and (max-width: 799px) {
+  .error-container {
+    padding: 100px 5%;
+    height: 60vh;
   }
 }
