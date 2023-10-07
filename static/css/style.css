@@ -319,6 +319,7 @@ body {
   transform: translate(0%, 100%);
   transition: opacity 0.2s ease, transform 0.3s ease;
   margin-bottom: 25px;
+  cursor: initial;
 }
 
 .mobile-list-item:before {
@@ -389,6 +390,7 @@ body.mobile-navigation-active #mobile-navigation-icons {
   transform: translateX(0%);
   transition: opacity 0.5s ease, transform 0.5s ease, color 0.5s ease;
   transition-delay: 1.3s;
+  cursor: initial;
 }
 
 body.mobile-navigation-active .mobile-list-item:nth-child(1) {
@@ -533,21 +535,20 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 #mobile-search {
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.2);
   margin-bottom: 50px;
 }
 
 #mobile-search-box {
-  border: none;
+  border: 1px solid #a0a0a0;
   padding: 1.5em 3em;
-  border-radius: 3px;
   width: 12em;
   transition: all 0.5s ease;
 }
 
 #mobile-search-box::placeholder {
   color: #a0a0a0;
-  font-size: 16px;
+  font-size: 18px;
+  text-transform: lowercase;
 }
 
 /* 9. Swiper */
