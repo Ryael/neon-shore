@@ -453,10 +453,16 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   background-position: 99% 50%;
 }
 
-#profile-password-btn {
+#profile-password-btn,
+#profile-logout-btn {
   width: 142px;
   margin-top: 15px;
   font-weight: 500;
+  margin-right: 5px;
+}
+
+#profile-logout-btn {
+  text-align: center;
 }
 
 /* 7. Search */
