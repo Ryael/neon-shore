@@ -87,3 +87,14 @@ This sprint's objective was to setup Stripe and all of its associated functional
 - Setting up Stripe proved to be relatively straightforward and not many issues were encountered, aside from styling the card-details field in order to match the rest of the checkout form. After consulting Stack Overflow and some trial-and-error, this too was resolved.
 - Webhooks were set-up but testing will be done after deployment as Stripe no longer supports webhook testing.
 - 3 bugs were discovered while working on implenting Stripe functionality, and while not directly related to it, they were still resolved as they proved to be quite simple and Stripe even helped understand why the delivery cost was not being displayed correctly.
+
+### Sprint #7:
+
+https://i.imgur.com/UtKZKBV.png
+
+Sprint #7 objective was used to setup the user profile portion of the website and all of its associated functionality, including the displaying of all past orders, saving and editing of personal details, and allowing users to change and reset their passwords.
+
+- This sprint began on 24/07/23 at 22:00 and finished on 26/07/23 at 5:00. The estimated story point total was 22 and the time taken to complete these user stories took approximately 25 hours, so this sprint was deemed to be mostly successful.
+- Creating a design for the user profile that would be both coherent with the rest of the website and also pleasant to navigate, while simultaneously also accomplishing the relevant user stories proved to be a challenge but the outcome is one I'm very content with in terms of design and functionality.
+- Once the user profile was designed and successfully implemented, the password reset and password change functionality of allauth was connected to the account tab. Following this, a logout button was added to both the regular and mobile navigation while the user is logged in.
+- No bugs were discovered and no other bugs were fixed during this sprint.
