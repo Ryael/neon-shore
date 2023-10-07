@@ -166,6 +166,12 @@ body {
   margin-right: 20px;
 }
 
+.logout {
+  width: 22px;
+  margin-left: 18px;
+  padding-top: 2px;
+}
+
 #navigation-menu a,
 .logo-text,
 #navigation-icons svg {
@@ -454,7 +460,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   margin-right: 19px;
 }
 
-#search input {
+#search .authenticated {
   background: none;
   border: none;
   outline: none;
@@ -472,6 +478,10 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   cursor: pointer;
   color: var(--font-color);
   top: 16px;
+  right: 116px;
+}
+
+#search .non-authenticated {
   right: 77px;
 }
 
