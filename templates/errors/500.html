@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}error 500{% endblock %}
+
+{% block content %}
+
+<section class="error-container">
+  <h2 id="error-title">500</h2>
+  <div id="error-message">
+    <h3>Internal Server Error</h3>
+    <p>
+      Whoops, it seems like you've gotten lost after swimming into unfamiliar waters to us.
+    </p>
+    <p>
+      Let us safely bring you back ashore.
+    </p>
+  </div>
+  <a href="/" class="btn error-btn">
+    Home
+  </a>
+</section>
+
+{% endblock %}
