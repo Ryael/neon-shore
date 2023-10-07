@@ -257,7 +257,6 @@ body {
   text-align: center;
   font-size: calc(2vw + 10px);
   font-weight: 200;
-  cursor: pointer;
 }
 
 .mobile-logo {
@@ -290,17 +289,24 @@ body {
   transition: 0.3s;
 }
 
-#mobile-navigation-icons .shopping-bag {
+#mobile-navigation-icons .shopping-bag,
+#mobile-navigation-icons .logout {
   transition: 0.3s;
 }
 
 #mobile-navigation-icons .shopping-bag svg,
 #mobile-navigation-icons .profile-icon svg {
-  height: 30px;
+  height: 35px;
+}
+
+#mobile-navigation-icons .logout {
+  width: 35px;
+  margin-left: 150px;
 }
 
 #mobile-navigation-icons .shopping-bag:hover,
-#mobile-navigation-icons .profile-icon:hover {
+#mobile-navigation-icons .profile-icon:hover,
+#mobile-navigation-icons .logout:hover {
   transition: 0.3s;
   filter: brightness(80%);
 }
@@ -319,7 +325,6 @@ body {
   transform: translate(0%, 100%);
   transition: opacity 0.2s ease, transform 0.3s ease;
   margin-bottom: 25px;
-  cursor: initial;
 }
 
 .mobile-list-item:before {
@@ -390,7 +395,6 @@ body.mobile-navigation-active #mobile-navigation-icons {
   transform: translateX(0%);
   transition: opacity 0.5s ease, transform 0.5s ease, color 0.5s ease;
   transition-delay: 1.3s;
-  cursor: initial;
 }
 
 body.mobile-navigation-active .mobile-list-item:nth-child(1) {
