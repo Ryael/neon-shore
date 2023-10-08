@@ -27,14 +27,15 @@
 /*/// 17. Profile ///*/
 /*///   17.1 Profile Order History ///*/
 /*/// 18. Error Pages ///*/
-/*/// 19. Media Query ///*/
-/*///   19.1 Navigation Query ///*/
-/*///   19.2 Store Query ///*/
-/*///   19.3 Product Details Query ///*/
-/*///   19.4 Bag Query ///*/
-/*///   19.5 Checkout Query ///*/
-/*///   19.6 Checkout Success Query ///*/
-/*///   19.7 Profile Query ///*/
+/*/// 19. About ///*/
+/*/// 20. Media Query ///*/
+/*///   20.1 Navigation Query ///*/
+/*///   20.2 Store Query ///*/
+/*///   20.3 Product Details Query ///*/
+/*///   20.4 Bag Query ///*/
+/*///   20.5 Checkout Query ///*/
+/*///   20.6 Checkout Success Query ///*/
+/*///   20.7 Profile Query ///*/
 
 /* 1. Fonts */
 
@@ -2272,9 +2273,58 @@ a.save:hover {
   padding-bottom: 10px;
 }
 
-/* 19. Media Query */
+/* 19. About */
 
-/* 19.1 Navigation Query */
+#about-blurb {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
+}
+
+#about-description {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+#about-description h3 {
+  font-size: 24px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+#about-description h4 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+#about-description p {
+  margin-bottom: 15px;
+}
+
+#about-description p:last-child {
+  margin-bottom: 0px;
+}
+
+#about-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-image img {
+  width: 210px;
+  border-radius: 100%;
+  transform: scaleX(-1);
+}
+
+/* 20. Media Query */
+
+/* 20.1 Navigation Query */
 
 @media screen and (max-width: 1000px) {
 
@@ -2289,7 +2339,7 @@ a.save:hover {
   }
 }
 
-/* 19.2 Store Query */
+/* 20.2 Store Query */
 
 @media screen and (min-width: 640px) {
 
@@ -2299,7 +2349,7 @@ a.save:hover {
 
 }
 
-/* 19.3 Product Details Query */
+/* 20.3 Product Details Query */
 
 @media (min-width: 900px) {
 
@@ -2346,7 +2396,7 @@ a.save:hover {
 
 }
 
-/* 19.4 Bag Query */
+/* 20.4 Bag Query */
 
 @media (min-width: 900px) {
 
@@ -2442,7 +2492,7 @@ a.save:hover {
 
 }
 
-/* 19.5 Checkout Query */
+/* 20.5 Checkout Query */
 
 @media (max-width: 970px) {
 
@@ -2457,7 +2507,7 @@ a.save:hover {
 
 }
 
-/* 19.6 Checkout Success Query */
+/* 20.6 Checkout Success Query */
 
 @media (max-width: 620px) {
 
@@ -2478,7 +2528,7 @@ a.save:hover {
 
 }
 
-/* 19.7 Profile Query */
+/* 20.7 Profile Query */
 
 @media screen and (max-width: 799px) {
 
@@ -2539,7 +2589,7 @@ a.save:hover {
 
 }
 
-/* 19.8 Profile Order Query */
+/* 20.8 Profile Order Query */
 
 @media screen and (max-width: 650px) {
 
@@ -2656,11 +2706,24 @@ a.save:hover {
   }
 }
 
-/* 19.9 Errors Query */
+/* 20.9 Errors Query */
 
 @media screen and (max-width: 799px) {
   .error-container {
     padding: 100px 5%;
     height: 60vh;
+  }
+}
+
+/* 20.10 About Query */
+
+@media screen and (max-width: 900px) {
+
+  #about-blurb {
+    grid-template-columns: 1fr;
+  }
+
+  #about-image img {
+    margin-top: 30px;
   }
 }
