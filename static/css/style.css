@@ -28,14 +28,19 @@
 /*///   17.1 Profile Order History ///*/
 /*/// 18. Error Pages ///*/
 /*/// 19. About ///*/
-/*/// 20. Media Query ///*/
-/*///   20.1 Navigation Query ///*/
-/*///   20.2 Store Query ///*/
-/*///   20.3 Product Details Query ///*/
-/*///   20.4 Bag Query ///*/
-/*///   20.5 Checkout Query ///*/
-/*///   20.6 Checkout Success Query ///*/
-/*///   20.7 Profile Query ///*/
+/*/// 20. Product Management ///*/
+/*/// 21. Media Query ///*/
+/*///   21.1 Navigation Query ///*/
+/*///   21.2 Store Query ///*/
+/*///   21.3 Product Details Query ///*/
+/*///   21.4 Bag Query ///*/
+/*///   21.5 Checkout Query ///*/
+/*///   21.6 Checkout Success Query ///*/
+/*///   21.7 Profile Query ///*/
+/*///   21.8 Profile Order Query ///*/
+/*///   21.9 Errors Query ///*/
+/*///   21.10 About Query ///*/
+/*///   21.11 Product Management Query ///*/
 
 /* 1. Fonts */
 
@@ -960,7 +965,10 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 #card-element,
 #id_country,
 .profile-details input,
-#id_default_country {
+#id_default_country,
+#product-management-form input,
+#id_category,
+#id_description {
   border-width: 0px;
   outline: none;
   font-weight: 400;
@@ -976,6 +984,14 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   border-radius: 4px;
 }
 
+#id_description {
+  height: 160px;
+}
+
+#id_category {
+  width: 97.2%;
+}
+
 .profile-details input,
 #id_default_country {
   text-transform: lowercase;
@@ -987,9 +1003,14 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 }
 
 #id_country,
-#id_default_country {
+#id_default_country,
+#id_category {
   color: var(--font-color);
   text-transform: lowercase;
+}
+
+#id_description {
+  padding-top: 10px;
 }
 
 #id_default_country option:not(:first-child) {
@@ -2356,9 +2377,32 @@ a.save:hover {
   transition: 0.3s ease-in-out;
 }
 
-/* 20. Media Query */
+/* 20. Product Management */
 
-/* 20.1 Navigation Query */
+#product-management {
+  padding: 30px 5%;
+  width: auto;
+}
+
+#product-management h5 {
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  align-items: initial;
+  display: flex;
+}
+
+#product-management .btn {
+  padding: 1.2em 4em;
+  font-size: 0.778rem;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+/* 21. Media Query */
+
+/* 21.1 Navigation Query */
 
 @media screen and (max-width: 1000px) {
 
@@ -2373,7 +2417,7 @@ a.save:hover {
   }
 }
 
-/* 20.2 Store Query */
+/* 21.2 Store Query */
 
 @media screen and (min-width: 640px) {
 
@@ -2383,7 +2427,7 @@ a.save:hover {
 
 }
 
-/* 20.3 Product Details Query */
+/* 21.3 Product Details Query */
 
 @media (min-width: 900px) {
 
@@ -2430,7 +2474,7 @@ a.save:hover {
 
 }
 
-/* 20.4 Bag Query */
+/* 21.4 Bag Query */
 
 @media (min-width: 900px) {
 
@@ -2527,7 +2571,7 @@ a.save:hover {
 
 }
 
-/* 20.5 Checkout Query */
+/* 21.5 Checkout Query */
 
 @media (max-width: 970px) {
 
@@ -2542,7 +2586,7 @@ a.save:hover {
 
 }
 
-/* 20.6 Checkout Success Query */
+/* 21.6 Checkout Success Query */
 
 @media (max-width: 620px) {
 
@@ -2563,7 +2607,7 @@ a.save:hover {
 
 }
 
-/* 20.7 Profile Query */
+/* 21.7 Profile Query */
 
 @media screen and (max-width: 799px) {
 
@@ -2624,7 +2668,7 @@ a.save:hover {
 
 }
 
-/* 20.8 Profile Order Query */
+/* 21.8 Profile Order Query */
 
 @media screen and (max-width: 650px) {
 
@@ -2741,7 +2785,7 @@ a.save:hover {
   }
 }
 
-/* 20.9 Errors Query */
+/* 21.9 Errors Query */
 
 @media screen and (max-width: 799px) {
   .error-container {
@@ -2750,7 +2794,7 @@ a.save:hover {
   }
 }
 
-/* 20.10 About Query */
+/* 21.10 About Query */
 
 @media screen and (max-width: 900px) {
 
