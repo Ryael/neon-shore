@@ -107,7 +107,8 @@ body {
 }
 
 .bag-container,
-.about-container {
+.about-container,
+.management-container {
   display: table;
   width: 75%;
   max-width: 960px;
@@ -1726,7 +1727,8 @@ a.save:hover {
 
 /* 15. Checkout */
 
-#checkout-title h2 {
+#checkout-title h2,
+#management-title h2 {
   font-size: 32px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -1746,7 +1748,8 @@ a.save:hover {
   justify-self: center;
 }
 
-#checkout-title {
+#checkout-title,
+#management-title {
   border-bottom: 1px solid #ccc;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2380,24 +2383,47 @@ a.save:hover {
 /* 20. Product Management */
 
 #product-management {
-  padding: 30px 5%;
-  width: auto;
+  display: grid;
+  justify-items: center;
+}
+
+#management-subtitle {
+  width: 400px;
+}
+
+#product-management-form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+#product-management input {
+  width
 }
 
 #product-management h5 {
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: 24px;
+  margin: 30px 0;
   font-weight: 500;
   letter-spacing: 2px;
   align-items: initial;
   display: flex;
 }
 
-#product-management .btn {
+#management-btns {
+  display: flex;
+}
+
+#management-btns .btn {
   padding: 1.2em 4em;
   font-size: 0.778rem;
   margin-top: 15px;
   font-weight: 500;
+}
+
+#management-btns a {
+  margin-right: 5px;
 }
 
 /* 21. Media Query */
@@ -2479,7 +2505,8 @@ a.save:hover {
 @media (min-width: 900px) {
 
   .bag-container,
-  .about-container {
+  .about-container,
+  .management-container {
     padding: 183px 4% 180px 4%;
   }
 
