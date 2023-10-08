@@ -4,17 +4,22 @@
 
 {% block content %}
 
-<div class="bag-container">
-  <div id="checkout-title">
+<div class="management-container">
+  <div id="management-title">
     <h2>Product Management</h2>
   </div>
   <div id="product-management">
-    <h5>Add A Product</h5>
+    <div id="management-subtitle">
+      <h5>Add A Product</h5>
+    </div>
     <form method="POST" action="{% url 'add_product' %}" id="product-management-form" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form | crispy }}
-      <a class="btn" href="{% url 'products' %}">Cancel</a>
-      <button class="btn" type="submit">Add Product</button>
+      <div id="management-btns">
+        <a class="btn" href="{% url 'products' %}">Cancel</a>
+        <button class="btn" type="submit">Add Product</button>
+      </div>
+    </form>
   </div>
 </div>
 {% endblock %}
