@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}thank you{% endblock %}
+
+{% block content %}
+
+<div class="bag-container">
+  <div id="order-success-title">
+    <h2>thank you</h2>
+  </div>
+    <div id="order-success-wrapper">
+      <div id="order-success">
+        <p id="order-confirmation">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+        <h3 class="info-title">Order Info:</h3>
+        <div class="order-info">
+            <p class="order-left">Order Number:</p>
+            <p class="order-right">{{ order.order_number }}</p>
+            <p class="order-left">Order Date:</p>
+            <p class="order-right">{{ order.date }}</p>
+        </div>
+        <h3 class="details-title">Order Details:</h3>
+        <div class="details-info">
+          {% for item in order.lineitems.all %}
+            <p class="order-left">{{ item.product.name }}</p>
+            <p class="order-right">{{ item.quantity }} @ # {{ item.product.price }} each</p>
+          {% endfor %}
+        </div>
+        <h3 class="delivery-title">Deliverying To:</h3>
+        <div class="delivery-info">
+          <p class="order-left">Full Name:</p>
+          <p class="order-right">{{ order.full_name }}</p>
+          <p class="order-left">Address 1:</p>
+          <p class="order-right">{{ order.street_address1 }}</p>
+          {% if order.street_address2 %}
+            <p class="order-left">Address 2:</p>
+            <p class="order-right">{{ order.street_address2 }}</p>
+          {% endif %}
+
+          {% if order.county %}
+            <p class="order-left">County:</p>
+            <p class="order-right">{{ order.county }}</p>
+          {% endif %}
+          <p class="order-left">Town/City:</p>
+          <p class="order-right">{{ order.town_or_city }}</p>
+
+          {% if order.postcode %}
+            <p class="order-left">Postal Code:</p>
+            <p class="order-right">{{ order.postcode }}</p>
+          {% endif %}
+          <p class="order-left">Country:</p>
+          <p class="order-right">{{ order.country }}</p>
+          <p class="order-left">Phone Number:</p>
+          <p class="order-right">{{ order.phone_number }}</p>
+        </div>
+        <h3 class="billing-title">Billing Details:</h3>
+        <div class="billing-info">
+          <p class="order-left">Order Total:</p>
+          <p class="order-right">${{ order.order_total }}</p>
+          <p class="order-left">Delivery:</p>
+          <p class="order-right">${{ order.delivery_cost }}</p>
+          <p>Grand Total:</p>
+          <p class="order-right">${{ order.grand_total }}</p>
+        </div>
+        <div class="product-button">
+          {% if from_profile %}
+            <a class="btn" href="{% url 'profile_orders' %}">Back to Profile</a>
+          {% else %}
+            <a class="btn" href="{% url 'products' %}">Keep Shopping</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

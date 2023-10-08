@@ -6,35 +6,33 @@
 
 {% block title %}login{% endblock %}
 
-{% block content %}
-<div id="form-container">
-  <div id="login-form">
-    <h2>{% trans "Login" %}</h2>
-    <form class="login" method="POST" action="{% url 'account_login' %}">
-      {% csrf_token %}
-      {{ form.as_p }}
-      {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
-      {% endif %}
-      <button class="primaryAction, btn"  type="submit">{% trans "Login" %}
-      </button>
-    </form>
-    <div id="body-form">
-      <p>
-        {% blocktrans %}
-        Don't have an account? You can
-        <a href="{{ signup_url }}">
-          <span>Register here.</span>
-        </a>
-        {% endblocktrans %}
-      </p>
-      <p>
-        Forgot your password?
-        <a href="{% url 'account_reset_password' %}">
-          <span>Reset it here.</span>
-        </a>
-      </p>
-    </div>
+{% block inner_content %}
+<div id="login-form">
+  <h2>{% trans "Login" %}</h2>
+  <form class="login" method="POST" action="{% url 'account_login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+    {% endif %}
+    <button class="primaryAction, btn"  type="submit">{% trans "Login" %}
+    </button>
+  </form>
+  <div id="body-form">
+    <p>
+      {% blocktrans %}
+      Don't have an account? You can
+      <a href="{{ signup_url }}">
+        <span>Register here.</span>
+      </a>
+      {% endblocktrans %}
+    </p>
+    <p>
+      Forgot your password?
+      <a href="{% url 'account_reset_password' %}">
+        <span>Reset it here.</span>
+      </a>
+    </p>
   </div>
 </div>
 {% endblock %}

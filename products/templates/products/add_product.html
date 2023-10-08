@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}product management{% endblock %}
+
+{% block content %}
+
+<div class="bag-container">
+  <div id="checkout-title">
+    <h2>Product Management</h2>
+  </div>
+  <div id="product-management">
+    <h5>Add A Product</h5>
+    <form method="POST" action="{% url 'add_product' %}" id="product-management-form" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form | crispy }}
+      <a class="btn" href="{% url 'products' %}">Cancel</a>
+      <button class="btn" type="submit">Add Product</button>
+  </div>
+</div>
+{% endblock %}

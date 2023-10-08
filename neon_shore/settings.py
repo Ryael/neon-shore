@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
+    'profiles',
+    'about',
 
     # Other Apps
 
@@ -209,4 +211,14 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Stripe
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'usd'
+
+# STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+# STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+# STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+STRIPE_PUBLIC_KEY = 'pk_test_51NUyVJEyEagIb5f29JErXa8XX7zeAL8NoBvGmrgj7wBdEIAjS89xNDq07Ay47ecuUSd7JYypYzXrPOctq7EEheGw00EXgxqF1f'
+STRIPE_SECRET_KEY = 'sk_test_51NUyVJEyEagIb5f23g11hQMEKZ7ayfeTXw1dSZzoTZwnSgcHAPbDo8vwbzrrY2b2G61p1vLmXpKBLz0Vu6z8wOCW00bVkqtsTX'
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+DEFAULT_FROM_EMAIL = 'neonshore@example.com'

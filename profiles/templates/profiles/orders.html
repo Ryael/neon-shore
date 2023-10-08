@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}orders{% endblock %}
+
+{% block content %}
+
+<section class="profile-container">
+  <div id="profile-wrapper">
+    <div id="profile">
+      <div class="profile-navigation">
+        <span class="profile-menu profile-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <div id="profile-links-container">
+          <a href="{% url 'profile' %}" class="profile-link">
+            <span>Profile</span>
+          </a>
+          <a href="{% url 'profile_details' %}" class="profile-link">
+            <span>Details</span>
+          </a>
+          <a href="{% url 'profile_orders' %}" class="profile-link active">
+            <span>Orders</span>
+          </a>
+          <a href="{% url 'profile_account' %}" class="profile-link">
+            <span>Account</span>
+          </a>
+        </div>
+      </div>
+      <div class="profile-details">
+        <div class="general">
+          <h2 class="title">Orders</h2>
+          <p>Welcome, {{profile}}!</p>
+          <p>Here you can view all past orders, including full details, order totals, and the date of purchase.</p>
+          <p>We hope you have a pleasant shopping experience!</p>
+          <h3 class="title" id="smaller-title">Order History</h3>
+          <div id="order-history">
+            <table id="order-table">
+              <tbody>
+                <tr>
+                  <th>Order No.</th>
+                  <th>Date</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+                {% for order in orders %}
+                  <tr>
+                    <td>
+                      {{ order.order_number|truncatechars:8 }}
+                    </td>
+                    <td>{{ order.date|date:"SHORT_DATE_FORMAT" }}</td>
+                    <td>${{ order.grand_total }}</td>
+                    <td>
+                      <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}"><i class="fa-solid fa-eye"></i></a>
+                    </td>
+                  </tr>
+              {% endfor %}
+              <tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

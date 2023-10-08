@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}my profile{% endblock %}
+
+{% block content %}
+
+<section class="profile-container">
+  <div id="profile-wrapper">
+    <div id="profile">
+      <div class="profile-navigation">
+        <span class="profile-menu profile-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <div id="profile-links-container">
+          <a href="{% url 'profile' %}" class="profile-link">
+            <span>Profile</span>
+          </a>
+          <a href="{% url 'profile_details' %}" class="profile-link">
+            <span>Details</span>
+          </a>
+          <a href="{% url 'profile_orders' %}" class="profile-link">
+            <span>Orders</span>
+          </a>
+          <a href="{% url 'profile_account' %}" class="profile-link active">
+            <span>Account</span>
+          </a>
+        </div>
+      </div>
+      <div class="profile-details">
+        <div class="general">
+            <h2 class="title">Account</h2>
+            <p>Welcome, {{profile}}!</p>
+            <p>This is the account management part of your profile where you're able to modify your password as you wish.</p>
+            <p id="password-reset">Please note that you'll need to remember your current password. If you do not, then you may <a href="{% url 'account_reset_password' %}"><span>reset it here.</span></a>
+            </p>
+            <a href="{% url 'account_change_password' %}" class="btn" id="profile-password-btn">
+              Change Password
+            </a>
+            <a href="{% url 'account_logout' %}" class="btn" id="profile-logout-btn">
+              Log Out
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
