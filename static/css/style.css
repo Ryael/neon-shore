@@ -101,7 +101,8 @@ body {
   align-items: center;
 }
 
-.bag-container {
+.bag-container,
+.about-container {
   display: table;
   width: 75%;
   max-width: 960px;
@@ -1666,14 +1667,16 @@ a.save:hover {
   padding-top: 0.5em;
 }
 
-#bag-title {
+#bag-title,
+#about-title {
   border-bottom: 1px solid #ccc;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-bottom: 30px;
 }
 
-#bag-title h2 {
+#bag-title h2,
+#about-title h2 {
   font-size: 32px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -2314,12 +2317,43 @@ a.save:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 #about-image img {
   width: 210px;
   border-radius: 100%;
   transform: scaleX(-1);
+}
+
+#about-links {
+  margin-top: 30px;
+}
+
+#about-links ul {
+  display: flex;
+}
+
+#about-links li {
+  list-style: none;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+#about-links i {
+  border: 2px solid var(--font-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  vertical-align: middle;
+  transition: 0.3s ease-in-out;
+}
+
+#about-links i:hover {
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
 }
 
 /* 20. Media Query */
@@ -2400,7 +2434,8 @@ a.save:hover {
 
 @media (min-width: 900px) {
 
-  .bag-container {
+  .bag-container,
+  .about-container {
     padding: 183px 4% 180px 4%;
   }
 
