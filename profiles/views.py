@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from checkout.models import Order
+from products.models import WishlistItem
 from .models import UserProfile
 from .forms import UserProfileForm
 
@@ -92,7 +93,7 @@ def profile_account(request):
 
 @login_required
 def profile_admin(request):
-    """ Display the user's account information. """
+    """ Display product management to admins. """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     template = 'profiles/admin.html'
@@ -101,3 +102,19 @@ def profile_admin(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def profile_wishlist(request):
+    """ Display the user's wishlist. """
+    profile = get_object_or_404(UserProfile, user=request.user)
+    wishlist = WishlistItem.objects.filter(user_id=request.user.id)
+
+    template = 'profiles/wishlist.html'
+    context = {
+        'profile': profile,
+        'wishlist': wishlist
+    }
+
+    return render(request, template, context)
+
