@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 
-from .models import Product, Category
+from .models import Product, Category, WishlistItem
 from .forms import ProductForm
 
 # Create your views here.
@@ -85,7 +85,7 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add a product to the store """
+    """ Add a product to the store. """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -140,7 +140,7 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store """
+    """ Delete a product from the store. """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -149,3 +149,29 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+@login_required
+def add_wishlist_item(request, product_id):
+    """ Add an item to user's wishlist. """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    if not WishlistItem.objects.filter(user_id=request.user.id, product_id=product.id).exists():
+        wishlist_item = WishlistItem(user=request.user, product=product)
+        wishlist_item.save()
+        messages.success(request, 'Successfully added to wishlist!')
+    else:
+        messages.info(request, 'Item already in your wishlist.')
+
+    return redirect(reverse('product_detail', args=[product.id]))
+
+
+@login_required
+def delete_wishlist_item(request, item_id):
+    """ Delete an item from user's wishlist. """
+
+    wishlist_item = get_object_or_404(WishlistItem, pk=item_id)
+    wishlist_item.delete()
+    messages.success(request, 'Item successfully removed from wishlist!')
+
+    return redirect(reverse('profile_wishlist'))
