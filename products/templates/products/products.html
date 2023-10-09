@@ -42,6 +42,10 @@
         <a href="{% url 'product_detail' product.id %}">
           <img class="product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
         </a>
+        {% else %}
+        <a href="{% url 'product_detail' product.id %}">
+          <img class="product-image" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+        </a>
         {% endif %}
         <div class="product-category">
           <p class="category">{{ product.category.singular_name }}</p>

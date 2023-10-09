@@ -80,12 +80,12 @@
       </div>
       <div id="checkout-preview">
         {% for item in bag_items %}
-          <div id>
+          <div>
             <a href="{% url 'product_detail' item.product.id %}">
               {% if item.product.image %}
-                  <img class="" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                  <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
               {% else %}
-                  <img class="" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                  <img src="{{ MEDIA_URL }}noimage.jpg" alt="{{ item.product.name }}">
               {% endif %}
             </a>
           </div>

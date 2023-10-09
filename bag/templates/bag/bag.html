@@ -17,7 +17,11 @@
           <li class="items">
             <div class="info">
               <div class="bag-section">
-                <img class= "item-image" src="{{ item.product.image.url }}"/>
+                {% if item.product.image %}
+                <img class="item-image" src="{{ item.product.image.url }}" alt="{{ item.product.name }}"/>
+                {% else %}
+                <img class="item-image" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ item.product.name }}">
+                {% endif %}
                 <p class="item-number">SKU: {{ item.product.sku|upper }}</p>
                 <h3>{{ item.product.name }}</h3>
                 <p class="bag-category"> {{ item.product.category.singular_name }}</p>
