@@ -1,11 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from checkout.models import Order
 from .models import UserProfile
 from .forms import UserProfileForm
 
-
+@login_required
 def profile(request):
     """ Display the user's overall profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -17,6 +18,8 @@ def profile(request):
 
     return render(request, template, context)
 
+
+@login_required
 def profile_details(request):
     """ Display the user's profile details. """
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -39,6 +42,8 @@ def profile_details(request):
 
     return render(request, template, context)
 
+
+@login_required
 def profile_orders(request):
     """ Display the user's orders. """
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -53,6 +58,8 @@ def profile_orders(request):
 
     return render(request, template, context)
 
+
+@login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -69,6 +76,8 @@ def order_history(request, order_number):
 
     return render(request, template, context)
 
+
+@login_required
 def profile_account(request):
     """ Display the user's account information. """
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -80,6 +89,8 @@ def profile_account(request):
 
     return render(request, template, context)
 
+
+@login_required
 def profile_admin(request):
     """ Display the user's account information. """
     profile = get_object_or_404(UserProfile, user=request.user)
