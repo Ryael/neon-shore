@@ -26,6 +26,11 @@
           <a href="{% url 'profile_account' %}" class="profile-link">
             <span>Account</span>
           </a>
+          {% if request.user.is_superuser %}
+          <a href="{% url 'add_product' %}" class="profile-link">
+            <span>Product Admin</span>
+          </a>
+          {% endif %}
         </div>
       </div>
       <div class="profile-details">
