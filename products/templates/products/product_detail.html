@@ -17,8 +17,16 @@
   </div>
   {% endif %}
   <div id="product-details">
-    <div class="product-category">
-      <p class="category">{{ product.category.singular_name }}</p>
+    <div class="product-detail-grid">
+      <div class="product-category">
+        <p class="category">{{ product.category.singular_name }}</p>
+      </div>
+      {% if request.user.is_superuser %}
+      <div class="superuser-btns">
+        <a href="{% url 'edit_product' product.id %}"><i class="fa-solid fa-pen"></i></a>
+        <a href="{% url 'delete_product' product.id %}"><i class="fa-solid fa-trash last"></i></a>
+      </div>
+      {% endif %}
     </div>
     <div class="product-name">
       <p class="name">{{ product.name }}</p>
