@@ -79,3 +79,14 @@ def profile_account(request):
     }
 
     return render(request, template, context)
+
+def profile_admin(request):
+    """ Display the user's account information. """
+    profile = get_object_or_404(UserProfile, user=request.user)
+
+    template = 'profiles/admin.html'
+    context = {
+        'profile': profile,
+    }
+
+    return render(request, template, context)

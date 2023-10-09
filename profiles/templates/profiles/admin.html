@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}details{% endblock %}
+{% block title %}admin{% endblock %}
 
 {% block content %}
 
@@ -17,7 +17,7 @@
           <a href="{% url 'profile' %}" class="profile-link">
             <span>Profile</span>
           </a>
-          <a href="{% url 'profile_details' %}" class="profile-link active">
+          <a href="{% url 'profile_details' %}" class="profile-link">
             <span>Details</span>
           </a>
           <a href="{% url 'profile_orders' %}" class="profile-link">
@@ -27,7 +27,7 @@
             <span>Account</span>
           </a>
           {% if request.user.is_superuser %}
-          <a href="{% url 'profile_admin' %}" class="profile-link">
+          <a href="{% url 'profile_admin' %}" class="profile-link active">
             <span>Admin</span>
           </a>
           {% endif %}
@@ -35,15 +35,13 @@
       </div>
       <div class="profile-details">
         <div class="general">
-            <h2 class="title">Details</h2>
-            <p>Welcome, {{profile}}!</p>
-            <p> Here you can add new delivery details, or add or even delete existing details.</p>
-            <h3 class="title" id="smaller-title">Delivery Information</h3>
-            <form id="profile-update-form" action="{% url 'profile_details' %}" method="POST">
-              {% csrf_token %}
-              {{ form|crispy }}
-              <button class="btn">Update Information</button>
-            </form>
+          <h2 class="title">Admin</h2>
+          <p>Welcome, {{profile}}!</p>
+          <p>This is the product management part of your profile where you're able to add products as you wish.</p>
+          <p>If you'd like to edit or delete a product, you'll have to navigate to the specific product you're looking to change and do it from that page.</p>
+          <a href="{% url 'add_product' %}" class="btn">
+            Add Product
+          </a>
         </div>
       </div>
     </div>

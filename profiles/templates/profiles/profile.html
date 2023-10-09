@@ -27,8 +27,8 @@
             <span>Account</span>
           </a>
           {% if request.user.is_superuser %}
-          <a href="{% url 'add_product' %}" class="profile-link">
-            <span>Product Admin</span>
+          <a href="{% url 'profile_admin' %}" class="profile-link">
+            <span>Admin</span>
           </a>
           {% endif %}
         </div>
@@ -38,8 +38,13 @@
             <h2 class="title">Profile</h2>
             <p>Welcome, {{profile}}!</p>
             <p>This is your profile dashboard, where you can add, modify, and delete addresses, view all orders, and change your account details such as your password and e-mail.</p>
+            {% if request.user.is_superuser %}
+            <p>If you're looking to add a product, you can do so via the Admin part of your user profile.</p>
+            <a class="btn" href="{% url 'profile_admin' %}">Admin</a>
+            {% else %}
             <p>We hope you have a pleasant shopping experience!</p>
-            <a class="btn">Store</a>
+            <a class="btn" href="{% url 'products' %}">Store</a>
+            {% endif %}
         </div>
       </div>
     </div>
