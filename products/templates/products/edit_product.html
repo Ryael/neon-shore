@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}edit product{% endblock %}
+
+{% block content %}
+
+<div class="management-container">
+  <div id="management-title">
+    <h2>Product Management</h2>
+  </div>
+  <div id="product-management">
+    <div id="management-subtitle">
+      <h5>Edit A Product</h5>
+    </div>
+    <form method="POST" action="{% url 'edit_product' product.id %}" id="product-management-form" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form | crispy }}
+      <div id="management-btns">
+        <a class="btn" href="{% url 'products' %}">Cancel</a>
+        <button class="btn" type="submit">Edit Product</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
