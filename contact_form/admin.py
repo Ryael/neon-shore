@@ -4,13 +4,12 @@ from .models import ContactInquiries
 # Register your models here.
 
 class ContactInquiriesAdmin(admin.ModelAdmin):
+    baseModel = ContactInquiries
     list_display = (
       'name',
       'email',
       'subject',
       'message',
-      'date_received',
       )
-    ordering = ('-date_received',)
 
 admin.site.register(ContactInquiries)

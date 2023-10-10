@@ -10,7 +10,7 @@ class ContactInquiries(models.Model):
     date_received = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f" message from {self.email}"
+        return f"{self.subject} from {self.email} on {self.date_received}."
 
     class Meta:
         verbose_name_plural = "Contact Inquiries"
