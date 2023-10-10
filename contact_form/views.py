@@ -8,7 +8,7 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             messages.success(request, 'We received your query! We will contact you within 48 hours.')
-            return redirect('success')
+            return redirect('contact')
     else:
         form = ContactForm()
     return render(request, 'contact_form/contact_form.html', {'form': form})
