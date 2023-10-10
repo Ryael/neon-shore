@@ -2562,6 +2562,8 @@ a.save:hover {
   font: 14px var(--font);
   display: flex;
   justify-content: center;
+  margin-bottom: 25px;
+}
 }
 
 #contact-container .refferal_badge {
@@ -2579,12 +2581,16 @@ a.save:hover {
 
 #contact-container #mc_embed_signup div.response {
   padding: 0px;
-  width: 100%;
+  width: 120%;
 }
 
 #contact-container #mc_embed_signup .mc-field-group {
   padding: 0;
   width: 100%;
+}
+
+#contact-container #mc-embedded-subscribe {
+  font-weight: 500;
 }
 
 /* 23. Media Query */
