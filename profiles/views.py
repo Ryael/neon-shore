@@ -113,7 +113,7 @@ def profile_wishlist(request):
     template = 'profiles/wishlist.html'
     context = {
         'profile': profile,
-        'wishlist': wishlist
+        'wishlist': wishlist,
     }
 
     return render(request, template, context)

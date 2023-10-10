@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}orders{% endblock %}
+{% block title %}wishlist{% endblock %}
 
 {% block content %}
 
@@ -20,7 +20,7 @@
           <a href="{% url 'profile_details' %}" class="profile-link">
             <span>Details</span>
           </a>
-          <a href="{% url 'profile_orders' %}" class="profile-link active">
+          <a href="{% url 'profile_orders' %}" class="profile-link">
             <span>Orders</span>
           </a>
           <a href="{% url 'profile_account' %}" class="profile-link">
@@ -31,7 +31,7 @@
             <span>Admin</span>
           </a>
           {% elif request.user.is_authenticated %}
-          <a href="{% url 'profile_wishlist' %}" class="profile-link">
+          <a href="{% url 'profile_wishlist' %}" class="profile-link active">
             <span>Wishlist</span>
           </a>
           {% endif %}
@@ -39,32 +39,32 @@
       </div>
       <div class="profile-details">
         <div class="general">
-          <h2 class="title">Orders</h2>
+          <h2 class="title">Wishlist</h2>
           <p>Welcome, {{profile}}!</p>
-          <p>Here you can view all past orders, including full details, order totals, and the date of purchase.</p>
+          <p>Here you can view all the items you've added to your wishlist. If you wish to remove an item, please interact with the bin icon. Otherwise interacting with the name will bring you to the item page.</p>
           <p>We hope you have a pleasant shopping experience!</p>
-          <h3 class="title" id="smaller-title">Order History</h3>
+          <h3 class="title" id="smaller-title">Wishlisted Items</h3>
           <div id="order-history">
             <table id="order-table">
               <tbody>
                 <tr>
-                  <th>Order No.</th>
-                  <th>Date</th>
-                  <th>Price</th>
+                  <th>Item Name</th>
+                  <th>Date Added</th>
                   <th></th>
                 </tr>
-                {% for order in orders %}
+                {% for wishlist_item in wishlist %}
                   <tr>
                     <td>
-                      {{ order.order_number|truncatechars:8 }}
+                      <a class="name-link" href="{% url 'product_detail' wishlist_item.product_id %}">{{ wishlist_item.product }}</a>
                     </td>
-                    <td>{{ order.date|date:"SHORT_DATE_FORMAT" }}</td>
-                    <td>${{ order.grand_total }}</td>
                     <td>
-                      <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}"><i class="fa-solid fa-eye"></i></a>
+                      {{ wishlist_item.added_date }}
+                    </td>
+                    <td>
+                      <a href="{% url 'delete_wishlist_item' wishlist_item.id %}"><i class="fa-solid fa-trash last"></i></a>
                     </td>
                   </tr>
-              {% endfor %}
+                {% endfor %}
               <tbody>
             </table>
           </div>
