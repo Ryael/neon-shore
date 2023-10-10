@@ -177,3 +177,10 @@ $('#id_default_country').change(function() {
         $(this).css('color', '#4f5356');
     }
 });
+
+/* Product Admin - Add New Image */
+
+$('#new-image').change(function() {
+    var file = $('#new-image')[0].files[0];
+    $('#filename').text(`Image will be set to: ${file.name}`);
+});
