@@ -14,7 +14,13 @@
     </div>
     <form method="POST" action="{% url 'edit_product' product.id %}" id="product-management-form" enctype="multipart/form-data">
       {% csrf_token %}
-      {{ form | crispy }}
+      {% for field in form %}
+          {% if field.name != 'image' %}
+              {{ field | as_crispy_field }}
+          {% else %}
+              {{ field }}
+          {% endif %}
+      {% endfor %}
       <div id="management-btns">
         <a class="btn" href="{% url 'products' %}">Cancel</a>
         <button class="btn" type="submit">Edit Product</button>
