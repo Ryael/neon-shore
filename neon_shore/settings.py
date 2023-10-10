@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'about',
+    'contact_form',
 
     # Other Apps
 
