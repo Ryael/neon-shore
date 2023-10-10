@@ -2473,6 +2473,22 @@ a.save:hover {
 
 #wishlist-icon i {
   font-size: 25px;
+  transition: 0.3s ease-in-out;
+}
+
+#wishlist-icon i:hover {
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
+}
+
+.name-link {
+  transition: 0.3s ease-in-out;
+  font-weight: 400;
+}
+
+.name-link:hover {
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
 }
 
 /* 22. Media Query */
