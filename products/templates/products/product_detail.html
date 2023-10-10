@@ -26,6 +26,10 @@
         <a href="{% url 'edit_product' product.id %}"><i class="fa-solid fa-pen"></i></a>
         <a href="{% url 'delete_product' product.id %}"><i class="fa-solid fa-trash last"></i></a>
       </div>
+      {% elif request.user.is_authenticated %}
+      <div id="wishlist-icon">
+        <a href="{% url 'add_wishlist_item' product.id %}"><i class="fa-regular fa-heart"></i></a>
+      </div>
       {% endif %}
     </div>
     <div class="product-name">
