@@ -2453,7 +2453,8 @@ a.save:hover {
   display: flex;
 }
 
-#management-btns .btn {
+#management-btns .btn,
+.btn-file {
   padding: 1.2em 4em;
   font-size: 0.778rem;
   margin-top: 15px;
@@ -2462,6 +2463,40 @@ a.save:hover {
 
 #management-btns a {
   margin-right: 5px;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  width: 105px;
+}
+
+.btn-file input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox #image-clear_id {
+  height: auto;
+  width: auto;
+  margin: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+#div_id_image #new-image {
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+#product-management-form #filename {
+  margin: 10px 0 0 0;
 }
 
 /* 21. Wishlist */
