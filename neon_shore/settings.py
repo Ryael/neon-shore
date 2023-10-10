@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'profiles',
     'about',
     'contact_form',
+    'newsletter',
 
     # Other Apps
 
