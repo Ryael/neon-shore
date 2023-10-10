@@ -30,18 +30,19 @@
 /*/// 19. About ///*/
 /*/// 20. Product Management ///*/
 /*/// 21. Wishlist ///*/
-/*/// 22. Media Query ///*/
-/*///   22.1 Navigation Query ///*/
-/*///   22.2 Store Query ///*/
-/*///   22.3 Product Details Query ///*/
-/*///   22.4 Bag Query ///*/
-/*///   22.5 Checkout Query ///*/
-/*///   22.6 Checkout Success Query ///*/
-/*///   22.7 Profile Query ///*/
-/*///   22.8 Profile Order Query ///*/
-/*///   22.9 Errors Query ///*/
-/*///   22.10 About Query ///*/
-/*///   22.11 Product Management Query ///*/
+/*/// 22. Newsletter ///*/
+/*/// 23. Media Query ///*/
+/*///   23.1 Navigation Query ///*/
+/*///   23.2 Store Query ///*/
+/*///   23.3 Product Details Query ///*/
+/*///   23.4 Bag Query ///*/
+/*///   23.5 Checkout Query ///*/
+/*///   23.6 Checkout Success Query ///*/
+/*///   23.7 Profile Query ///*/
+/*///   23.8 Profile Order Query ///*/
+/*///   23.9 Errors Query ///*/
+/*///   23.10 About Query ///*/
+/*///   23.11 Product Management Query ///*/
 
 /* 1. Fonts */
 
@@ -1064,7 +1065,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 #account-info,
 #password-form,
 #profile-update-form,
-#contact-form {
+#contact-form,
+#mc-embedded-subscribe-form {
   font-size: 17px;
   width: 340px;
   border-bottom: 1px solid #ccc;
@@ -1116,7 +1118,8 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
 
 #signup-form .btn,
 #login-form .btn,
-#contact-form .btn {
+#contact-form .btn,
+#mc-embedded-subscribe-form .btn {
   width: 99%;
   height: 50px;
   font-weight: 600;
@@ -2533,9 +2536,60 @@ a.save:hover {
   transition: 0.3s ease-in-out;
 }
 
-/* 22. Media Query */
+/* 22. Newsletter */
 
-/* 22.1 Navigation Query */
+#contact-container #mc_embed_signup form {
+  margin: 0;
+}
+
+#mc_embed_signup h2,
+.indicates-required {
+  display: none;
+}
+
+#contact-container #mc_embed_signup input {
+  display: block;
+  width: 90%;
+  padding: 0 15px;
+  text-indent: 0;
+  border: none;
+  border-radius: 4px;
+  }
+
+#contact-container #mc_embed_signup,
+#contact-container #mc_embed_signup #mce-success-response {
+  background: var(--body-color);
+  font: 14px var(--font);
+  display: flex;
+  justify-content: center;
+}
+
+#contact-container .refferal_badge {
+  margin: 15px 0 30px 0;
+}
+
+#contact-container #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  margin: 2px 0 1em 0;
+  padding: 5px;
+  background-color: var(--body-color);
+  border-radius: 0;
+  font-size: 14px;
+  color: var(--font-color);
+}
+
+#contact-container #mc_embed_signup div.response {
+  padding: 0px;
+  width: 100%;
+}
+
+#contact-container #mc_embed_signup .mc-field-group {
+  padding: 0;
+  width: 100%;
+}
+
+/* 23. Media Query */
+
+/* 23.1 Navigation Query */
 
 @media screen and (max-width: 1000px) {
 
@@ -2550,7 +2604,7 @@ a.save:hover {
   }
 }
 
-/* 22.2 Store Query */
+/* 23.2 Store Query */
 
 @media screen and (min-width: 640px) {
 
@@ -2560,7 +2614,7 @@ a.save:hover {
 
 }
 
-/* 22.3 Product Details Query */
+/* 23.3 Product Details Query */
 
 @media (min-width: 900px) {
 
@@ -2607,7 +2661,7 @@ a.save:hover {
 
 }
 
-/* 22.4 Bag Query */
+/* 23.4 Bag Query */
 
 @media (min-width: 900px) {
 
@@ -2705,7 +2759,7 @@ a.save:hover {
 
 }
 
-/* 22.5 Checkout Query */
+/* 23.5 Checkout Query */
 
 @media (max-width: 970px) {
 
@@ -2720,7 +2774,7 @@ a.save:hover {
 
 }
 
-/* 22.6 Checkout Success Query */
+/* 23.6 Checkout Success Query */
 
 @media (max-width: 620px) {
 
@@ -2741,7 +2795,7 @@ a.save:hover {
 
 }
 
-/* 22.7 Profile Query */
+/* 23.7 Profile Query */
 
 @media screen and (max-width: 799px) {
 
@@ -2802,7 +2856,7 @@ a.save:hover {
 
 }
 
-/* 22.8 Profile Order Query */
+/* 23.8 Profile Order Query */
 
 @media screen and (max-width: 650px) {
 
@@ -2919,7 +2973,7 @@ a.save:hover {
   }
 }
 
-/* 22.9 Errors Query */
+/* 23.9 Errors Query */
 
 @media screen and (max-width: 799px) {
   .error-container {
@@ -2928,7 +2982,7 @@ a.save:hover {
   }
 }
 
-/* 22.10 About Query */
+/* 23.10 About Query */
 
 @media screen and (max-width: 900px) {
 
