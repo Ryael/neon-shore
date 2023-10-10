@@ -92,9 +92,20 @@ This sprint's objective was to setup Stripe and all of its associated functional
 
 https://i.imgur.com/UtKZKBV.png
 
-Sprint #7 objective was used to setup the user profile portion of the website and all of its associated functionality, including the displaying of all past orders, saving and editing of personal details, and allowing users to change and reset their passwords.
+Sprint #7's objective was used to setup the user profile portion of the website and all of its associated functionality, including the displaying of all past orders, saving and editing of personal details, and allowing users to change and reset their passwords.
 
 - This sprint began on 24/07/23 at 22:00 and finished on 26/07/23 at 5:00. The estimated story point total was 22 and the time taken to complete these user stories took approximately 25 hours, so this sprint was deemed to be mostly successful.
 - Creating a design for the user profile that would be both coherent with the rest of the website and also pleasant to navigate, while simultaneously also accomplishing the relevant user stories proved to be a challenge but the outcome is one I'm very content with in terms of design and functionality.
 - Once the user profile was designed and successfully implemented, the password reset and password change functionality of allauth was connected to the account tab. Following this, a logout button was added to both the regular and mobile navigation while the user is logged in.
 - No bugs were discovered and no other bugs were fixed during this sprint.
+
+### Sprint #8:
+
+https://i.imgur.com/lcdURQs.png
+
+This sprint's main objective was to set-up the product admin, as well as the error pages and an about page.
+
+- This sprint began on 07/10/23 at 22:00 and finished on 08/10/23 at 18:00. The estimated story point total was 24 and the time taken to complete them was about 10 hours, resuling in this sprint being a complete and utter success.
+- Setting up the product admin proved to be relatively straightforward and there were no complications here.
+- The error pages and the about page also proved to be relatively simple.
+- Upon re-deployment, however, five separate bugs were encountered that fully broke the website each time. All five of these were resolved within the story-point time and have been documented.
