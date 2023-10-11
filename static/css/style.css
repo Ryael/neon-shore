@@ -3092,10 +3092,6 @@ a.save:hover {
     padding: 50px 0 50px 0;
   }
 
-  .cover {
-    width: 390px;
-  }
-
   .right-side {
     margin: 0;
     align-items: center;
@@ -3133,6 +3129,14 @@ a.save:hover {
 
   .pagination-wrapper {
     position: relative;
+  }
+
+  .navigation-arrow-container .navigation-arrows li.arrow-left {
+    left: 3%;
+  }
+
+  .navigation-arrow-container .navigation-arrows li.arrow-right {
+    right: 3%;
   }
 
 }
