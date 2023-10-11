@@ -431,6 +431,10 @@ body.mobile-navigation-active .mobile-list-item:nth-child(6) {
   transition-delay: 1.2s;
 }
 
+body.mobile-navigation-active .mobile-list-item:nth-child(7) {
+  transition-delay: 1.3s;
+}
+
 /* 6. Buttons */
 
 .btn {
