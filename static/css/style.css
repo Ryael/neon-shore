@@ -3040,28 +3040,19 @@ a.save:hover {
 /* 24.11 Home Query */
 
 @media screen and (max-width: 1700px) {
-  #navigation-arrow-container #navigation-arrows li.arrow-left {
+  .navigation-arrow-container .navigation-arrows li.arrow-left {
     left: 8%;
   }
-  #navigation-arrow-container #navigation-arrows li.arrow-right {
+  .navigation-arrow-container .navigation-arrows li.arrow-right {
     right: 8%;
   }
 }
 
 @media screen and (max-width: 1500px) {
-  #navigation-arrow-container #navigation-arrows li.arrow-left {
+  .navigation-arrow-container .navigation-arrows li.arrow-left {
     left: 5%;
   }
-  #navigation-arrow-container #navigation-arrows li.arrow-right {
+  .navigation-arrow-container .navigation-arrows li.arrow-right {
     right: 5%;
-  }
-}
-
-@media screen and (max-width: 1500px) {
-  #navigation-arrow-container #navigation-arrows li.arrow-left {
-    left: 3%;
-  }
-  #navigation-arrow-container #navigation-arrows li.arrow-right {
-    right: 3%;
   }
 }
