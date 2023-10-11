@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}all testimonials{% endblock %}
+
+{% block content %}
+
+<section id="contact-container">
+  <div id="contact-form">
+    <h2>Testimonials</h2>
+      <div id="testimonials">
+        <table id="testimonials-table">
+          <tbody>
+            <tr>
+            </tr>
+            {% for testimonials in testimonials %}
+              <tr>
+                <td>
+                  <h5>{{ testimonials.user }}</h5>
+                </td>
+                <td><p>{{ testimonials.testimonial }}</p></td>
+              </tr>
+          {% endfor %}
+          <tbody>
+        </table>
+        <a href="{% url 'testimonial' %}" class="btn">Create New</a>
+      </div>
+  </div>
+</section>
+
+{% endblock %}
