@@ -105,7 +105,19 @@ https://i.imgur.com/lcdURQs.png
 
 This sprint's main objective was to set-up the product admin, as well as the error pages and an about page.
 
-- This sprint began on 07/10/23 at 22:00 and finished on 08/10/23 at 18:00. The estimated story point total was 24 and the time taken to complete them was about 10 hours, resuling in this sprint being a complete and utter success.
+- This sprint began on 07/10/23 at 22:00 and finished on 08/10/23 at 18:00. The estimated story point total was 24 and the time taken to complete them was about 10 hours, resulting in this sprint being a complete and utter success.
 - Setting up the product admin proved to be relatively straightforward and there were no complications here.
 - The error pages and the about page also proved to be relatively simple.
 - Upon re-deployment, however, five separate bugs were encountered that fully broke the website each time. All five of these were resolved within the story-point time and have been documented.
+
+### Sprint #9
+
+https://i.imgur.com/lGNk6f9.png
+
+Sprint #9 was used to create the Contact and Review models and set up their pages accordingly, as well as using MailChimp to setup a Newsletter.
+
+- This sprint began on 10/10/23 at 19:35 and finished on 11/10/23 at 3:00. The estimated story point total was 41 and the time taken to complete them was around 7.5 hours. 20 of these points were attributed to a bug that has been around for weeks on end now, and it was finally finished here. As such, this sprint was deemed a complete success. I believe this is due to my growing familiarity with Django and its MVC relationship.
+- As such, setting up the Contact page provided to be relatively straightforward. The only issue I had arose from me not writing the `views.py` correctly for it. After that, it worked correctly and logged the inputs to the admin panel.
+- The Review or Testimonial model proved to be a bit more difficult due to it being a bit more unfamiliar but after a bit of research and troubleshooting it was up and running.
+- The newsletter was the easiest of the sprint to setup due to MailChimp being extremely easy to use, setup, and customise.
+- Three bugs were resolved that were found much earlier on, with the most notorious being the one that prevented emails from being sent. Tutor support was contacted and after a lot of troubleshooting the error was found: a superflous newline in the subject template for the confirmation email. Tutor support's help was crucial in solving this and showed me how to troubleshoot errors with webhooks and how complicated it can be.
