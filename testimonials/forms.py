@@ -1,6 +1,5 @@
 from django import forms
 from django.core.validators import EmailValidator
-from django.contrib.auth.models import User
 from .models import Testimonials
 
 
@@ -11,6 +10,6 @@ class TestimonialsForm(forms.ModelForm):
         fields = '__all__'
         exclude = ('user',)
 
-    review = forms.CharField(widget=forms.Textarea)
+    testimonial = forms.CharField(widget=forms.Textarea, max_length=100)
 
 
