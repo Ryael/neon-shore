@@ -3090,6 +3090,7 @@ a.save:hover {
   .mySwiper .hero-section {
     grid-template-columns: 1fr;
     padding: 50px 0 50px 0;
+    justify-content: center;
   }
 
   .right-side {
@@ -3120,7 +3121,7 @@ a.save:hover {
   }
 
   .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 459px;
+    bottom: 560px;
     width: 100%;
     display: flex;
     position: absolute;
