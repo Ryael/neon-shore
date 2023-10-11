@@ -442,6 +442,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(7) {
   padding: 1em 2em;
   border-radius: 0;
   color: var(--font-color);
+  font-family: var(--font);
   font-weight: bold;
   font-size: 0.678rem;
   letter-spacing: 2px;
