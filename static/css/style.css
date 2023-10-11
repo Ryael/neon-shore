@@ -2699,6 +2699,29 @@ a.save:hover {
 
 }
 
+@media (max-width: 600px) {
+
+  .detailed-image,
+  .product-details {
+    width: 260px;
+  }
+
+  #product-details .product-button form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #product-details .product-button .btn {
+    width: 165px;
+  }
+
+  #product-details .product-button .input-group {
+    height: 45px;
+    margin-top: 15px;
+  }
+
+}
+
 /* 24.4 Bag Query */
 
 @media (min-width: 900px) {
@@ -2966,7 +2989,7 @@ a.save:hover {
   }
 
   #wishlist #order-history #order-table td:nth-child(3):before {
-    content: ":";
+    content: "";
   }
 
   #order-table tr {
