@@ -2965,7 +2965,7 @@ a.save:hover {
     content: "Price:";
   }
 
-  #wishlist #order-table td:nth-child(3):before {
+  #wishlist #order-history #order-table td:nth-child(3):before {
     content: ":";
   }
 
