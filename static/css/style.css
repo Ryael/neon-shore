@@ -3068,7 +3068,7 @@ a.save:hover {
 @media screen and (max-width: 1300px) {
 
   .navigation-arrow-container .navigation-arrows li.arrow-left {
-    left: 2%;
+    left: 5%;
   }
 
   .navigation-arrow-container .navigation-arrows li.arrow-right {
@@ -3078,6 +3078,14 @@ a.save:hover {
 }
 
 @media (max-width: 1100px) {
+
+  .cover {
+    width: 300px;
+  }
+
+  .container {
+    height: auto;
+  }
 
   .mySwiper .hero-section {
     grid-template-columns: 1fr;
