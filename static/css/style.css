@@ -44,6 +44,7 @@
 /*///   24.9 Errors Query ///*/
 /*///   24.10 About Query ///*/
 /*///   24.11 Product Management Query ///*/
+/*///   24.12 Home Query ///*/
 
 /* 1. Fonts */
 
@@ -762,7 +763,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(7) {
   border-bottom-color: transparent;
   transform: rotate(45deg);
   transition: 0.3s ease-in-out;
-  right: 12%;
+  right: 9%;
 }
 
 .navigation-arrow-container .navigation-arrows li.arrow-left:hover {
@@ -1918,7 +1919,7 @@ a.save:hover {
   margin-top: 12.5px;
 }
 
-.payment-buttons .btn {
+#checkout-grid .payment-buttons .btn {
   font-size: 0.59rem;
 }
 
@@ -3036,3 +3037,31 @@ a.save:hover {
   }
 }
 
+/* 24.11 Home Query */
+
+@media screen and (max-width: 1700px) {
+  #navigation-arrow-container #navigation-arrows li.arrow-left {
+    left: 8%;
+  }
+  #navigation-arrow-container #navigation-arrows li.arrow-right {
+    right: 8%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #navigation-arrow-container #navigation-arrows li.arrow-left {
+    left: 5%;
+  }
+  #navigation-arrow-container #navigation-arrows li.arrow-right {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #navigation-arrow-container #navigation-arrows li.arrow-left {
+    left: 3%;
+  }
+  #navigation-arrow-container #navigation-arrows li.arrow-right {
+    right: 3%;
+  }
+}
