@@ -29,6 +29,7 @@ urlpatterns = [
     path('about/', include('about.urls')),
     path('contact_form/', include('contact_form.urls')),
     path('newsletter/', include('newsletter.urls')),
+    path('testimonials/', include('testimonials.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'neon_shore.views.error_404'
