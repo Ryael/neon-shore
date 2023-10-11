@@ -296,7 +296,7 @@ body {
 }
 
 #mobile-navigation-icons .profile-icon {
-  margin-right: 165px;
+  margin-right: 82.5px;
   transition: 0.3s;
 }
 
@@ -312,7 +312,7 @@ body {
 
 #mobile-navigation-icons .logout {
   width: 35px;
-  margin-left: 150px;
+  margin-left: 56px;
 }
 
 #mobile-navigation-icons .shopping-bag:hover,
