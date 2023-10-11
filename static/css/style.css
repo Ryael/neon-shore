@@ -1918,6 +1918,10 @@ a.save:hover {
   margin-top: 12.5px;
 }
 
+.payment-buttons .btns {
+  font-size: 0.59rem;
+}
+
 #card-errors {
   padding: 25.5px 0 12.5px 0
 }
