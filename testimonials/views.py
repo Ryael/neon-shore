@@ -1,9 +1,10 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import TestimonialsForm
 from .models import Testimonials
 
-
+@login_required
 def testimonial(request):
     if request.method == 'POST':
         form = TestimonialsForm(request.POST)
