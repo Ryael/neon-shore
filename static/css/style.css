@@ -3120,7 +3120,7 @@ a.save:hover {
     height: auto;
   }
 
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
+  .container .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 560px;
     width: 100%;
     display: flex;
@@ -3139,5 +3139,8 @@ a.save:hover {
   .navigation-arrow-container .navigation-arrows li.arrow-right {
     right: 3%;
   }
+
+  .swiper-slide-active .main-wrapper > *, .swiper-slide-active .hero-content > * {
+    padding: 0 50px;
 
 }
