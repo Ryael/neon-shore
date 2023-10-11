@@ -2562,7 +2562,6 @@ a.save:hover {
 
 #contact-container #mc_embed_signup input {
   display: block;
-  width: 90%;
   padding: 0 15px;
   text-indent: 0;
   border: none;
@@ -2589,7 +2588,6 @@ a.save:hover {
 
 #contact-container #mc_embed_signup div.response {
   padding: 0px;
-  width: 120%;
 }
 
 #contact-container #mc_embed_signup .mc-field-group {
@@ -3121,10 +3119,10 @@ a.save:hover {
   }
 
   .container .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 560px;
+    bottom: 750px;
     width: 100%;
     display: flex;
-    position: absolute;
+    position: fixed;
     justify-content: center;
   }
 
