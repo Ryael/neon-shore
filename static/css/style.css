@@ -3044,7 +3044,7 @@ a.save:hover {
     left: 8%;
   }
   .navigation-arrow-container .navigation-arrows li.arrow-right {
-    right: 8%;
+    right: 5%;
   }
 }
 
@@ -3053,6 +3053,15 @@ a.save:hover {
     left: 5%;
   }
   .navigation-arrow-container .navigation-arrows li.arrow-right {
-    right: 5%;
+    right: 2%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .navigation-arrow-container .navigation-arrows li.arrow-left {
+    left: 2%;
+  }
+  .navigation-arrow-container .navigation-arrows li.arrow-right {
+    right: -1%;
   }
 }
