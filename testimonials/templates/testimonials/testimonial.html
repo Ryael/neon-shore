@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}contact{% endblock %}
+
+{% block content %}
+
+<section id="contact-container">
+  <div id="contact-form">
+    <h2>Testimonials</h2>
+    <form action="/testimonials/" method="post">
+       {% csrf_token %}
+       {% for field in form %}
+         <div class="fieldWrapper">
+           {{ field.errors }}
+           {{ field.label_tag }} {{ field }}
+         </div>
+       {% endfor %}
+       <button class="btn" input type="submit" value="Submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+{% endblock %}
+
+
+
