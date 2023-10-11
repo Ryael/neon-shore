@@ -2965,6 +2965,10 @@ a.save:hover {
     content: "Price:";
   }
 
+  #wishlist #order-table td:nth-child(3):before {
+    content: ":";
+  }
+
   #order-table tr {
     padding: 20px 0;
     position: relative;
@@ -3119,7 +3123,7 @@ a.save:hover {
   }
 
   .container .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 750px;
+    bottom: 605px;
     width: 100%;
     display: flex;
     position: fixed;
