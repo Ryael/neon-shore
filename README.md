@@ -88,7 +88,7 @@ The following was an extensive list of features that were brainstormed between e
 
 | Opportunity             | Importance  | Feasibility   |
 |------------------------ |------------ |-------------  |
-| User Account Management      | 5           | 5             |
+| User Account      | 5           | 5             |
 | Stripe Payments           | 5           | 5             |
 | Landing Page            | 5           | 5             |
 | Account Management              | 5           | 5             |
@@ -100,45 +100,53 @@ The following was an extensive list of features that were brainstormed between e
 | Flash Messages             | 5           | 5             |
 | Testimonials             | 3           | 4             |
 | Contact Page             | 5           | 5             |
-| CRUD Functionality             | 5           | 5             |
 | Social Media             | 5           | 5             |
 | Different Currencies             | 3           | 1             |
 | Promotions             | 3           | 1             |
 | Related Products             | 2           | 2             |
-| FAQ             | 3           | 3             |
+| FAQ Page             | 3           | 3             |
 | E-mail Confirmation             | 5           | 5             |
 | Order Status             | 3           | 1             |
 | Trustpilot Reviews             | 4           | 1             |
-| **Total**               | **38**      | **33**        |
+| Newsletter             | 3           | 3             |
+| **Total**               | **87**      | **80**        |
 
 Feasibility is based on time and my current level of ability using languages.
 
 ### Scope
 
-As there is an imbalance of 5 points in the above score, (38 vs 35), there will have to be trade-offs made due to the tight schedule of this project.
+As there is an imbalance of 5 points in the above score, (87 vs 80), there will have to be trade-offs made due to the tight schedule of this project.
 
 The above table has been further categorised in order to establish a clear vision of the MVP required while satisfying the above requirements.
 
-- UX **Must's**:
+UX **Must's**:
   - User can login, logout, and register
-  - User can create an army roster
-  - User can edit an army roster
-  - User can view their army rosters
-  - User can delete their army rosters
+  - User can checkout
+  - User can use Stripe to carry out payment
+  - User can recieve a confirmation email
+  - User can view products
+  - User can view their order history
+  - User can access a store's Social Media
+  - User can change and/or reset their passwords
+  - User can access their profile
+  - User can see feedback for their actions
 
 - UX **Should's**:
-  - User can use the "forgot your password" functionality
+  - User can leave and read testimonials
   - User can otherwise reset their password
-  - Landing page
-  - About page
-  - Killteam Ruleset
-  - Error pages
+  - Landing Page
+  - About Page
+  - Contact Page
+  - Error Pages
+  - Newsletter
+  - Product Management for admin
 
 - UX **Should Not's**:
-  - User profile
-  - Friend system
-  - Roster sharing
-  - User can change their e-mail
+  - Different Currencies
+  - Trustpilot Reviews
+  - Order Status
+  - Related Products
+  - FAQ Page
 
 ## User Experience
 
