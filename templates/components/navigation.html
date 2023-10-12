@@ -101,7 +101,7 @@
         <form method="GET" action="{% url 'products' %}">
           {% if request.user.is_authenticated %}
             <label id="authenticated-search" class="hidden-text">Search</label>
-            <input class="authenticated" type="text" name="q" placeholder=" " aria-labelledby="authenticated search">
+            <input class="authenticated" type="text" name="q" placeholder=" " aria-labelledby="authenticated-search">
           {% else %}
             <label id="non-authenticated-search" class="hidden-text">Search</label>
             <input class="authenticated non-authenticated" type="text" name="q" placeholder=" " aria-labelledby="non-authenticated-search">
