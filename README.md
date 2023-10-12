@@ -1,28 +1,28 @@
 # neon shore
 
-WIP - Work in Progress. The content is simply lifted from the previous project and the readme itself is in a greatly unfinished state. However, permission was obtained for use of all pieces of artwork on the website and will be elaborated in great detail later. Additionally, code from other places was used but heavily modified and commented, and it also will be attributed properly in the Credits section later.
-
 [neon shore - Live Website](https://paradise-lost-app.herokuapp.com/)
 
 ![Stars - Badge](https://badgen.net/github/stars/Ryael/paradise-lost) ![Watchers - Badge](https://badgen.net/github/watchers/Ryael/paradise-lost) ![Issues - Badge](https://badgen.net/github/issues/Ryael/avarice)
 
 ![neon shore](docs/screenshots/paradise-lost.gif)
 
-neon shore is a community-based platform to allow users to build and edit their armies, find people nearby to play with (should they want to opt into displaying their location), and make friends!
+neon shore is a B2C merchandise store belonging to my dear friend, an artist who goes by [expuella](). As it stands, it's just a prototype and proof of concept but there are plans to get this up and running the future. In the interest of privacy and safety, her real name will be disclosed and she will instead be referred to solely by her alias. I've worked with expuella in the past and currently help her with business inquiries, as well as managing Pixiv and Weibo on her behalf. Pixiv is imageboard that's extremely popular in Japan, and Weibo is effectively China's take on Twitter.
 
-This is my fourth milestone project as part of Code Institute's Diploma in <strong>Software Development (E-commerce Applications)</strong>.
+This is my fifth and final milestone project as part of Code Institute's Diploma in <strong>Software Development (E-commerce Applications)</strong>.
 
-This project was suggested to me by my very close friend and fellow full stack developer, Simon W. He initially pitched this idea with me working on the front-end and him creating the back end using Crystal, which is a programming language with Ruby-like syntax and C-like speed. I agreed to this but wanted to use this idea for my Portfolio Project 4 due to it fitting my interests, as well as the assessment criteria in terms of scope. As such, the backend is built using Python and the Django web framework, whereas the front-end consists of the usual trifecta of HTML, CSS, and JavaScript.
+This project was my idea as opening up a store is something we've spoken about in the past but have never done anything about due to how much time and effort it would require. This is not to mention maintainence and fulfilling orders without a dedicated staff. Having said that, this e-commerce project was the perfect opportunity to take this idea and begin working on it.
 
-Inspired by [Battle Scribe](https://www.battlescribe.net/), which utilises an application approach and is available on Windows, Apple Story, and Google Play. Unfortunately, many tabletop players have grown frustrated with Battle Scribe due to almost no development in past few years and this has become a bit of an open niche. This will be my humble attempt to create a website that fills this niche and hopefully provide a useful service to any aspiring commanders.
+Many artists have merchandise stores but they're often created using services like [Shopify]() and full-on storefronts like [etsy]() and these services take a percentage of the profits from the artist. [INPRNT]() is a very popular choice for artists to sell prints of their artwork as INPRNT handles the printing and shipping of the prints once the art is uploaded, however the profit split is a whopping 50:50. Expuella herself also uses INPRNT and has expressed her distaste in staying with them.
 
-For the purpose of this project, Simon W. will be referred to as the client as he was the one that pitched the concept. It will be my goal to facilitate and actualise his vision.
+Knowing this, I decided to craft an e-commerce website around expuella's vision of "neon-shore", which is a name she chose for the business side of things when she was much younger and it has stuck with her since. neon-shore speaks of expuella's love for tropical settings, beaches in particular, in combination of a neon colour palette. As such, I wanted the design and UI of this website to represent that, hence I asked expuella to work with me as my client and approve my designs and decisions.
+
+For the purpose of this project, expuella will also be referred to as the client It will be my goal to facilitate and actualise her vision of her business.
 
 ![neon shore- Responsive](docs/screenshots/responsive.png)
 
 ## Table of Contents
 
-1. [neon shore](#paradise-lost)
+1. [neon shore](#neon-shore)
 2. [Planning Phase](#planning-phase)
     - [Strategy](#strategy)
       - [Site Aims](#site-aims)
