@@ -77,3 +77,9 @@
 </section>
 
 {% endblock %}
+
+{% block sidebar_js %}
+  {{ block.super }}
+  {% load static %}
+  <script src="{% static 'profiles/js/profile-sidebar.js' %}"></script>
+{% endblock %}
