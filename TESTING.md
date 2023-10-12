@@ -34,9 +34,7 @@ Mozilla Firefox's built-in Responsive Design Mode was to extensively test all as
 
 ## Accessibility
 
-[WAVE WebAIM](https://wave.webaim.org/) was used to test the accessibility and it returned just one error and no contrast-errors.
-
-- The error returned was that the button present in `navigation.html` was empty and required and `aria-label`, which was a simple fix.
+[WAVE WebAIM](https://wave.webaim.org/) was used to test the accessibility. A handful of label and aria-label errors were returned, as well as one constrast error but those were quickly fixed.
 
 ## Performance
 
