@@ -3150,7 +3150,7 @@ a.save:hover {
   }
 
   .swiper-pagination {
-    margin-bottom: 0px;
+    display: none;
   }
 
   .swiper-wrapper {
@@ -3197,7 +3197,7 @@ a.save:hover {
   }
 
   #management-btns .btn, .btn-file {
-    padding: 1em 2em;
+    padding: 1.2em 4em;
   }
 
 }
