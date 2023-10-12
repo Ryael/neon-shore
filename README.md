@@ -152,10 +152,9 @@ UX **Must's**:
 
 ### Target Audience
 
-  - People who are looking to keep track of their rosters for table-top war gaming
-  - People who are looking to replace their physical rosters notes with digital storage
-  - Fans of tabletop games
-  - Fans of sci-fi concepts
+  - People who are looking to support artists
+  - People who are looking for merchandise of their favourite series
+  - People who are fans of original content and merchandise pertaining to it
 
 ### User Stories
 
@@ -167,56 +166,78 @@ UX **Must's**:
 
   3. As an unregistered user, I want to quickly and easily learn more about the website and its purpose if I am unable to infer its purpose from the visuals and text alone, so that I can decide if registering for this website would be beneficial to me.
 
-  4. As an unregistered user, I want to be able to register for an account so that I can start building my army rosters.
+  4. As an unregistered user, I want to be able to register for an account so that I can view my past orders.
+
+  5. As an unregistered user, I want to be given feedback for my actions so that I know they've been successful or not.
+
+  6. As a site user, I want to be engaged by the user interface, indicating I will enjoy spending time exploring the website as I navigate the same menus repeatedly.
+
+  7. As a site user, I want to experience a unique and uniform design with appealing colours so that every part of the website stimulates a positive response.
+
+  8. As a site user, I want to be able to access the website from any screen size and still have a pleasant viewing experience, so that I'm not restricted to only viewing this website on bigger screens.
 
 #### Registered Users
 
-  5. As a registered user, I want to be able to change my password should I forget so that I have peace of mind in knowing that I won't be locked out of my account.
+  9. As a registered user, I want to be able to change my password should I forget so that I have peace of mind in knowing that I won't be locked out of my account.
 
-  6. As a registered user, I want to be able to manage my account by changing my password so that I can avoid any security breaches or implement a stronger password.
+  10. As a registered user, I want to be able to manage my account by changing my password so that I can avoid any security breaches or implement a stronger password.
 
-  7. As a registered user, I want to be made aware of my account management actions so that I know they have been successful.
+  11. As a registered user, I want to be made aware of my account management actions so that I know they have been successful.
 
-  8. As a registered user, I want to be able to access a user dashboard so that I have a base of operations for this website that's readily available.
+  12. As a registered user, I want to be able to access a user dashboard so that I have a base of operations for this website that's readily available.
 
-  9. As a registered user, I want to be able to create my roster so that I can view it later.
+  13. As a registered user, I want to be able to view a list of products so that I can select some for purchase.
 
-  10. As a registered user, I want to be able to view my roster so that I can decide if it needs to have any changes made to it.
+  14. As a registered user, I want to be able to view individual product details so that I can see their price, description, and a larger image to see if it's something I like.
 
-  11. As a registered user, I want to be able to update my roster so that I can make sure it's always up to date.
+  15. As a registered user, I want to be able to view all my purchases to see how much my order has amounted to.
 
-  12. As a registered user, I want to be able to delete my roster so that any old or unnecessary rosters don't use any unnecessary space.
+  16. As a registered user, I want to be able to leave a testimonial to let other people know of my experiences with this store.
+
+  17. As a registered user, I want to be able to contact the store owner easily with any queries I may have.
+
+  18. As a registered user, I want to be able to change my delivery details so that they're correct and saved for future purchases.
+
+  19. As a registered user, I want to be able to recieve a verification email upon registration so that I know my registration was successful.
+
+  20. As a registered user, I want to be able to recieve a confirmation email upon completeing a purchase so that will I have a copy of order.
+
+  21. As a registered user, I want to be able to sort products by their categories so I can quicker identify what I'm interested in.
+
+  22. As a registered user, I want to be able to search the list of products so that I can find anything I'm looking for as quickly as possible.
+
+  23. As a registered user, I want to be able to add a specific amount of a given product to my bag so that I can buy only the amount I'm looking for.
+
+  24. As a registered user, I want to be able to adjust the amount of a given product in my bag so that I can easily make changes to my overall order.
+
+  25. As a registered user, I want to be able to easily enter my payment information so that I can checkout quickly and securely and know that my payment information is safe.
+
+  26. As a registered user, I want to be able to access the order success page after completing a payment to make sure it went through successfully and that I haven't made any mistakes in my shipping details.
+
+  27. As a registered user, I want to be able to access the checkout page so that I review my order whilst entering my payment and shipping details.
 
 #### Admins
 
-  13. As an admin, I want to be able to log into an admin interface so that I can view, add, update, or delete information pertaining to the army rosters.
+  28. As an admin, I want to be able to add a product so that I can add new products to the store via the product management menu
 
-  14. As an admin, I want to be able to access the users for the website so that I can make any adjustments to their accounts such as changing their password or email, should they request it.
+  29. As an admin, I want to be able to edit a product so that I can change the product details via the product management menu.
 
-  15. As an admin, I want to be able to view a list of the users so that I know how many active users there are.
+  30. As an admin, I want to be able to delete the product so that I can remove products that are out of stock or have been discontinued via the product management menu.
 
-#### Site User
+  31. As an admin, I want to be able to setup a social media page to promote my business, products, and website.
 
-  16. As a site user, I want to be engaged by the user interface, indicating I will enjoy spending time building my rosters as I navigate the same menus repeatedly.
+  32. As an admin, I want to be able to access the users for the website so that I can make any adjustments to their accounts such as changing their password or email, should they request it.
 
-  17. As a site user, I want to be shown responses from the website upon interaction with it so that I know the creation, deletion, or update of my roster has been successful.
-
-  18. As a site user, I want to experience a unique and uniform design with appealing colours so that every part of the website stimulates a positive response.
-
-  19. As a site user, I want to be able to access the website from any screen size and still have a pleasant viewing experience, so that I'm not restricted to only viewing this website on bigger screens.
-
-  20. As a site user, I want to be able to contact the admin via e-mail, find their GitHub project repository, or even find them on other socials like LinkedIn.
+  33. As an admin, I want to be able to view a list of the users so that I know how many active users there are.
 
 #### Dropped
 
 Certain user stories were dropped as part of the agile process. They are as follows:
 
-  - As a registered user, I want to be able make a profile so that I can share my roster via a link.
-  - As a registered user, I want to be able to private my rosters so that they don't appear on my profile.
-  - As a registered user, I want to view other people's profiles so that I can view their rosters.
-  - As a registered user, I want to add other people as friends so that we can make rosters and play together.
-  - As a registered user, I want to be able to delete a friend because they were very unsportsmanlike after beating me in a game.
-  - As a registered user, I want to find nearby active players so that we can meet up and play games.
+  - As an unregistered user, I want to be able to view a FAQ page to see what the most popular questions are and if they answer any of my questions.
+  - As a unregistered user, I want to quickly navigate to the top from any point on the page so that I don't spend too long scrolling.
+  - As a registered user, I want to be able to edit my testimonials in case I make a typo or just want to change it.
+  - As a registered user, I want to be able to delete my testimonials in case I want to remove the testimonial altogether.
   - As an admin, I want to add headings to the admin database tables so I can more quickly understand my data.
   - As an admin, I want to filter the admin database tables so that I can more easily find the data I need.
 
