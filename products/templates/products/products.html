@@ -39,11 +39,11 @@
     {% for product in products %}
       <div class="product">
         {% if product.image %}
-        <a href="{% url 'product_detail' product.id %}">
+        <a href="{% url 'product_detail' product.id %}" aria-label="detailed product view">
           <img class="product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
         </a>
         {% else %}
-        <a href="{% url 'product_detail' product.id %}">
+        <a href="{% url 'product_detail' product.id %}" aria-label="detailed product view">
           <img class="product-image" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
         </a>
         {% endif %}
@@ -59,13 +59,13 @@
               <p class="price">${{ product.price }}</p>
             </div>
             <div class="product-button">
-              <a class="btn" href="{% url 'product_detail' product.id %}">buy now</a>
+              <a class="btn" href="{% url 'product_detail' product.id %}" aria-label="detailed product view">buy now</a>
             </div>
           </div>
           {% if request.user.is_superuser %}
           <div class="superuser-btns">
-            <a href="{% url 'edit_product' product.id %}"><i class="fa-solid fa-pen"></i></a>
-            <a href="{% url 'delete_product' product.id %}"><i class="fa-solid fa-trash last"></i></a>
+            <a href="{% url 'edit_product' product.id %}" aria-label="edit product"><i class="fa-solid fa-pen"></i></a>
+            <a href="{% url 'delete_product' product.id %}" aria-label="delete product"><i class="fa-solid fa-trash last"></i></a>
           </div>
           {% endif %}
         </div>
