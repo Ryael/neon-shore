@@ -76,10 +76,7 @@
   </div>
 </section>
 
-{% endblock %}
+{% load static %}
+<script src="{% static 'profiles/js/profile-sidebar.js' %}"></script>
 
-{% block sidebar_js %}
-  {{ block.super }}
-  {% load static %}
-  <script src="{% static 'profiles/js/profile-sidebar.js' %}"></script>
 {% endblock %}
