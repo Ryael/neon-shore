@@ -450,7 +450,7 @@ All of the above allowed for more precise and correct version control.
 
 ## Testing
 
-Extensive testing has been carried out during and post-development and is available in a separate document [here](https://github.com/Ryael/paradise-lost/blob/main/TESTING.md).
+Extensive testing has been carried out during and post-development and is available in a separate document [here](https://github.com/Ryael/neon-shore/blob/main/TESTING.md).
 
 ## Future Updates
 
