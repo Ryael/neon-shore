@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /profile/
+Sitemap: https://neon-shore-a156870f9760.herokuapp.com/sitemap.xml
