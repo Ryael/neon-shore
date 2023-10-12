@@ -1,12 +1,12 @@
 # neon shore
 
-[neon shore - Live Website](https://paradise-lost-app.herokuapp.com/)
+[neon shore - Live Website](https://neon-shore-a156870f9760.herokuapp.com/)
 
-![Stars - Badge](https://badgen.net/github/stars/Ryael/paradise-lost) ![Watchers - Badge](https://badgen.net/github/watchers/Ryael/paradise-lost) ![Issues - Badge](https://badgen.net/github/issues/Ryael/avarice)
+![Stars - Badge](https://badgen.net/github/stars/Ryael/paradise-lost) ![Watchers - Badge](https://badgen.net/github/watchers/Ryael/neon-shore) ![Issues - Badge](https://badgen.net/github/issues/Ryael/neon-shore)
 
 ![neon shore](docs/screenshots/paradise-lost.gif)
 
-neon shore is a B2C merchandise store belonging to my dear friend, an artist who goes by [expuella](). As it stands, it's just a prototype and proof of concept but there are plans to get this up and running the future. In the interest of privacy and safety, her real name will be disclosed and she will instead be referred to solely by her alias. I've worked with expuella in the past and currently help her with business inquiries, as well as managing Pixiv and Weibo on her behalf. Pixiv is imageboard that's extremely popular in Japan, and Weibo is effectively China's take on Twitter.
+neon shore is a B2C merchandise store belonging to my dear friend, an artist who goes by [expuella](). As it stands, it's just a prototype and proof of concept but there are plans to get this up and running the future. In the interest of privacy and safety, her real name will be disclosed and she will instead be referred to solely by her alias. I've worked with expuella in the past and currently help her with business inquiries, as well as managing Pixiv and Weibo on her behalf. [Pixiv]() is an imageboard/gallery that's extremely popular in Japan, and [Weibo]() is a micro-blogging alternative to Twitter in China.
 
 This is my fifth and final milestone project as part of Code Institute's Diploma in <strong>Software Development (E-commerce Applications)</strong>.
 
@@ -76,32 +76,39 @@ For the purpose of this project, expuella will also be referred to as the client
 
 #### Site Aims
 
-Building an army for a tabletop war game is no small feat. Hobbyists must buy unit models of a specific faction, assemble, paint, and organise them. If they then want to play against another person, they must transport them while making sure the models don't get damaged.
+While a merchandise store may not seem like a good choice for a business, especially with there being so many alternatives between websites like [Redbubble](), [eBay](), and so on, avid fans of art and certain series enjoy to show their support of an artist and their works by purchasing their works. It's my belief that as much as possible of this should go to the sole creator of these works, the original artist. Art is often stolen, used, and printed without permission, and this is an unfortuante truth of the internet. As such, I'd like to bring as much attention and money to the original artists themselves.
 
-Amidst all that, every game has its own ruleset. Oftentimes, games have multiple. Put simply, there's more than one way to enjoy any particular game and this has led to the creation of various rulesets that cater to different demographics of players.
+Often times, people are more than happy to show their support towards their favourite artist and their works by purchasing prints, which are easy to ship, store, and display. Smaller pieces of merchandise like charms, pins, and stickers are also very popular as they're both cheap and easier to display as they use less room real-estate. Artbooks are also quite popular as they tend to be relatively inexpensive and a very sought-out collector's item, especially for those interested in collecting artbooks.
 
-Keeping track of rulesets is tricky because each one tends to be in-depth and is usually accompanied by some thick rulebooks. As such, it can be difficult to remember which unit belongs to which army for which ruleset, and so on. Many players have taken to note-taking in journals and the like, but that is one more thing to remember to bring whenever they need to travel for games.
-
-This application aims to streamline the process of players having to bring their physical notes everywhere. Instead, they can quickly and readily access their army rosters from the comfort of their mobile phones or computers.
-
-Here they can create their army rosters, view them at their leisure, modify them as required, and even delete them should become unnecessary. Wherever you go, your army information is always with you.
+This site aims to act as a prototype for my client to show her what an e-commerce store would look and function like, while providing a simple, clean, and easy-to-use interface for both clients and admins.
 
 #### Opportunities
 
-The following was an extensive list of features that were brainstormed between Simon W. and I during the conceptualisation of the website. A feasibility chart was deemed important to prioritise the scope of the intended strategy.
+The following was an extensive list of features that were brainstormed between expuella and I during the conceptualisation of the website. A feasibility chart was deemed important to prioritise the scope of the intended strategy.
 
 | Opportunity             | Importance  | Feasibility   |
 |------------------------ |------------ |-------------  |
 | User Account Management      | 5           | 5             |
-| Friend System           | 1           | 2             |
+| Stripe Payments           | 5           | 5             |
 | Landing Page            | 5           | 5             |
-| User Login, Logout, Register              | 5           | 5             |
-| About Page              | 5           | 5             |
-| User Profile            | 1           | 1             |
-| Army Roster Management  | 5           | 4             |
-| Roster Sharing          | 1           | 3             |
-| Killteam 2018 Ruleset   | 5           | 3             |
-| Error Pages             | 5           | 5             |
+| Account Management              | 5           | 5             |
+| About Page              | 3           | 5             |
+| User Profile            | 5           | 5             |
+| Product Management  | 5           | 5             |
+| Checkout System          | 5           | 5             |
+| Order History   | 5           | 5             |
+| Flash Messages             | 5           | 5             |
+| Testimonials             | 3           | 4             |
+| Contact Page             | 5           | 5             |
+| CRUD Functionality             | 5           | 5             |
+| Social Media             | 5           | 5             |
+| Different Currencies             | 3           | 1             |
+| Promotions             | 3           | 1             |
+| Related Products             | 2           | 2             |
+| FAQ             | 3           | 3             |
+| E-mail Confirmation             | 5           | 5             |
+| Order Status             | 3           | 1             |
+| Trustpilot Reviews             | 4           | 1             |
 | **Total**               | **38**      | **33**        |
 
 Feasibility is based on time and my current level of ability using languages.
