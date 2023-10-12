@@ -119,6 +119,10 @@ body {
   padding: 180px 4%;
 }
 
+.hidden-text {
+  display: none;
+}
+
 /* 4. Navigation */
 
 

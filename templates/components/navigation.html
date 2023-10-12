@@ -100,9 +100,11 @@
       <div id="search">
         <form method="GET" action="{% url 'products' %}">
           {% if request.user.is_authenticated %}
-            <input class="authenticated" type="text" name="q" placeholder=" ">
+            <label id="authenticated-search">
+            <input class="authenticated" type="text" name="q" placeholder=" " aria-labelledby="authenticated search">
           {% else %}
-            <input class="authenticated non-authenticated" type="text" name="q" placeholder=" ">
+            <label id="non-authenticated-search">
+            <input class="authenticated non-authenticated" type="text" name="q" placeholder=" " aria-labelledby="non-authenticated-search">
           {% endif %}
             <div>
               <svg>
