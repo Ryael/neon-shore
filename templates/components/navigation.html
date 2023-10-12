@@ -18,7 +18,7 @@
           <li class="mobile-list-item">
             <div id="mobile-search">
               <form method="GET" action="{% url 'products' %}">
-                <label id="nav-search">
+                <label id="nav-search" class="hidden-text">Search</label>
                 <input type="text" id="mobile-search-box" name="q" placeholder="Search..." aria-labelledby="nav-search">
               </form>
             </div>
@@ -100,10 +100,10 @@
       <div id="search">
         <form method="GET" action="{% url 'products' %}">
           {% if request.user.is_authenticated %}
-            <label id="authenticated-search">
+            <label id="authenticated-search" class="hidden-text">Search</label>
             <input class="authenticated" type="text" name="q" placeholder=" " aria-labelledby="authenticated search">
           {% else %}
-            <label id="non-authenticated-search">
+            <label id="non-authenticated-search" class="hidden-text">Search</label>
             <input class="authenticated non-authenticated" type="text" name="q" placeholder=" " aria-labelledby="non-authenticated-search">
           {% endif %}
             <div>
