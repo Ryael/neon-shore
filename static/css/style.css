@@ -3149,10 +3149,6 @@ a.save:hover {
     bottom: calc(67.5%);
   }
 
-  .swiper-pagination {
-    display: none;
-  }
-
   .swiper-wrapper {
     position: relative;
     height: auto;
@@ -3161,7 +3157,7 @@ a.save:hover {
   .container .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 605px;
     width: 100%;
-    display: flex;
+    display: none;
     position: fixed;
     justify-content: center;
   }
@@ -3197,7 +3193,7 @@ a.save:hover {
   }
 
   #management-btns .btn, .btn-file {
-    padding: 1.2em 4em;
+    padding: 1em 2em;
   }
 
 }
