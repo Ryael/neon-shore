@@ -26,7 +26,7 @@ For the purpose of this project, expuella will also be referred to as the client
 2. [Planning Phase](#planning-phase)
     - [Strategy](#strategy)
       - [Site Aims](#site-aims)
-      - [Opportunities ](#opportunities )
+      - [Opportunities ](#opportunities)
     - [Scope](#scope)
 3. [User Experience](#user-experience)
     - [Target Audience](#target-audience)
@@ -245,31 +245,33 @@ Certain user stories were dropped as part of the agile process. They are as foll
 
 ### Design Philosophy
 
-The design of this website began with a simple and clear vision: to replicate the menus present in old real-time strategy games, such as the Command & Conquer series. While navigating the many menus of the game, especially when choosing a location to start a campaign on Earth, the player can choose their starting location. While they're choosing, a hologram of the Earth will play on screen. While not exactly the same, [this video (timestamped)](https://youtu.be/j77gwvA2bQU?t=35), shows a very similar sequence.
+The design of this website began with a simple and clear vision: to encapsulate expuella's vision of a tropical beachfront paradise. Expuella's colour palette has pulled away from the neon palette quite a bit in the past few years so I opted to focus in on the beach aspect. This meant leaving the neon colour palette behind and instead opting for a much softer colour palette.
 
-My goal was first and foremost to replicate this sort of feeling: that the user is looking over the planet, ready to make their move. As such, I began scouring the website for a video that was not too long and looped perfectly, which is when I happened on Free Stock Videos by [Videezy](https://www.videezy.com/abstract/50298-futuristic-globe-world-earth-planet-in-cyberspace-with-binary-code). There's a great collection of high-quality videos that are free to use with attribution. This video in particular was exactly what I was looking for, it's a relatively short and perfect loop that features a rotating holograph of the planet.
+My goal was first and foremost to replicate the feeling that the user is welcomed by a friendly sandy beach shore.. As such, I began looking for design inspiration all over the internet, including websites like [Dribble](https://dribbble.com/), [Behance](https://www.behance.net/), and [CodePen](https://codepen.io). After about a week of searching, I stumbled upon this [Product UI Showcase](https://codepen.io/TurkAysenur/pen/gORaboY) pen and this is where the idea for my design was born for neon shore. It had that perfect sandy aesthetic that served as the core of this website design going forward.
 
-The colour scheme was picked from this video, which serves as the landing page for the website. The rest of the UI was built around this colour scheme and inspiration. The button style used is reminiscent of a commanding officer making difficult decisions as the reticule focuses in. Of course this website does nothing so austere, this is just the feeling I wanted to evoke with my designs. The menus themselves are simple, sleek, angular, with a repeated dot background combined a semi-transparent black to yellow gradient.
+After consulting my client, we agreed that a less saturated sandy colour would be more effective and less visually overpowering. Montserrat was chosen as the font of choice due to how well it complemented the existing design with its geometric and soft look. Instead of the black, a gray was opted for as it looked a lot more gentle with the less saturated sandy background. Originally, I planned to use EB Garamond for its sleek italic feel and its ability to create a sense of contrast with Montserrat, but unfortunately, expuella was not fond of it so it was removed. After much more searching, no other font type was found that satisified both of us and hence Montserrat was chosen as the sole font for this project. This worked quite well as it is very self-sufficient and looks different enough to the point that different font weights complement each other quite nicely.
 
-The design of the UI was mostly made with a mobile-first approach. However, for the smallest viewports, the menus expand to 80-100% of the width to allow for easier viewing.
+One of the biggest takeaways from this was pen the implementation of [SwiperJS](), which allowed me to create a carousel of rotating images, saving a huge deal of space and even allowing me to use a [GSAP]() paintlike mask effect to allow the image be revealed in brushstrokes. Learning to use and customise SwiperJS proved to be quite challenging as it was complex and required a complex HTML structure. However, after much adjustment I was able to find a marriage between a sandy shoreline and an art gallery, which I believe perfectly illustrates the purpose of this website.
+
+The remainder of the website followed the philosophy of this design, so as to create a coherent experience that felt like one thing smoothly led to another without any jarring changes within the user interface.
+
+The design of the UI was mostly made with a desktop approach in mind. The design for the smaller viewports had to come after and while it proved to be a challenge, I'm quite happy with how the website looks and handles at smaller resolutions.
 
 #### Colours
 
-The below image was generated using [coolers.co](https://coolors.co/fd9c31-cccccc-ffffff). The orange is the colour that was picked from the landing page video, silver was often used for text, and the white was used for titles and as a form of contrast between the black and greys present throughout the site.
+The below image was generated using [coolers.co](https://coolors.co/edeade-4f5356-ffffff). The feint sandy yellow is the colour that was picked from the body of the website, the gray was often used for text content, and the white was used primarily for the navigation menus, the profile interface, and for the footer. The white was used to represent foamy waves and served to create a sense of contrast to prevent the user from only ever seeing sand, which is only about half the point of a beach!
 
 ![neon shore - Colours](docs/screenshots/colours.png)
 
 #### Typography
 
-Two fonts were specifically chosen for this website:
+One font was specifically chosen for this website:
 
-- *Orbitron*
+- *Montserrat*
 
-Orbitron was chosen due to its sleek look, which evokes the feeling of a futuristic sci-fi movie. As it is intended for display purposes, it was used for the logo and as text headings.
+Montserrat was chosen for its soft, geometric, and contemorary feeling. Its well rounded corners give it an air of elegance, as if it belongs in an art gallery itself, making it the perfect font for the purpose of neon shore.
 
-- *Exo*
-
-Exo was chosen to compliment Orbitron as it also conveys a similarly futuristic yet elegant feeling. While it can also be used for headings, Exo looks much better at small text sizes, which is what it is used for in this project.
+All lowercase was my client's preference, as it is part and parcel of both her identity and aesthetic. It proved difficult to work with at first as it was quite difficult to create designs using just fonts that felt different enough, but thankfully after learning to properly manipulate weight, letter spacing, and size, it was still possible to create layouts where the heading and paragraph text looks varied yet consistent.
 
 ### Wireframes
 
