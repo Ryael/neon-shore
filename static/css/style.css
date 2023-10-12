@@ -844,7 +844,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(7) {
 }
 
 #footer-text p {
-  color: #bbb;
+  color: #aaa;
   margin-bottom: 50px;
 }
 
@@ -917,7 +917,7 @@ body.mobile-navigation-active .mobile-list-item:nth-child(7) {
 
 .social-icon-link {
   position: relative;
-  color: #bbb;
+  color: #aaa;
 }
 
 .social-icon-link:not(:last-of-type) {
