@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% block sidebar_js %}
+  {{ block.super }}
+  {% load static %}
+  <script src="{% static 'profiles/js/profile-sidebar.js' %}"></script>
+{% endblock %}
+
 {% block title %}my profile{% endblock %}
 
 {% block content %}
@@ -55,10 +61,4 @@
   </div>
 </section>
 
-{% endblock %}
-
-{% block sidebar_js %}
-  {{ block.super }}
-  {% load static %}
-  <script src="{% static 'profiles/js/profile-sidebar.js' %}"></script>
 {% endblock %}
