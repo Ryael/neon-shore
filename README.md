@@ -2,9 +2,9 @@
 
 [neon shore - Live Website](https://neon-shore-a156870f9760.herokuapp.com/)
 
-![Stars - Badge](https://badgen.net/github/stars/Ryael/paradise-lost) ![Watchers - Badge](https://badgen.net/github/watchers/Ryael/neon-shore) ![Issues - Badge](https://badgen.net/github/issues/Ryael/neon-shore)
+![Stars - Badge](https://badgen.net/github/stars/Ryael/neon-shore) ![Watchers - Badge](https://badgen.net/github/watchers/Ryael/neon-shore) ![Issues - Badge](https://badgen.net/github/issues/Ryael/neon-shore)
 
-![neon shore](docs/screenshots/paradise-lost.gif)
+![neon shore](docs/screenshots/neon-shore.gif)
 
 neon shore is a B2C merchandise store belonging to my dear friend, an artist who goes by [expuella](). As it stands, it's just a prototype and proof of concept but there are plans to get this up and running the future. In the interest of privacy and safety, her real name will not be disclosed and she will instead be referred to solely by her alias. I've worked with expuella in the past and currently help her with business inquiries, as well as managing Pixiv and Weibo on her behalf. [Pixiv]() is an imageboard/gallery that's extremely popular in Japan, and [Weibo]() is a micro-blogging alternative to Twitter in China.
 
@@ -79,7 +79,7 @@ For the purpose of this project, expuella will also be referred to as the client
 
 #### Site Aims
 
-While an independent merchandise store may not seem like a good choice for a business, especially with there being so many alternatives between websites like [Redbubble](), [eBay](), and so on, avid fans of art and certain media series enjoy to show their support of an artist by purchasing copies of their work. It's my belief that as much of the proceeds as possible should go to the sole creator of these works, the original artist. Art is often stolen, used, and printed without permission, and this is an unfortunate truth of the internet. As such, I'd like to bring as much attention and profit to the original artists themselves.
+While an independent merchandise store may not seem like a good choice for a business, especially with there being so many alternatives between websites like [Redbubble](https://www.redbubble.com/), [eBay](https://www.ebay.ie/), and so on, avid fans of art and certain media series enjoy to show their support of an artist by purchasing copies of their work. It's my belief that as much of the proceeds as possible should go to the sole creator of these works, the original artist. Art is often stolen, used, and printed without permission, and this is an unfortunate truth of the internet. As such, I'd like to bring as much attention and profit to the original artists themselves.
 
 Oftentimes, people are more than happy to show their support towards their favourite artist and their works by purchasing prints, which are easy to ship, store, and display. Smaller pieces of merchandise like charms, pins, and stickers are also very popular as they're both inexpensive and easier to display as they use less room real-estate. Artbooks are also quite popular as they tend to be good value and a very sought-out collector's item, especially for those interested in collecting artbooks.
 
