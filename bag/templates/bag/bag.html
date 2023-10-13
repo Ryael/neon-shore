@@ -35,7 +35,7 @@
                     <button class="decrement-qty" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}" aria-label="decrease product amount">
                       <i class="fa-solid fa-minus"></i>
                     </button>
-                    <label id="bag-quantity-management">
+                    <label id="bag-quantity-management" class="hidden-text">Bag Quantity Management</label>
                     <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" aria-labelledby="bag-quantity-management">
                     <button class="increment-qty" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}" aria-label="increase product amount">
                       <i class="fa-solid fa-plus"></i>
