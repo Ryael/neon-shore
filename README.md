@@ -280,23 +280,19 @@ All lowercase was my client's preference, as it is part and parcel of both her b
 
 The conceptualisation of the layout used in this project began with simple pen and paper sketches, which were then transformed into wireframes via Balsamiq. Everything shown here is a rough beta of the layout, some of which has changed during development.
 
-This is the prototype of the project, which changes over the course of project development.
+This is the prototype of the project, which changes over the course of project development. Only the below three had wireframes, and the rest of the website fell into place once these were figured out.
 
 <details>
   <summary>Home Page</summary>
   <img src="docs/wireframes/home.png" alt="Wireframe of the Home Page">
 </details>
 <details>
-  <summary>Navigation Menu</summary>
-  <img src="docs/wireframes/navigation-menu.png" alt="Wireframe of the Navigation Menu">
+  <summary>Store Page</summary>
+  <img src="docs/wireframes/store.png" alt="Wireframe of the Store Page">
 </details>
 <details>
-  <summary>General Menu</summary>
-  <img src="docs/wireframes/menu.png" alt="Wireframe of the General Menu">
-</details>
-<details>
-  <summary>Roster</summary>
-  <img src="docs/wireframes/roster.png" alt="Wireframe of the Roster">
+  <summary>Profile Menu</summary>
+  <img src="docs/wireframes/profile.png" alt="Wireframe of the Profile Menu">
 </details>
 
 ### Database
@@ -478,29 +474,29 @@ Upon accessing the profile, the wishlist tab for the admin is replaced by admin.
 
 ![confirmation-email](docs/screenshots/confirmation-email.png)
 
-Opting to delete a roster brings the user to a very simple and short menu where they're asked if this is the correct roster to be deleted. This roster is referenced by name and has a button labelled "Yes" under this text, with a "Cancel" link under that should the user want to return to the roster list.
+As soon as the Stripe webhook confirms that payment has successfully went through, the user recieves an email confirming their order.
 
 ### SweetAlert
 
 ![sweetalert](docs/screenshots/sweetalert.png)
 
-Opting to delete a roster brings the user to a very simple and short menu where they're asked if this is the correct roster to be deleted. This roster is referenced by name and has a button labelled "Yes" under this text, with a "Cancel" link under that should the user want to return to the roster list.
+SweetAlert modals were opted for the choice of flash messages. They have a bit of personality in their animations and looks.
 
 ### Error 404
 
 ![error-404](docs/screenshots/error-404.png)
 
-If a user managed to stray off the beaten path, they'll be displayed an error 404 page, which has been styled with the usual orange colour. This design uses an SVG which can be upscaled almost infinitely without sacrificing any quality. This SVG is created entirely using CSS as well. The SVG itself is used to create a round "O" animation that feels at home in any futuristic-themed website and is sandwiched by "4" and "0". The error description is rendered in Exo and in orange, with flashing brackets at both sides that help grab the user's attention.
+If a user managed to stray off the beaten path, they'll be displayed an error 404 page, which has been styled with the usual sandy yellow colour. It remains consistent with the rest of the website. Error 500 is the exact same except with a different error code and its associated description.
 
 ### Favicon
 
 ![favicon](docs/screenshots/favicon.png)
 
-As with all websites, this one also has a Favicon that is displayed beside the Title of the page. A user can quickly and easily discern if they have neon shore open amongst many different tabs by looking for the capital "P" icon, which is rendered in the same font as the title text, Orbitron.
+As with all websites, this one also has a Favicon that is displayed beside the Title of the page. A user can quickly and easily discern if they have neon shore open amongst many different tabs by looking for the little palm tree.
 
 ## Code
 
-Primarily standard practice was followed for creating a Django application, however, due how to `{{forms as p}}` render, `style.css` was split aside from `form.css`, the latter of which targeted any elements on the page post-rendering to style them effectively. `script.js` was also split into two: `hamburger-script.js` and `text-rotator.js` due to the jQuery present on the latter throwing console errors for any page where the dynamic text wasn't present, which was every page except for the home page.
+Primarily standard practice was followed for creating a Django application, with little to no exceptions.
 
 ### Commits
 
