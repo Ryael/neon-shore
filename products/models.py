@@ -6,9 +6,13 @@ from django.contrib.auth.models import User
 
 
 class Category(models.Model):
+    """ Model for the category of products. """
 
     class Meta:
-          verbose_name_plural = 'Categories'
+        """"
+        Changes the name of the category in the admin panel.
+        """
+        verbose_name_plural = 'Categories'
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
     singular_name = models.CharField(max_length=254, null=True, blank=True)
@@ -17,14 +21,23 @@ class Category(models.Model):
         return self.name
 
     def get_friendly_name(self):
+        """
+        Passes the friendly name to the template/admin panel.
+        """
         return self.friendly_name
 
     def get_singular_name(self):
+        """
+        Passes the singular name to the template/admin panel
+        """
         return self.singular_name
 
 
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    """ Model for all products. """
+
+    category = models.ForeignKey('Category', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -37,10 +50,11 @@ class Product(models.Model):
 
 
 class WishlistItem (models.Model):
+    """ Model for wishlist items. """
+
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     added_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.product.name
-
