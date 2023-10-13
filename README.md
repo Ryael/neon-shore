@@ -170,11 +170,11 @@ UX **Must's**:
 
   5. As an unregistered user, I want to be given feedback for my actions so that I know they've been successful or not.
 
-  6. As a site user, I want to be engaged by the user interface, indicating I will enjoy spending time exploring the website as I navigate the same menus repeatedly.
+  6. As an unregistered user, I want to be engaged by the user interface, indicating I will enjoy spending time exploring the website as I navigate the same menus repeatedly.
 
-  7. As a site user, I want to experience a unique and uniform design with appealing colours so that every part of the website stimulates a positive response.
+  7. As an unregistered user, I want to experience a unique and uniform design with appealing colours so that every part of the website stimulates a positive response.
 
-  8. As a site user, I want to be able to access the website from any screen size and still have a pleasant viewing experience, so that I'm not restricted to only viewing this website on bigger screens.
+  8. As an unregistered user, I want to be able to access the website from any screen size and still have a pleasant viewing experience, so that I'm not restricted to only viewing this website on bigger screens.
 
 #### Registered Users
 
@@ -218,7 +218,7 @@ UX **Must's**:
 
 #### Admins
 
-  28. As an admin, I want to be able to add a product so that I can add new products to the store via the product management menu
+  28. As an admin, I want to be able to add a product so that I can add new products to the store via the product management menu.
 
   29. As an admin, I want to be able to edit a product so that I can change the product details via the product management menu.
 
@@ -298,11 +298,9 @@ This is the prototype of the project, which changes over the course of project d
 
 ### Database
 
-![neon shore - Database Schema](docs/schema/database.png)
+![neon shore - EDR](docs/schema/database.png)
 
-Above is the database schema as the initial plan for the database tables. Originally, we planned for users to be able to configure their rosters with units, specialisms, abilities, war gear, and weapon profiles. Unfortunately, this fell completely out of scope due to time constraints and unfamiliarity with a method of serialising those models in a way that's customisable to each user.
-
-The user model was not included due to the default user model provided by the ALLAUTH library.
+This EDR was obtained via [pgAdmin]() by being connected to the database on elephantSQL
 
 ## Agile Development Process
 
