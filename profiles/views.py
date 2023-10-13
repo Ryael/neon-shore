@@ -7,6 +7,7 @@ from products.models import WishlistItem
 from .models import UserProfile
 from .forms import UserProfileForm
 
+
 @login_required
 def profile(request):
     """ Display the user's overall profile. """
@@ -31,7 +32,8 @@ def profile_details(request):
             form.save()
             messages.success(request, 'Profile updated successfully.')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(request,
+                           'Update failed. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
 
@@ -117,4 +119,3 @@ def profile_wishlist(request):
     }
 
     return render(request, template, context)
-
