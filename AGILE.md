@@ -25,7 +25,7 @@ Below is a summary of learnings from each individual sprint, taken from screensh
 
 ### Sprint #1:
 
-https://i.imgur.com/HC51hWw.png
+![Sprint #1](docs/sprints/sprint1.png)
 
 The aim of this sprint was to set-up the project while following along the Boutique Ado walkthrough. This involved setting up allauth, the relevant templates, basic UI, and the home page.
 
@@ -38,7 +38,7 @@ The aim of this sprint was to set-up the project while following along the Bouti
 
 ### Sprint #2:
 
-https://i.imgur.com/uJqdUva.png
+![Sprint #2](docs/sprints/sprint2.png)
 
 The objective of the second sprint was to finish some basic UI elements and style the majority of the User Management pages.
 
@@ -49,7 +49,7 @@ The objective of the second sprint was to finish some basic UI elements and styl
 
 ### Sprint #3:
 
-https://i.imgur.com/IUBFeea.png
+![Sprint #3](docs/sprints/sprint3.png)
 
 The main goal of this sprint was to set-up and style the Store page and all its related contents, including the search, sort, categorise functionalities, as well as the detailed product view.
 
@@ -58,7 +58,7 @@ The main goal of this sprint was to set-up and style the Store page and all its 
 
 ### Sprint #4:
 
-https://i.imgur.com/FCk9TSr.png
+![Sprint #4](docs/sprints/sprint4.png)
 
 The aim of this sprint was to set-up and style the Bag page, implement being able to add a select quantity to the bag, and then adjusting the quantity within the bag itself alongside being able to remove items altogether.
 
@@ -69,7 +69,7 @@ The aim of this sprint was to set-up and style the Bag page, implement being abl
 
 ### Sprint #5:
 
-https://i.imgur.com/rlWguhU.png
+![Sprint #5](docs/sprints/sprint5.png)
 
 This sprint was used to find an alternative to Bootstrap's Toasts and use it as flash messages that inform the user that their actions have either have or haven't been successful. As that alone seemed difficult, only one other task was added in the setting-up and styling of the Checkout page.
 
@@ -79,7 +79,7 @@ This sprint was used to find an alternative to Bootstrap's Toasts and use it as 
 
 ### Sprint #6:
 
-https://i.imgur.com/ksle5hC.png
+![Sprint #6](docs/sprints/sprint6.png)
 
 This sprint's objective was to setup Stripe and all of its associated functionality, including webhooks. Having known that the Boutique Ado code-along had a very long session for this, the Payment Security (i.e.. Stripe), was allocated 10 story points and the only other user story to accompany it was chosen to be Order Confirmation, sitting at 2 story points.
 
@@ -90,7 +90,7 @@ This sprint's objective was to setup Stripe and all of its associated functional
 
 ### Sprint #7:
 
-https://i.imgur.com/UtKZKBV.png
+![Sprint #7](docs/sprints/sprint7.png)
 
 Sprint #7's objective was used to setup the user profile portion of the website and all its associated functionality, including the displaying of all past orders, saving and editing of personal details, and allowing users to change and reset their passwords.
 
@@ -101,7 +101,7 @@ Sprint #7's objective was used to setup the user profile portion of the website 
 
 ### Sprint #8:
 
-https://i.imgur.com/lcdURQs.png
+![Sprint #8](docs/sprints/sprint8.png)
 
 This sprint's main objective was to set-up the product admin, as well as the error pages and an about page.
 
@@ -112,7 +112,7 @@ This sprint's main objective was to set-up the product admin, as well as the err
 
 ### Sprint #9
 
-https://i.imgur.com/lGNk6f9.png
+![Sprint #9](docs/sprints/sprint9.png)
 
 Sprint #9 was used to create the Contact and Review models and set up their pages accordingly, as well as using MailChimp to setup a Newsletter.
 
