@@ -47,18 +47,18 @@ const app = (() => {
     menuItems = document.querySelectorAll('.mobile-list-item');
 
     applyListeners();
-  }
+  };
 
   const applyListeners = () => {
     menu.addEventListener('click', () => toggleClass(body, 'mobile-navigation-active'));
-  }
+  };
 
   const toggleClass = (element, stringClass) => {
     if(element.classList.contains(stringClass))
       element.classList.remove(stringClass);
     else
       element.classList.add(stringClass);
-  }
+  };
 
   init();
 })();
@@ -128,7 +128,7 @@ $('.decrement-qty').click(function(e) {
 $('.update-link').click(function(e) {
     var form = $(this).prev('.update-form');
     form.submit();
-})
+});
 
 // Remove item and reload on click
 $('.remove-item').click(function(e) {
@@ -141,14 +141,14 @@ $('.remove-item').click(function(e) {
      .done(function() {
          location.reload();
      });
-})
+});
 
 /* Country Field */
 
 let countrySelected = $('#id_default_country').val();
 if(!countrySelected) {
     $('#id_default_country').css('color', '#9b9b9b');
-};
+}
 $('#id_default_country').change(function() {
     countrySelected = $(this).val();
     if(!countrySelected) {
