@@ -126,33 +126,33 @@ I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsof
 
   - The navigation menu has a profile button that re-directs the user to the "Register" page, where they're able to easily and quickly make an account for the website.
 
-5. As an unregistered user, I want to be given feedback for my actions so that I know they've been successful or not.
+5.  As an unregistered user, I want to be given feedback for my actions so that I know if they’ve been successful or not.
 
-  - Upon every action, the user is either re-directed to the relevant page or SweetAlert flash messages appear in the top right of the screen informing if the users action has been successful or not, or even just displaying information.
+  - Upon every action, the user is either re-directed to the relevant page or SweetAlert flash messages appear in the top right of the screen informing if the user’s action has been successful or not, or even just displaying information.
 
 6. As an unregistered user, I want to be engaged by the user interface, indicating I will enjoy spending time exploring the website as I navigate the same menus repeatedly.
 
   - The menus were all built in such a way that it feels cohesive and everything leads to another. Buttons are snappy and quick, with animations playing very quickly.
-  - When one has to navigate lots of menus quickly, it's equally important that said menus are well-designed and responsive.
+  - When one has to navigate lots of menus quickly, it’s equally important that said menus are well-designed and responsive.
   - The designs are also consistent throughout, with each part of the website complementing each other, emulating that sandy beach aesthetic.
 
 7. As an unregistered user, I want to experience a unique and uniform design with appealing colours so that every part of the website stimulates a positive response.
 
-  - The user interface was built with a very modern and sandy-beach theme in mind that's supposed to evoke feelings of tropical shores with its buttons, hero-slider, and wave-like animations. Design was put on the forefront to engage the user as much as possible and maximise user conversion.
+  - The user interface was built with a very modern and sandy-beach theme in mind that’s supposed to evoke feelings of tropical shores with its buttons, hero-slider, and wave-like animations. Design was put on the forefront to engage the user as much as possible and maximise user conversion.
 
-8. As an unregistered user, I want to be able to access the website from any screen size and still have a pleasant viewing experience, so that I'm not restricted to only viewing this website on bigger screens.
+8.  As an unregistered user, I want to be able to access the website from any screen size and still have a pleasant viewing experience, so that I’m not restricted to only viewing this website on bigger screens.
 
   - This website has been optimised for all viewports, even for mobiles with widths as small as 370px.
-  - Generally speaking, these sort of websites tend to lend themselves well to bigger screens due to the amount of data they display, but this data has been styled in such a way that the data displays nicely even at smaller viewports.
+  - Generally speaking, these sorts of websites tend to lend themselves well to bigger screens due to the amount of data they display, but this data has been styled in such a way that the data displays nicely even at smaller viewports.
 
-9. As a registered user, I want to be able to change my password should I forget so that I have peace of mind in knowing that I won't be locked out of my account.
+9.  As a registered user, I want to be able to change my password should I forget it so that I have peace of mind in knowing that I won't be locked out of my account.
 
   - Upon navigation to the user profile, the user is presented with text documenting the features of their user profile. One such tab, account, will bring them to the part of their profile where they're provided options to reset their password or just change it.
   - Alternatively, if the user was logged out, once they navigate to the "Login" page by interacting with the user profile icon, and there'll be a link to "reset" their password in case they forgot at the bottom of the menu, which brings them to the same place as above.
 
 10. As a registered user, I want to be able to manage my account by changing my password so that I can avoid any security breaches or implement a stronger password.
 
-  - Registered users are able to open their user profile, which acts as their base of operations. Here they can find a "Change Your Password" button as part of the accounts tab, which re-directs them to the page of the same name. The user is able to change their password by first inputting their current password and their new, desired password twice.
+  - Registered users are able to open their user profile, which acts as their base of operations. Here they can find a "Change Your Password" button as part of the accounts tab, which re-directs them to the page of the same name. The user can change their password by first inputting their current password and their new, desired password twice.
 
 11. As a registered user, I want to be made aware of my account management actions so that I know they have been successful.
 
@@ -187,23 +187,23 @@ I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsof
 
   - The contact portion of the navigation menu is always visible to the user such that if they have any queries they are able to contact the store.
   - Upon navigating to it, they are presented with a very quick form so they can easily and quickly fill it out.
-  - After it's been filled out and they click submit, a SweetAlert informs that their message has been recieved and will have a response within 48 hours.
+  - After it's been filled out and they click submit, a SweetAlert informs that their message has been received and will have a response within 48 hours.
 
 18. As a registered user, I want to be able to change my delivery details so that they're correct and saved for future purchases.
 
   - After registration, the user may navigate to their user profile. Here, they're able to then navigate to the details tab, and this is where they're prompted for their delivery details.
-  - Once saved, these will be saved for all future purchases but they can be edited at any time either via this or via checkout.
+  - Once saved, these will be saved for all future purchases, but they can be edited at any time either via this or via checkout.
   - If a user wants to make a purchase first, then all they have to do is follow the checkout process and then interact with the save details to profile box.
 
-19. As a registered user, I want to be able to recieve a verification email upon registration so that I know my registration was successful.
+19. As a registered user, I want to be able to receive a verification email upon registration so that I know my registration was successful.
 
   - Upon successful registration, the user is sent an email asking them to verify their email.
 
-20. As a registered user, I want to be able to recieve a confirmation email upon completeing a purchase so that will I have a copy of order.
+20. As a registered user, I want to be able to receive a confirmation email upon completing a purchase so that I will have a copy of my order.
 
   - Upon successfully completing a purchase with Stripe, the user is sent a confirmation email via the Stripe webhook, which they can view at any time after.
 
-21. As a registered user, I want to be able to sort products by their categories so I can quicker identify what I'm interested in.
+21. As a registered user, I want to be able to sort products by their categories so I can quickly identify what I'm interested in.
 
   - Once the user is on the store page, they are presented with the available categories.
   - Should they choose to interact with any given one, every product associated with that category will be displayed to them.
@@ -242,21 +242,21 @@ I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsof
   - This is where they're greeted by a shipping and payment form on the left side, and a summary of their order on the right.
   - The user is given ample time to fill out their order and review it at their leisure.
 
-28. As an admin, I want to be able to add a product so that I can add new products to the store via the product management menu.
+28. As an admin, I want to be able to add a new product to the store via the product management menu.
 
   - Upon navigating to the profile as an admin, the profile tabs on the left change slightly. "Wishlist" is now replaced by "Admin", as admins will have no need for a wishlist on their own store.
   - The description of the very first profile page informs the admin of their ability to add products and redirects them with a button.
   - Once they navigate to the add product menu, they are able to fill out a short form and upload an image to create a new product.
 
-29. As an admin, I want to be able to edit a product so that I can change the product details via the product management menu.
+29. As an admin, I want to be able to edit a product by changing the product details via the product management menu.
 
-  - In order for an admin to edit products, they must first navigate to the store where all the products are displayed.
-  - Each product has two buttons on the far right: 1) an edit "pencil" icon and 2) a delete "bin" icon. 1) allows admins to edit products.
+  - For an admin to edit products, they must first navigate to the store where all the products are displayed.
+  - Each product has two buttons on the far right: 1) an edit “pencil” icon and 2) a delete “bin” icon. 1) allows admins to edit products.
   - This can also be done via the detailed product view.
 
-30. As an admin, I want to be able to delete the product so that I can remove products that are out of stock or have been discontinued via the product management menu.
+30. As an admin, I want to be able to delete the product, so that I can remove products that are out of stock or have been discontinued via the product management menu.
 
-  - In order for an admin to delete products, they must first navigate to the store where all the products are displayed.
+  - For an admin to delete products, they must first navigate to the store where all the products are displayed.
   - Each product has two buttons on the far right: 1) an edit "pencil" icon and 2) a delete "bin" icon. 2) allows admins to delete products.
   - This can also be done via the detailed product view.
 
