@@ -40,33 +40,35 @@ Mozilla Firefox's built-in Responsive Design Mode was to extensively test all as
 
 Google Lighthouse was used to assess the performance of this website. All tests were performed in incognito mode to avoid interference from any other sources. Tests were carried out on each section but the same result was returned every time. This was the same case for mobile, and as such, only one result will be provided.
 
+- Performance overall was poor, but this was to be expected with all the SVGs, transitions, and complex animations. This will the first thing to be rectified and optimised, as an e-commerce site that loads quickly is very important.
+- SwiperJS's recommended HTML structure impacted the Accessibility score a bit but due to time constraints I have not had the opportunity to fix this, hence this will be looked into in the future.
+- Lighthouse doesn't correctly detect the existing `robots.txt` file and the method of correcting unfortunately cannot be implemented due to time constraints.
+
 ![Lighthouse](docs/testing/lighthouse.png)
 
 ## Validation
 
 ### HTML
 
-[W3C Markup Validation Service](https://validator.w3.org/nu/) was used to validate all the HTML. Each file was checked by text input first and then by address afterwards. No errors were found, aside from errors pertaining to templating. A few warnings were flagged but this was assumed to be because of Django as well.
+[W3C Markup Validation Service](https://validator.w3.org/nu/) was used to validate all the HTML. Each file was checked by text input first and then by address afterwards. No errors were found, aside from errors pertaining to templating. A few errors were flagged but as they were svg warnings and those aren't parsed correctly, they were filtered.
 
 ![HTML](docs/testing/html.png)
 
 ### CSS
 
-[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate both CSS stylesheets. No errors were found for `form.css` but `style.css` showed errors for "Property r doesn't exist". However, after extensive research, this may just be that the validation tool is out of date. Property `r` refers to the radius of a circle and is often used in SVG designs. There's even a [CSS-Tricks page](https://css-tricks.com/svg-properties-and-css/) that covers the use of it. Additionally, it seems like the [VSCode linter](https://github.com/microsoft/vscode/issues/85828) also picks up on it incorrectly and has since 2019. The latest post was last month and it still seems to be an issue.
-
-![Form CSS](docs/testing/form-css.png)
+[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate both CSS stylesheets. No errors were found.
 
 ![Style CSS](docs/testing/style-css.png)
 
 ### JS
 
-[JSHint](https://jshint.com/) was used to validate JavaScript code. It detected one unused variable, but that variable is indeed used and was hence left alone.
+[JSHint](https://jshint.com/) was used to validate JavaScript code. It detected a few unused variables, specifically, `Swiper`, `gsap`, and `$`. The first two are imported from their own scripts and `$` is from jQuery.
 
 ![JavaScript](docs/testing/jshint.png)
 
 ### PEP8
 
-[PEP8 Code Institute Linter](https://pep8ci.herokuapp.com/#) was used to validate Python code. The only errors found were to do with lines being too long and those were all fixed. `settings.py` had a handful of line too long errors but as they were provided that same way by the base template and for fear of tampering with important configurations, these errors were left untouched.
+[PEP8 Code Institute Linter](https://pep8ci.herokuapp.com/#) was used to validate Python code. The only errors found were to do with lines being too long and those were all fixed. Stripe's `webhook_hanlder.py` had some line too long errors but those were left alone in fear of tampering and breaking the webhook. `settings.py` had a handful of line too long errors but as they were provided that same way by the base template and for fear of tampering with important configurations, these errors were left untouched.
 
 ## Device Testing
 
