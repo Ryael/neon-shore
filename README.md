@@ -337,105 +337,155 @@ Should excess stock occur, it can be given as freebies with other orders or even
 
 ![logo](docs/screenshots/logo.png)
 
-No suitable icon was found for the logo and hence the Orbitron font was used for it instead. To create a sense of contrast "Paradise" was written in white, whereas "Lost" was written in orange and has lower font weight than "Paradise". This approach to text logo design achieves a sleek and unique look. As expected, interacting with the logo brings the user to the home/landing page.
+A simple palm tree was chosen as the logo for neon shore as it helps emulate that sandy-beach aesthetic I was aiming for. It was found via [Flaticon](https://www.flaticon.com/free-icon/tree_6434066?term=palm+tree&page=1&position=7&origin=tag&related_id=6434066#) and is available for personal and commercial use with attribution.
 
 ### Landing Page
 
 ![landing-page](docs/screenshots/landing-page.png)
 
-The landing page utilises a hero-video for its background, which loops perfectly every 10 seconds. Upon loading into the page, the user is greeted the video and the dynamically rotating text. The text rotates between synonyms for "army", "fleet", and other similar words every four seconds. Dynamically changing text is very [effective for user conversion](https://www.convertize.io/dynamic-text/) and creates an engaging landing page. This text is accompanied by a call-to-action button with the words "Enlist Now!", urging potential users to sign-up. Lastly, in the top right corner, a hamburger menu is visible which is used to expand a navigation menu.
+The landing page utilises a hero-slider or carousel as its main draw. Upon loading into the page, the user is greeted by the text and image gently fading into view as the the contents of the image are painted on. This effect is achieved by GSAP, an industry standard JavaScript animation libary that allows high-performance animations that work in every browser. The user is then able to interact either with the pagination below or the navigation arrows either side. This will show one of three additional slides, with additional products on each page. It's effectively saving a lot of space by being able to rotate through them. With the flashiness of the painterly effect, the user's attention should be easy enough to retain for them to see each of the products.
 
-### Navigation Menu - New User
+On narrower viewports, the image is stacked on top of the text content in order to make greater use of the available space. Unfortunately, the pagination had to be removed at this point as it would constantly move about the page or not display at all. This is something that'll be looked into in the future.
 
-![navigation-menu-new](docs/screenshots/navigation-menu-new.png)
+Upon interactign with any of the "Buy Now" buttons, the user will be brought to one of four places: 1) directly to the artbook page, 2) the products page showing all prints, 3) the products page showing all pins, or 4) the products page showing all charms. Between this, the navigation bar, and the footer, the user will always have somewhere to explore, should they want to.
 
-The navigation menu opens with a smooth fade-in animation and the hamburger icon is replaced with an "X", informing the user that this "X" icon is what they should interact with should they want to close the navigation menu. The user is greeted by a dark gray "carbon-fiber" background with small dots, which consists of a small single dot image that is repeated. This allows the dot to scale to any viewport necessary without any stretching. The links themselves begin as white and when interacted with, all but the active one fade to grey. The social-icons on the bottom also function the same way.
+### Navigation Menu - Desktop
 
-The bottom of the navigation menu features the aforementioned social-icons which also double as the website's footer. This approach was opted for as full screen navigation menus are becoming increasingly popular, given they allow for greater focus on the true page content. Even if a stick navigation bar approach is utilised, it still uses a portion of the viewing space. The footer can also add unnecessary vertical scrolling. As this website aims to utilise the immediately available viewing space, full screen navigation menu was the ideal choice.
+![navigation-menu-desktop](docs/screenshots/navigation-menu-desktop.png)
 
-### Navigation Menu - Registered User
+The navigation bar doesn't have any particular transitions but instead is simple, clean, and slick. It operates like a sticky navigation bar whereby if the user scrolls down, it follows down with the user's viewport. This ensures that the user always has navigation at the ready.
 
-![navigation-menu-registered](docs/screenshots/navigation-menu-registered.png)
+The goal with this was not to paralyse the user with decision paralysis, which is all too common with websites like eBay or Amazon. You're given so many options and so many things to interact with, it can very difficult to decide exactly what you want to interact with. Here, the store is displayed immediately after home, speaking of its importance.
 
-Similarly, to the new user example, the navigation menu changes the links available to the user depending on if they are authenticated or not. If they are not, the above example is what they will see. If they are, however, then they'll instead be shown the Registered User example with the Login and Register links replaced with Dashboard and Logout links.
+Next to the links, on the far right, is the navigation icons. These are SVGs (think FontAwesome icons but with a lot more control over how they look and a much larger amount than what's available there). They're simple and clean, and the search icon has a neat animation that plays out upon click, which reveals a search field.
+
+Both the links and the icons can be hovered to have them fade to reduced opacity, giving feedback to the user as to where their mouse is.
+
+If the user is logged in, they'll see one extra icon: 1) search, 2) profile, 3) bag, 4) logout. This is used to inform the user of their logged in state.
+
+### Navigation Menu - Mobile
+
+![navigation-menu-mobile](docs/screenshots/navigation-menu-mobile.png)
+
+Upon switching to a narrower viewport or simply by browsing this website on a phone, the navigaton bar disappears to give the rest of the website room to breathe. It is instead replaced by a stylish hamburger menu icon, which upon interaction with, plays a transition of three rectangles smoothly sliding in from the top. This effect was chosen as it emulates the foamy tide coming into the shore.
+
+After this point, the content of the menu fades in and it is much the same as the desktop version, except the search functionality is now at the top, the navigation links are in the middle, and the navigation icons are on the bottom. Upon hover/interaction on the links, a smooth underline transition plays. For the icons, they simply increase in opacity upon hover. Lastly, the hamburger icon is replaced by an X to indicate that's what the user has to interact with to close this menu. Upon doing so, everything fades away before the menu recedes as the tide would.
 
 ### Button
 
 ![button](docs/screenshots/button.gif)
 
-All the buttons present on the website follow the same design: gray background with orange text and orange decorators on all corners. Upon interaction, the corners expand and float outwards. This effect was made to be reminiscent of an aiming reticle to give the website's buttons a more military-esque feeling, bolstering the site’s sci-fi army feel. The decorators and button text also both flicker upon loading and interaction, as a way of guiding the user.
+All the buttons present on the website follow the same design but at different sizes: transparent background with grey text. Upon interaction, the inards of the button fill up with a soft blue. This is one of the few instances that the colour blue was used throughout this website, and it, of course, symbolises water.
+
+### Footer
+
+![footer](docs/screenshots/footer.gif)
+
+The footer is one of the most impressive parts of the website as it's three white overlapping foamy waves of different opacities. These are SVGs once again and play ever so smoothly. It helps push home the very theme of this website. Within the footer itself are three more SVG icons, that display their name over their heads upon interaction. These SVGs were chosen such that users could learn what the icons were if they weren't familiar with them, especially the last two. Lastly, of course, is the credit and all the rights reserved statement.
+
+### Store
+
+![store](docs/screenshots/store.gif)
+
+The store page is where all the products reside. Upon loading into the page, the user is greeted by the available categories as well as the total number of products. The categories change colour by their opacity being reduced to indicate that they're interactable.
+
+The products themselves are displayed in a polaroid grid style with a big white border around the image that pushes downwards and makes space for the text. This text displays the category, name, price, and a button to view a more detailed version of the product. If the user is logged in, a heart icon is displayed opposite the category and this works as a wishlist addition.
+
+As the viewport gets smaller, the grid switches from two columns to just the one.
+
+
+### Product Details
+
+![product-details](docs/screenshots/product-details.gif)
+
+Upon interaction with either the button or the image itself in the store, the user is brought to a detailed view of the product. Here, the image is much bigger and instead takes the form of a polaroid picture sliding out of an envelope. This is achieved by box-shadow effects. There's also a description present here, which informs the user of more details about the product.
+
+Additionally, there's a add to bag button that's accompanied by quantity adjustment controls, allowing the user to increment, decrement, and manually input the value they'd so desire.
+
+As before, if the user is logged in, a heart icon is available to be interacted with if they want to add this item to their wishlist. It's once again opposite the category.
 
 ### About
 
 ![about](docs/screenshots/about.png)
 
-The about page is the one of the first pages the user will see should they want to learn more about the purpose of the website. The entirety of the page background is a dark gray with a similar (albeit more widely spaced) dot pattern to the navigation menu. However, this time the dot itself is generated with CSS, which allows it to expand infinitely as required by the viewport. Links are highlighted in orange and turn to white on mouse-over/interaction, providing the user with visual feedback.
+The about page is the one of the first pages the user will see should they want to learn more about the purpose of the website. The entirety of the page background is the usualy sandy yellow with a similar. There's a splash of colour in expuella's most popular avatar that tells of her neon roots. This is accompanied by text that tells of her time as an illustrator.
 
-### Register
+### Newsletter
 
-![register](docs/screenshots/register.png)
+![newsletter](docs/screenshots/newsletter.png)
 
-This is one of the first menus a new user will see, if the landing page user conversion was successful. Upon loading into this page, the user is greeted by a centered menu with a white outline and input text fields outlined in that same orange colour, creating a consistent design throughout. Errors are rendered above their relevant text field and are styled in the same manner as regular paragraph text, meaning that the body text is consistently gray throughout. Additionally, a link to the login page is found at the bottom of the menu and highlighted in orange, instantly standing out to the user who may be looking just to login. The button for the input is same as other buttons showcased earlier. This will be consistent for every other button on this website.
+The newsletter page itself is very simple: it's the embed HTML provided by MailChimp that has been customised to match the background and input fields of this site. Simple and clean.
+
+### Testimonials
+
+![testimonials](docs/screenshots/testimonials.png)
+
+Testimonials is where the testimonials for the shop exist. It's a very simple page as it serves to display the five most recent testimonials. The button below brings the user, if they're logged in, to a form which allows them to add their own testimonial. The design and layout of it is very similar to the below contact page.
+
+### Contact
+
+![contact](docs/screenshots/contact.png)
+
+The contact page is also extremely simple as it contains four fields for any user to enter, and by hitting the submit button, their inquiry will be recieved. After which, the page will refresh and the user will be informed of their success via SweetAlert.
+
 
 ### Login
 
 ![login](docs/screenshots/login.png)
 
-Logging in is an important process for any website with features locked behind user registration. As such, login menu itself is simple and short. The user is also provided with a remember-me checkbox, with its opacity reduced ever-so-slightly to make it fit in with the overall colour scheme of the menu. Upon it being checked, it becomes highlighted in the usual orange colour. The user is also presented with two links at the bottom of the menu, one linking them back to the register page and the one below that allowing them to use the "Forgot your password" functionality which allows them to reset their password via email.
+Only the login page will be displayed here as it's very similar to the registration and logout menus. They either have more fields or no fields and look almost identical.
 
-### Forgot Your Password
+The fields themselves are white with a box-shadow behind them to creat a sense of depth.
 
-![forgot-your-password](docs/screenshots/forgot-your-password.png)
+Logging in is an important process for any website with features locked behind user registration. As such, login menu itself is simple and short. The user is also provided with a remember-me checkbox, with its opacity reduced ever-so-slightly to make it fit in with the overall colour scheme of the menu. The user is also presented with two links at the bottom of the menu, one linking them back to the register page and the one below that allowing them to use the "Forgot your password" functionality which allows them to reset their password via email.
 
-In terms of design, this section is consistent with the above menus. Upon entering the email the user used for registration, they're able to request a link via email to reset their password. Once that link is used, the user is redirected to the reset password page where they are given a chance to input a new password and then confirm that same password. They are then brought to a new page where they are informed their password has been successfully changed.
-
-### Logout
-
-![logout](docs/screenshots/logout.png)
-
-Should the user want to logout, they are brought to one of the smallest menus across the entire website. It's centered vertically and horizontally, which admittedly does stand out. However, this is intentional as the very small menu box looks out of place when it's placed in the same location as the other menus. Upon logging out, the user is not provided with any text but instead is brought to the landing page as is standard. The links in the navigation menu also revert to "Register" and "Login".
-
-### Dashboard
+### Profile - Desktop
 
 ![dashboard](docs/screenshots/dashboard.png)
 
-Upon successful registration or login, the dashboard page is the first thing the user will see. While there is no message printed to inform the user that their login has been successful, instead they will be greeted by "Welcome, Commander USERNAME!". Between the redirect and the greeting on the dashboard, I feel this is sufficient to let the user know that their login has been successful. The dashboard is available to the user wherever they go via the navigation menu alongside the "Logout" link. On the dashboard itself, the user is given three options on where to go next: "My Rosters", "Change Password", and "Logout".
+Once the user navigations to the profile page, they will be greeted by "welcome, username!" alongside a very sleek user interface with a sidebar navigation menu. This menu consists of five tabs, which are as follows: Profile, Details, Orders, Account, and Wishlist. As they're very similar only the profile page will be displayed. Upon hover, they fill up with that similar blue to the buttons.
 
-### Change Your Password
+In essence, each page is the same except for the details, orders, and wishlist pages. The details pages holds the user's delivery details which can be edited at any time. These are almost identical to the fields from the other parts of the website except they have a simple 1px border instead of a box-shadow. The orders page contains a list of all past orders, each of which links to their order success page. The wishlist page is identical to the orders page except the user has an option to remove items from their wishlist.
 
-![change-your-password](docs/screenshots/change-your-password.png)
+Each page contains a short summary of its features, and should the user want to logout they can do so by navigating to the account tab and interacting with the logout button.
 
-Changing your password on the website is important due to security reasons. Sometimes one may want a more complex password for peace of mind, sometimes one may want to update their password manager, and even sometimes one may want to update their passwords across all websites due to their password being compromised. As such, it is extremely important to provide the user with a way of changing their password. The menu itself is the exact same as before and once the current password, new password, and new password again are submitted, the page is refreshed, and the user is informed via message that their password has been successfully changed.
+### Bag
 
-### Roster List
+![bag](docs/screenshots/bag.png)
 
-![roster-list](docs/screenshots/roster-list.png)
+Once the user has at least one item in their bag and access that page, they are greeted by a table with two rows: one of the image of their product and its associated details, and one of the price, quantity, and buttons to adjust the quantity or remove the product entirely. Under these is the subtotal, shipping, and total price, and then the checkout button.
 
-Once the user interacts with the "My Rosters" button, they'll be brought to the roster index page, which shows all the available rosters. If this is the user's first time coming to this page, there will be no rosters visible and instead all they'll see is a "Create Roster" button. This button is placed under the created rosters but will be in their immediate viewing space initially. The roster menus are different from the general menus as they are much wider to accommodate the tables. This width is adjusted to around 80% of the viewport on medium-small devices to ensure everything fits nicely and neatly.
+### Checkout
 
-Once a roster has been created, it is rendered as a table via HTML and styled using CSS. For wider screens this will be a table with an orange outline as per usual, for medium-small screens this will be a wide card, and for small screens this will be a narrow card. Each of the aforementioned cards are stacked vertically with a small space in between. Each roster has three Font Awesome icons: 1) View (Eye), 2) Edit (Pen), and 3) Delete (Bin). These three icons are common practice for these actions and also fade to white on interaction, indicating that they function as links. The rosters themselves are sorted by their name.
+![checkout](docs/screenshots/checkout.png)
 
-### Create Roster
+The checkout page follows the same sort of format as the bag did. It is, once again, a table with two columns. One for the delivery and payment details, and one that holds a quick summary of the user's order.
 
-![create-roster](docs/screenshots/create-roster.png)
+Once the details have been filled out, the user can opt to select the "save delivery details" box to ensure their details are saved for subsequent purchases.
 
-The create roster page is fundamentally very similar to the user account management menus, except that it features a number field and drop-down menus for selection. Below the relevant data input is a button that lets the user create a roster with their selected data. Below the button is a link to go back to roster list.
+Stripe is used for the payment form and should anyone attempt to test this, please use "4242 4242 4242 4242 424/42 424 24242". This a is card used for testing payment systems. After filling out their payment details, the user has a chance to review their order, before either opting to adjust their bag or complete the order. As they do, an overlay comes into effect indicating that the payment is being processed. If there's an error or a field is missing, an error will be displayed via the form that'll assist the user in figuring out what the issue was.
 
-### Edit Roster
+### Order Success
 
-![edit-roster](docs/screenshots/edit-roster.png)
+![order-success](docs/screenshots/order-success.png)
 
-Editing a roster is almost identical to creating one as the menu is the same – however, the page title and submit buttons are different. This is a simple and straightforward experience.
+Upon payment successfully going through with Stripe, the order success page is loaded. Yet again, it's a table with two columns, one of which has the labels for the information, while the other has the details pertaining to the order. Above this is text informing the user that a confirmation email has been sent to their email. At the bottom of the table is a button that encourages the user to keep shopping.
 
-### View Roster
+### Product Management
 
-![view-roster](docs/screenshots/view-roster.png)
+![product-management](docs/screenshots/product-management.png)
 
 Viewing a roster is more or less identical to the "My Rosters" page, however it shows one select roster in the same fashion as the roster list. Ideally this is what the users would be able to share with other players. Unfortunately, that functionality is currently out of scope. At the bottom of the menu, a "Return" button is available for the user.
 
-### Delete Roster
+### Confirmation Email
 
-![delete-roster](docs/screenshots/delete-roster.png)
+![confirmation-email](docs/screenshots/confirmation-email.png)
+
+Opting to delete a roster brings the user to a very simple and short menu where they're asked if this is the correct roster to be deleted. This roster is referenced by name and has a button labelled "Yes" under this text, with a "Cancel" link under that should the user want to return to the roster list.
+
+### SweetAlert
+
+![sweetalert](docs/screenshots/sweetalert.png)
 
 Opting to delete a roster brings the user to a very simple and short menu where they're asked if this is the correct roster to be deleted. This roster is referenced by name and has a button labelled "Yes" under this text, with a "Cancel" link under that should the user want to return to the roster list.
 
@@ -444,12 +494,6 @@ Opting to delete a roster brings the user to a very simple and short menu where 
 ![error-404](docs/screenshots/error-404.png)
 
 If a user managed to stray off the beaten path, they'll be displayed an error 404 page, which has been styled with the usual orange colour. This design uses an SVG which can be upscaled almost infinitely without sacrificing any quality. This SVG is created entirely using CSS as well. The SVG itself is used to create a round "O" animation that feels at home in any futuristic-themed website and is sandwiched by "4" and "0". The error description is rendered in Exo and in orange, with flashing brackets at both sides that help grab the user's attention.
-
-### Error 500
-
-![error-500](docs/screenshots/error-500.png)
-
-Similarly, to the error 404-page, error 500 is displayed whenever there's an internal server error. Ideally, users will never encounter it. It uses a similar SVG-styled page with the "4" and "4" replaced with "5" and "0" to spell out error 500. The error description reads "Internal Server Error" in the same style as the above error.
 
 ### Favicon
 
@@ -595,7 +639,7 @@ Now, lastly, all you need to do is to navigate to the Deploy tab and hit Deploy.
 
 - [Simon Waldron](https://github.com/saikez) - Simon acted as my client, my mentor, my tutor support, and my best friend throughout this entire project. He helped guide me when I was stuck, helped me learn many good practices, how to quickly and efficiently research topics, how to troubleshoot, explained agile methodologies, helped me setup JIRA, and even allowed me to use his pre-configured e-mail server so that users would have the option to reset their passwords. Thank you so much, Simon, it was an absolute pleasure designing this for you and I'm very eager to work not for you but together with you in the near future.
 
-- Rose S. - Rose was instrumental in helping me proofread this readme, testing.md, and agile.mdY ou've saved me so much time and hassle, after looking at it for so long I just can't spot errors any longer... so, thank you so much, Rose! You're wonderful!
+- Rose S. - Rose was instrumental in helping me proofread this readme, testing.md, and agile.md. You've saved me so much time and hassle, after looking at it for so long I just can't spot errors any longer... so, thank you so much, Rose! You're wonderful!
 
 - My family and friends, who have been incredibly supportive and have been instrumental in keeping me motivated throughout this project. Thank you all so much! All of you who helped proofread, test, provide feedback on the website, code, and etc... I couldn't have done it without you all!
 
