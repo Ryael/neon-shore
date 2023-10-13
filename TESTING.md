@@ -28,6 +28,10 @@
 | #22   | Stripe webhook should deliver events successfully.  | Stripe webhook was not delivering events successfully.  | Stripe endpoint configured incorrectly.   | Add `/checkout/wh` to the end of the endpoint.  | N/A   |
 | #23   | Stripe should send confirmation emails upon successful checkout.  | Stripe was not sending confirmation emails.   | Error 500, there was an extra newline in the subject confirmation email template.   | Remove the newline from the subject template.   | [dee11b4](https://github.com/Ryael/neon-shore/commit/dee11b40446f320ad7eabaeebe89785e4c2d7b7e)  |
 
+### Unfixed:
+
+- Some images and files not displaying due to an error 403 from AWS's end. This will be looked into later. One such image is the media "noimage". It seems to be an issue with permissions but as I'm largely unfamiliar with hosts like AWS, this was put aside in favor of other issues.
+
 ## Responsiveness
 
 Mozilla Firefox's built-in Responsive Design Mode was to extensively test all aspects of Paradise Lost. It works on viewports as small as 350px.
@@ -105,106 +109,167 @@ I tested the website extensively on Mozilla Firefox, Google Chrome, and Microsof
 
 1. As an unregistered user, I want to quickly understand the purpose of this website so that I can determine if I want to continue spending my time on this website and register.
 
-  - Upon arriving at the landing page, the user is greeted by the hero video and dynamically changing text that informs the user of the purpose of the website.
-  - The typography help to convey the feeling that this is a very futuristic, sci-fi, and army-focused website which should help the user infer its purpose.
+  - Upon arriving at the landing page, the user is greeted by the Swiper which allows the user to dynamically change the slides, showcasing 4 different products to them.
+  - The typography helps to convey the feeling that this is a very contemorary, soft, and welcoming website which should help the user feel welcomed.
 
 2. As an unregistered user, I want to easily navigate the menu without getting lost and see the uniformity of each page so that I know this website is worth my time and won't lead to any frustrations.
 
-  - The colour scheme is consistent throughout all pages, as are the menus which emulate an application-like approach that help familiarise the user with the website.
+  - The colour scheme is consistent throughout all pages, as are the menus which emulate an gallery-like approach that help familiarise the user with the website.
   - The navigation menu is sleek, clean, and simple. Everything is well laid-out and easy to understand.
 
 3. As an unregistered user, I want to quickly and easily learn more about the website and its purpose if I am unable to infer its purpose from the visuals and text alone, so that I can decide if registering for this website would be beneficial to me.
 
-  - After this point, the user is able to open the navigation menu if the visuals were engaging enough to open the "About" page, where they can find more detailed information about the purpose of this website in great detail.
+  - After this point, the user is able to navigate to the navigation menu if the visuals were engaging enough to open the "About" page, where they can find more detailed information about the purpose of this website in great detail.
+  - Additionally, the user is able to quickly checkout the store and its product. If they're interested, they can registered to keep tabs on a list of their orders via the user profile.
 
-4. As an unregistered user, I want to be able to register for an account so that I can start building my army rosters.
+4. As an unregistered user, I want to be able to register for an account so that I can view my past orders.
 
-  - The home page has an "Enlist Now!" button that re-directs the user to the "Register" page, where they're able to easily and quickly make an account for the website.
-  - The user is also able to access this page by opening the fullscreen navigation menu and navigating to the "Register" link in the middle of the screen.
+  - The navigation menu has a profile button that re-directs the user to the "Register" page, where they're able to easily and quickly make an account for the website.
 
-5. As a registered user, I want to be able to change my password should I forget so that I have peace of mind in knowing that I won't be locked out of my account.
+5. As an unregistered user, I want to be given feedback for my actions so that I know they've been successful or not.
 
-  - Upon opening the dashboard, the user is prompted to change their password. However, this assumes that they know what it was prior to this. If not, there's a highlighted link at the bottom of the page that re-direct them towards the "Forgot Your Password" page, where the user can reset their password via e-mail.
-  - If the user registered without providing an e-mail, then they have the option of contacting the admin and asking them to help them change their password.
-  - Alternatively, if the user was logged out, once they navigate to the "Login" page there'll be a link to "Reset" their password in case they forgot at the bottom of the menu, which brings them to the same place as above.
+  - Upon every action, the user is either re-directed to the relevant page or SweetAlert flash messages appear in the top right of the screen informing if the users action has been successful or not, or even just displaying information.
 
-6. As a registered user, I want to be able to manage my account by changing my password so that I can avoid any security breaches or implement a stronger password.
-
-  - Registered users are able to open their dashboard, which acts as their base of operations. Here they can find a "Change Your Password" button which re-directs them to the page of the same name. The user is able to change their password by first inputting their current password and their new, desired password twice.
-
-7. As a registered user, I want to be made aware of my account management actions so that I know they have been successful.
-
-  - Upon changing or updating their password, if the "Forgot Your Password" functionality was used then a page is displayed to inform the user's action was successful. If the "Change Your Password" functionality was used then a message is printed above the form to inform them that their password has been changed successfully.
-
-8. As a registered user, I want to be able to access a user dashboard so that I have a base of operations for this website that's readily available.
-
-  - Upon logging in or registering, the user is provided feedback that their action was successful by being brought to the "Dashboard" page.
-  - They are greeted here with a "Welcome, Commander %USERNAME%!" to further inform that they're at the right place.
-  - There are three buttons here which allow them to navigate to a) "My Rosters", b) "Change Your Password", c) "Logout" pages.
-  - The "Dashboard" page is accessible from all parts of the website via the navigation menu once the user is logged in.
-
-9. As a registered user, I want to be able to create my roster so that I can view it later.
-
-  - From the "Dashboard" page, a user is able to navigate to the "My Rosters" page where they are greeted by a "Create Roster" button.
-  - Upon interaction with this button, they are brought to another page where they're able to create a roster.
-  - On this "Create Roster" page, once all the details are input and the button is interacted with, the user is brought back to the "My Rosters" page where a message is printed to let them a roster has been successfully created.
-
-10. As a registered user, I want to be able to view my roster so that I can decide if it needs to have any changes made to it.
-
-  - Users are able to view their current rosters via the "My Roster" page, which is available via the easily accessible "Dashboard".
-  - Here a table is displayed of all the available rosters.
-  - A user can interact with the "eye" icon to see a roster on its own.
-  - Nothing else is possible here and the user is provided with a button to return back to their list of rosters.
-
-11. As a registered user, I want to be able to update my roster so that I can make sure it's always up to date.
-
-  - From the "My Roster" page where all the current rosters are displayed, beside each roster is three icons: an "eye", a "pen", and a "bin". The second is often used as an icon for the edit function, which is precisely what this icon does.
-  - It re-directs the user to the "Edit Roster" page, where they can make changes to their roster of choice.
-  - Upon confirmation of the changes, they're returned back to the roster list where a message is printed to inform them that their edit has been successful.
-
-12. As a registered user, I want to be able to delete my roster so that any old or unnecessary rosters don't use any unnecessary space.
-
-  - In the same way as above, a registered user is able to make all management actions on their rosters via the "My Rosters" page.
-  - In this case, the focus is on the "bin" icon, which is commonly used as a delete button.
-  - Interacting with it will re-direct the user to the "Delete Roster" page where the user is asked if they are sure that this is the roster they want to delete. The name of the roster will be bold and a button asking for their confirmed will be found below that.
-  - Should they confirm, they'll be brought back to the "My Roster" page where there'll be one roster less and a message printed informing that roster has been deleted.
-
-13. As an admin, I want to be able to log into an admin interface so that I can view, add, update, or delete information pertaining to the army rosters.
-
-  - Django's provided admin interface makes it very quick and simple to login, manage data however you may wish to.
-  - This, however, is limited to how your models are set-up.
-
-14. As an admin, I want to be able to access the users for the website so that I can make any adjustments to their accounts such as changing their password or email, should they request it.
-
-  - The built-in admin interface is very powerful and offers powerful user management tools.
-  - Admins are able to change a user's username, first name, last name, email address, permissions, groups, password, as well as their latest login and date of registration.
-
-15. As an admin, I want to be able to view a list of the users so that I know how many active users there are.
-
-  - Simply by navigating to the "User" portion of the admin panel, an admin is quickly and easily able to see exactly how many users have registered on their website and how many of them are active.
-
-16. As a site user, I want to be engaged by the user interface, indicating I will enjoy spending time building my rosters as I navigate the same menus repeatedly.
+6. As an unregistered user, I want to be engaged by the user interface, indicating I will enjoy spending time exploring the website as I navigate the same menus repeatedly.
 
   - The menus were all built in such a way that it feels cohesive and everything leads to another. Buttons are snappy and quick, with animations playing very quickly.
   - When one has to navigate lots of menus quickly, it's equally important that said menus are well-designed and responsive.
-  - The designs are also consistent throughout, with each part of the website complementing each other.
+  - The designs are also consistent throughout, with each part of the website complementing each other, emulating that sandy beach aesthetic.
 
-17. As a site user, I want to be shown responses from the website upon interaction with it so that I know the creation, deletion, or update of my roster has been successful.
+7. As an unregistered user, I want to experience a unique and uniform design with appealing colours so that every part of the website stimulates a positive response.
 
-  - Upon any of the successful edit, create, and delete roster actions, the user is brought back to the "My Rosters" page, where the relevant message is printed just below the title of the page so as to inform them their action has been carried out.
+  - The user interface was built with a very modern and sandy-beach theme in mind that's supposed to evoke feelings of tropical shores with its buttons, hero-slider, and wave-like animations. Design was put on the forefront to engage the user as much as possible and maximise user conversion.
 
-18. As a site user, I want to experience a unique and uniform design with appealing colours so that every part of the website stimulates a positive response.
+8. As an unregistered user, I want to be able to access the website from any screen size and still have a pleasant viewing experience, so that I'm not restricted to only viewing this website on bigger screens.
 
-  - The user interface was built with a very sleek and futuristic theme in mind that's supposed to evoke feelings of sci-fi war-games with its buttons, hero-video, and dot-like backgrounds. Design was put on the forefront to engage the user as much as possible and maximise user conversion.
-
-19. As a site user, I want to be able to access the website from any screen size and still have a pleasant viewing experience, so that I'm not restricted to only viewing this website on bigger screens.
-
-  - This website has been optimised for all viewports, even for mobiles with widths as small as 350px.
+  - This website has been optimised for all viewports, even for mobiles with widths as small as 370px.
   - Generally speaking, these sort of websites tend to lend themselves well to bigger screens due to the amount of data they display, but this data has been styled in such a way that the data displays nicely even at smaller viewports.
 
-20. As a site user, I want to be able to contact the admin via e-mail, find their GitHub project repository, or even find them on other socials like LinkedIn.
+9. As a registered user, I want to be able to change my password should I forget so that I have peace of mind in knowing that I won't be locked out of my account.
 
-  - Any user is able to find the admin's socials via the navigation menu, which is always available to them.
-  - There they can find the admin's LinkedIn, GitHub, and their e-mail.
+  - Upon navigation to the user profile, the user is presented with text documenting the features of their user profile. One such tab, account, will bring them to the part of their profile where they're provided options to reset their password or just change it.
+  - Alternatively, if the user was logged out, once they navigate to the "Login" page by interacting with the user profile icon, and there'll be a link to "reset" their password in case they forgot at the bottom of the menu, which brings them to the same place as above.
 
-[Back to Readme](https://github.com/Ryael/paradise-lost)
+10. As a registered user, I want to be able to manage my account by changing my password so that I can avoid any security breaches or implement a stronger password.
+
+  - Registered users are able to open their user profile, which acts as their base of operations. Here they can find a "Change Your Password" button as part of the accounts tab, which re-directs them to the page of the same name. The user is able to change their password by first inputting their current password and their new, desired password twice.
+
+11. As a registered user, I want to be made aware of my account management actions so that I know they have been successful.
+
+  - Upon changing or updating their password, if the "Forgot Your Password" functionality was used then a page is displayed to inform the user's action was successful. If the "Change Your Password" functionality was used then a message is printed above the form to inform them that their password has been changed successfully.
+
+12. As a registered user, I want to be able to access a user profile so that I have a base of operations for this website that's readily available.
+
+  - Upon logging in or registering, the user is provided feedback that their action was successful via SweetAlert modal.
+  - They are greeted here with a "Welcome, %username%!" to further inform that they're at the right place.
+  - There are five buttons on the left side which act as tabs, which allow them to navigate to a) "Profile", b) "Details", c) "Orders", d) "Account", and e) "Wishlist" ("Admin" for admins) pages.
+  - The "Profile" page is accessible from all parts of the website via the navigation menu once the user is logged in.
+
+13. As a registered user, I want to be able to view a list of products so that I can select some for purchase.
+
+  - Upon navigation to the store section of the website, the user is presented with all the available products.
+
+14. As a registered user, I want to be able to view individual product details so that I can see their price, description, and a larger image to see if it's something I like.
+
+  - While browsing the store page, the user can opt to interact with the "Buy Now" button or the image for any product that strikes their fancy.
+  - Doing so will bring them to the detailed product view, where they can see additional details like the description, price, and a larger image.
+
+15. As a registered user, I want to be able to view all my purchases to see how much my order has amounted to.
+
+  - Navigating to the bag via the navigation menu will show the user everything currently in their bag, as well as the total price for the items.
+
+16. As a registered user, I want to be able to leave a testimonial to let other people know of my experiences with this store.
+
+  - By navigation to the testimonial tab in the navigation menu, users will be brought to a list of the latest 5 testimonials.
+  - Here they're presented with a button to add their own testimonial, after which a short form is displayed in order for them to do so.
+
+17. As a registered user, I want to be able to contact the store owner easily with any queries I may have.
+
+  - The contact portion of the navigation menu is always visible to the user such that if they have any queries they are able to contact the store.
+  - Upon navigating to it, they are presented with a very quick form so they can easily and quickly fill it out.
+  - After it's been filled out and they click submit, a SweetAlert informs that their message has been recieved and will have a response within 48 hours.
+
+18. As a registered user, I want to be able to change my delivery details so that they're correct and saved for future purchases.
+
+  - After registration, the user may navigate to their user profile. Here, they're able to then navigate to the details tab, and this is where they're prompted for their delivery details.
+  - Once saved, these will be saved for all future purchases but they can be edited at any time either via this or via checkout.
+  - If a user wants to make a purchase first, then all they have to do is follow the checkout process and then interact with the save details to profile box.
+
+19. As a registered user, I want to be able to recieve a verification email upon registration so that I know my registration was successful.
+
+  - Upon successful registration, the user is sent an email asking them to verify their email.
+
+20. As a registered user, I want to be able to recieve a confirmation email upon completeing a purchase so that will I have a copy of order.
+
+  - Upon successfully completing a purchase with Stripe, the user is sent a confirmation email via the Stripe webhook, which they can view at any time after.
+
+21. As a registered user, I want to be able to sort products by their categories so I can quicker identify what I'm interested in.
+
+  - Once the user is on the store page, they are presented with the available categories.
+  - Should they choose to interact with any given one, every product associated with that category will be displayed to them.
+
+22. As a registered user, I want to be able to search the list of products so that I can find anything I'm looking for as quickly as possible.
+
+  - From anywhere within the website, the user has access to the search functionality.
+  - Carrying out a search will bring up relevant products depending on what's input.
+  - The user can even search by categories or description, should they wish to.
+
+23. As a registered user, I want to be able to add a specific amount of a given product to my bag so that I can buy only the amount I'm looking for.
+
+  - Once in the detailed view of a product, there is a button that allows users to choose precisely how much of a product they want to add to their bag.
+  - This quantity can be increased, decreased, or input manually via the text box.
+
+24. As a registered user, I want to be able to adjust the amount of a given product in my bag so that I can easily make changes to my overall order.
+
+  - By navigating to their bag, the user is able to remove the product by interacting with the x button.
+  - If they do not wish to remove it, but instead wish to adjust it, then they can adjust the quantity using the + and - buttons before confirming their choice with the tick button.
+
+25. As a registered user, I want to be able to easily enter my payment information so that I can checkout quickly and securely and know that my payment information is safe.
+
+  - After the user confirms they are happy with how their bag looks like, they may interact with the checkout button, which will bring them to the checkout page.
+  - Here, the user is able to input their shipping details and payment information.
+  - While the payment is processing, a spinning overlay appears over the checkout screen to indicate this.
+  - The payment information is never stored and is handled by Stripe, which is a leading entity in the world of e-commerce payments. They're known for their security.
+
+26. As a registered user, I want to be able to access the order success page after completing a payment to make sure it went through successfully and that I haven't made any mistakes in my shipping details.
+
+  - As soon as an order is completed via the checkout page, the user is brought to the order success page, and a confirmation email is sent.
+  - A SweetAlert modal message informs the user of this, and they are also able to view their order via the profile menu.
+
+27. As a registered user, I want to be able to access the checkout page so that I review my order whilst entering my payment and shipping details.
+
+  - Upon hitting checkout on the bag page, the user is brought to the checkout page.
+  - This is where they're greeted by a shipping and payment form on the left side, and a summary of their order on the right.
+  - The user is given ample time to fill out their order and review it at their leisure.
+
+28. As an admin, I want to be able to add a product so that I can add new products to the store via the product management menu.
+
+  - Upon navigating to the profile as an admin, the profile tabs on the left change slightly. "Wishlist" is now replaced by "Admin", as admins will have no need for a wishlist on their own store.
+  - The description of the very first profile page informs the admin of their ability to add products and redirects them with a button.
+  - Once they navigate to the add product menu, they are able to fill out a short form and upload an image to create a new product.
+
+29. As an admin, I want to be able to edit a product so that I can change the product details via the product management menu.
+
+  - In order for an admin to edit products, they must first navigate to the store where all the products are displayed.
+  - Each product has two buttons on the far right: 1) an edit "pencil" icon and 2) a delete "bin" icon. 1) allows admins to edit products.
+  - This can also be done via the detailed product view.
+
+30. As an admin, I want to be able to delete the product so that I can remove products that are out of stock or have been discontinued via the product management menu.
+
+  - In order for an admin to delete products, they must first navigate to the store where all the products are displayed.
+  - Each product has two buttons on the far right: 1) an edit "pencil" icon and 2) a delete "bin" icon. 2) allows admins to delete products.
+  - This can also be done via the detailed product view.
+
+31. As an admin, I want to be able to setup a social media page to promote my business, products, and website.
+
+  - Due to expuella's existing social media accounts in Twitter, Weibo, and Pixiv, promoting her business will be no issue at all. This is especially true considering that she has a considerable following between these three platforms.
+
+32. As an admin, I want to be able to access the users for the website so that I can make any adjustments to their accounts such as changing their password or email, should they request it.
+
+  - By accessing the admin panel, an admin is able to quickly navigate to the "Accounts" or "Emails" section, where they make any necessary adjustments.
+
+33. As an admin, I want to be able to view a list of the users so that I know how many active users there are.
+
+  - Simply by navigating to the "User" portion of the admin panel, an admin is quickly and easily able to see exactly how many users have registered on their website and how many of them are active.
+
+[Back to Readme](https://github.com/Ryael/neon-shore)
