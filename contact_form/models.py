@@ -2,7 +2,12 @@ from django.db import models
 
 # Create your models here.
 
+
 class ContactInquiries(models.Model):
+    """
+    Model to store users' inquiries.
+    """
+
     name = models.CharField(null=False, blank=False, max_length=100)
     email = models.EmailField(null=False, blank=False, max_length=50)
     subject = models.CharField(max_length=200)

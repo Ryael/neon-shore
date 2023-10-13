@@ -4,11 +4,16 @@ from .forms import ContactInquiriesForm
 
 
 def contact(request):
+    """
+    Display the contact form.
+    """
     if request.method == 'POST':
         form = ContactInquiriesForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'We received your query! We will contact you within 48 hours.')
+            messages.success(
+                request,
+                'We received your query! We will contact you within 48 hours.')
             return redirect('contact')
     else:
         form = ContactInquiriesForm()

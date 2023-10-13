@@ -3,6 +3,7 @@ from .models import ContactInquiries
 
 # Register your models here.
 
+
 class ContactInquiriesAdmin(admin.ModelAdmin):
     baseModel = ContactInquiries
     list_display = (
@@ -12,4 +13,4 @@ class ContactInquiriesAdmin(admin.ModelAdmin):
       'message',
       )
 
-admin.site.register(ContactInquiries)
+    admin.site.register(ContactInquiries)

@@ -4,6 +4,9 @@ from .models import ContactInquiries
 
 
 class ContactInquiriesForm(forms.ModelForm):
+    """
+    Form for use to input their inquiry.
+    """
 
     class Meta:
         model = ContactInquiries
@@ -13,4 +16,3 @@ class ContactInquiriesForm(forms.ModelForm):
     email = forms.CharField(validators=[EmailValidator()])
     subject = forms.CharField(max_length=100)
     message = forms.CharField(widget=forms.Textarea)
-
