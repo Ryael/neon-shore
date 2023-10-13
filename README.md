@@ -359,7 +359,7 @@ If the user is logged in, they'll see one extra icon: 1) search, 2) profile, 3) 
 
 ### Navigation Menu - Mobile
 
-![navigation-menu-mobile](docs/screenshots/navigation-menu-mobile.png)
+![navigation-menu-mobile](docs/screenshots/navigation-menu-mobile.gif)
 
 Upon switching to a narrower viewport or simply by browsing this website on a phone, the navigation bar disappears to give the rest of the website room to breathe. It is instead replaced by a stylish hamburger menu icon, which upon interaction with, plays a transition of three rectangles smoothly sliding in from the top. This effect was chosen as it emulates the foamy tide coming into the shore.
 
@@ -379,7 +379,7 @@ The footer is one of the most impressive parts of the website as it's three whit
 
 ### Store
 
-![store](docs/screenshots/store.gif)
+![store](docs/screenshots/store.png)
 
 The store page is where all the products reside. Upon loading into the page, the user is greeted by the available categories as well as the total number of products. The categories change colour by their opacity being reduced to indicate that they're interactable.
 
@@ -390,7 +390,7 @@ As the viewport gets smaller, the grid switches from two columns to just the one
 
 ### Product Details
 
-![product-details](docs/screenshots/product-details.gif)
+![product-details](docs/screenshots/product-details.png)
 
 Upon interaction with either the button or the image itself in the store, the user is brought to a detailed view of the product. Here, the image is much bigger and instead takes the form of a polaroid picture sliding out of an envelope. This is achieved by box-shadow effects. There's also a description present here, which informs the user of more details about the product.
 
