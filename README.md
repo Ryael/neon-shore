@@ -38,7 +38,10 @@ For the purpose of this project, expuella will also be referred to as the client
     - [Wireframes](#wireframes)
     - [Database](#database)
 5. [Agile Development Process](#agile-development-process)
-6. [Features](#features)
+6. [E-commerce Application Type](#e-commerce-application-type)
+7. [Marketing Strategy](#marketing-strategy)
+8. [Business Plan](#business-plan)
+9. [Features](#features)
     - [Logo](#logo)
     - [Landing Page](#landing-page)
     - [Navigation Menu - New User](#navigation-menu-new-user)
@@ -59,16 +62,16 @@ For the purpose of this project, expuella will also be referred to as the client
     - [Error 404](#error-404)
     - [Error 505](#error-500)
     - [Favicon](#favicon)
-7.  [Code](#code)
+10.  [Code](#code)
     - [Commits](#commits)
-8. [Testing]
-9. [Future Updates](#future-updates)
-10. [Deployment](#deployment)
-11. [Technologies Used](#technologies-used)
+11. [Testing]
+12. [Future Updates](#future-updates)
+13. [Deployment](#deployment)
+14. [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Tools](#tools)
-12. [Credits](#credits)
-13. [Acknowledgements](#acknowledgements)
+15. [Credits](#credits)
+16. [Acknowledgements](#acknowledgements)
 
 ## Planning Phase
 
@@ -304,7 +307,29 @@ This EDR was obtained via [pgAdmin]() by being connected to the database on elep
 
 ## Agile Development Process
 
-[Jira](https://www.atlassian.com/software/jira) was used to create and track User Stories and issues. Login credentials will be provided for the above project space when the project is submitted. A summary of my agile process and learning outcomes can be found [here](https://github.com/Ryael/paradise-lost/blob/main/AGILE.md).
+[Jira](https://www.atlassian.com/software/jira) was used to create and track User Stories and issues. Login credentials will be provided for the above project space when the project is submitted. A summary of my agile process and learning outcomes can be found [here](https://github.com/Ryael/neon-shore/blob/main/AGILE.md).
+
+## E-commerce Application Type
+
+neon shore is a B2C e-commerce appplication. As we will be selling directly to supporters, the site is designed to be quick, pleasant to navigate, and be reminiscient of expuella's brand. As it stands, most of the focus so far has been on setting up a work prototype as a proof of concept and the user experience. In particular, the user interface. It has to be both adhere to expuella's vision and be a pleasant experience for any and all potential clients.
+
+## Marketing Strategy
+
+While it is true that neon shore can be viewed as a start up business, the truth is that expuella has been operating under this business name while freelancing and taking on commissions, especially ones of the commercial sort. This provides us with a considerable budget to order products in bulk, saving a great deal and not having to worry about start-up costs as they are just the two of us.
+
+Of course, this does mean it'll be more work for us, but also more profit. Additionally, due to expuella's large following on Twitter, we'll be able to market her merchandise quite easily as it is something her fans have reached out to us about in the past. Between Twitter a huge part of the world, Pixiv for Japan, and Weibo for China, we'll have a huge amount of reach. Due to fickle algorithms and the sort, simply posting a link under a piece of art if it is to be used a piece of merchandise with a link to it won't hurt the performance of the art itself but also promote the item.
+
+Additionally, through collaborating with artist friends, we'll be able to promote our store to even a wider audience across many different series and parts of the internet. Combined with a newsletter provied via MailChimp, this will provide us with a very accessible audience.
+
+## Business Plan
+
+I've worked with artists before who have kindly let me in on their production secrets. The reason these are kept mostly as secrets, or even half-secrets, is not out of any malicious but rather self-preservation. The common producers of merchandise are located in China, where production costs are cheapest. If any known producer garners too much attention, many people will flock to them. Unfortunately, this has led to the quality of merchandise slowly declining over time and artists having to look for new places to work with. As such, most artists will keep this close to their chest.
+
+The production costs of prints, charms, and stickers are relatively cheap and get more expensive with pins, artbooks, plushies, and the like. There's a great deal of money to be made here but that involves ordering, packing, and shipping by hand. Between the two of us, expuella is situated in the US and would be able to deal with US orders, and I'm situated in the EU and hence would be best able to handle EU orders. The plan would be to order from China and split the merchandise 70/30 between NA/EU so that we have smaller shipping costs and no import tax while sending to clients within our respective regions.
+
+If we were to err on the side of caution, another alternative route we could take would be one of pre-orders. First, we'd carry out survey's via expuella's existing social media to see what kind of merchandise people would like to see and of what series/characters. Depending on the results, we could then brainstorm some merchandise ideas and pick out our favourite ones to announce for pre-order. These items would go on the neon shore website and have a new "pre-order" tag on them and specify that is pre-payment for a product. This way, we'll have the funds necessary to pay for just the right amount of products to be products, without worrying about excess stock.
+
+Should excess stock occur, it can be given as freebies with other orders or even sold at conventions, should it be possible to secure a booth at an artist alley.
 
 ## Features
 
