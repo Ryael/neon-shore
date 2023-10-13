@@ -6,13 +6,13 @@
 
 ![neon shore](docs/screenshots/neon-shore.gif)
 
-neon shore is a B2C merchandise store belonging to my dear friend, an artist who goes by [expuella](). As it stands, it's just a prototype and proof of concept but there are plans to get this up and running the future. In the interest of privacy and safety, her real name will not be disclosed and she will instead be referred to solely by her alias. I've worked with expuella in the past and currently help her with business inquiries, as well as managing Pixiv and Weibo on her behalf. [Pixiv]() is an imageboard/gallery that's extremely popular in Japan, and [Weibo]() is a micro-blogging alternative to Twitter in China.
+neon shore is a B2C merchandise store belonging to my dear friend, an artist who goes by [expuella](https://twitter.com/expuella). As it stands, it's just a prototype and proof of concept but there are plans to get this up and running the future. In the interest of privacy and safety, her real name will not be disclosed and she will instead be referred to solely by her alias. I've worked with expuella in the past and currently help her with business inquiries, as well as managing Pixiv and Weibo on her behalf. [Pixiv](https://www.pixiv.net/en/users/41698746) is an imageboard/gallery that's extremely popular in Japan, and [Weibo](https://weibo.com/n/expuella) is a micro-blogging alternative to Twitter in China. I have recieved her explicit permission to use her works throughout this project and any additional queries can be sent to her e-mail: mangoodra@gmail.com.
 
 This is my fifth and final milestone project as part of Code Institute's Diploma in <strong>Software Development (E-commerce Applications)</strong>.
 
 Opening up a store is something we've spoken about in the past but have never done anything about due to how much time and effort it would require. This is not to mention maintenance and fulfilling orders without a dedicated staff. Having said that, this e-commerce project was the perfect opportunity to take this vision and begin working on it.
 
-Many artists have merchandise stores but they're often created using services such as [Shopify]() and full-on storefronts like [etsy](). These services take a percentage of the profits from the artist. [INPRNT]() is a very popular choice for artists to sell prints of their artwork as it handles the printing and shipping of the prints once the art is uploaded, however the profit split is a whopping 50:50. Expuella herself also uses INPRNT and has expressed her dissatisfaction.
+Many artists have merchandise stores but they're often created using services such as [Shopify](https://www.shopify.com/) and full-on storefronts like [etsy](https://www.etsy.com/). These services take a percentage of the profits from the artist. [INPRNT](https://www.inprnt.com/) is a very popular choice for artists to sell prints of their artwork as it handles the printing and shipping of the prints once the art is uploaded, however the profit split is a whopping 50:50. Expuella herself also uses INPRNT and has expressed her dissatisfaction.
 
 Knowing this, I decided to craft an e-commerce website around expuella's vision of "neon-shore", which is a name she chose for the business side of things when she was much younger and it has stuck with her since. Neon-shore speaks of expuella's love for tropical settings, beaches in particular, in combination with a neon colour palette. As such, I wanted the design and UI of this website to represent that, hence I asked expuella to work with me as my client and provide input on my designs and decisions.
 
@@ -44,17 +44,19 @@ For the purpose of this project, expuella will also be referred to as the client
 9. [Features](#features)
     - [Logo](#logo)
     - [Landing Page](#landing-page)
-    - [Navigation Menu - New User](#navigation-menu-new-user)
-    - [Navigation Menu - Registered User](#navigation-menu-registered-user)
+    - [Navigation Menu - Desktop](#navigation-menu-desktop)
+    - [Navigation Menu - Mobile](#navigation-menu-mobile)
     - [Button](#button)
+    - [Footer](#footer)
+    - [Store](#store)
+    - [Product Details](#product-details)
     - [About](#about)
-    - [Register](#register)
+    - [Newsletter](#newsletter)
+    - [Testimonials](#testimonials)
+    - [Contact](#Contact)
     - [Login](#login)
-    - [Forgot Your Password](#forgot-your-password)
-    - [Logout](#logout)
-    - [Dashboard](#dashboard)
-    - [Change Your Password](#change-your-password)
-    - [Roster List](#roster-list)
+    - [Profile](#profile)
+    - [Bag](#bag)
     - [Checkout](#checkout)
     - [Order Success](#order-success)
     - [Product Management](#product-managament)
@@ -63,7 +65,7 @@ For the purpose of this project, expuella will also be referred to as the client
     - [Favicon](#favicon)
 10.  [Code](#code)
     - [Commits](#commits)
-11. [Testing]
+11. [Testing](#testing)
 12. [Future Updates](#future-updates)
 13. [Deployment](#deployment)
 14. [Technologies Used](#technologies-used)
@@ -312,7 +314,7 @@ This EDR was obtained via [pgAdmin]() by being connected to the database on elep
 
 While it is true that neon shore can be viewed as a start up business, the truth is that expuella has been operating under this business name while freelancing and taking on commissions, especially ones of the commercial sort. This provides us with a considerable budget to order products in bulk, saving a great deal and not having to worry about start-up costs as it is just the two of us.
 
-Of course, this does mean it'll be more work for us, but also more profit. Additionally, due to expuella's large following on social media platform Twitter (now known as X), we'll be able to market her merchandise quite easily as it is something her fans have reached out to us about in the past. Between Twitter for global, Pixiv for Japan, and Weibo for China, we'll have a huge amount of reach. Due to fickle algorithms and the sort, simply posting a link under a piece of art to its relevant merchandise link won't hurt the performance of the art itself, but will promote the item.
+Of course, this does mean it'll be more work for us, but also more profit. As it stands no social media mock-up has been created for this endeavour, however, expuella's current existing social media accounts will more than suffice for promoting the business. This is especially true due to expuella's large following on social media platform [Twitter (now known as X)](https://twitter.com/expuella), we'll be able to market her merchandise quite easily as it is something her fans have reached out to us about in the past. Between Twitter for global, Pixiv for Japan, and Weibo for China, we'll have a huge amount of reach. Due to fickle algorithms and the sort, simply posting a link under a piece of art to its relevant merchandise link won't hurt the performance of the art itself, but will promote the item.
 
 Additionally, through collaborating with artist friends, we'll be able to promote our store to even a wider audience across many different parts of the internet. Combined with a newsletter provided via MailChimp, this will provide us with a very accessible audience.
 
@@ -513,15 +515,21 @@ Extensive testing has been carried out during and post-development and is availa
 
 ## Future Updates
 
-1. Expand on the Roster system, allowing users to add units, wargear, weapon profiles, and the like.
+1. Create a stock management system, allowing us to track the current amount of stock remaining. This will help with restocking.
 
-2. Include more rulesets including more than just rulesets for Warhammer 40,000, other armies, and so on. Plenty to expand on, but it ultimately requires a lot more time and research.
+2. Optimise the loading speed of this website.
 
-3. Tighten up and optimise the UI a bit more. I had less time than I would have liked, so certain aspects had to be rushed to get them done to meet the deadline.
+3. Look into the existing AWS error 403 issues forbidding use of images like `noimage.png`.
 
-4. Properly center the hero video and fix the issue with the dynamically changing text where it stands to lag a bit. There's no easy fix in mind but there are some JavaScript wizards I could ask for advice.
+4. Further look into SwiperJS and learn to make better use of its pagination and navigation functionalities.
 
-5. Lastly, as this was a project for Simon W., I'd like to convert this from Python and Django to Ruby and Ruby on Rails. I'm already familiar with Ruby as is, but I would love an opportunity to learn on Rails, as well. I look forward to it.
+5. Allow for editing and deleting of testimonials by the user.
+
+6. Add a FAQ page.
+
+7. Adjust prices to reflect real world value.
+
+8. Populate the store with more products.
 
 ## Deployment
 
@@ -535,13 +543,17 @@ This project uses ElephantSQL as its database. In order to obtain your own Postg
 4. Tags can be left blank and instead select the Region and Data center closest to you.
 5. After creation, click on the name to be brought to the dashboard for the database where you will be shown the URL and password.
 
-### Cloudinary API
+### Amazon AWS
 
-This project also uses the Cloudinary API in order to store its media assests online. To obtain your own API key, after creating an account and logging in, follow these steps:
+This project also uses Amazon AWS in order to store its media assests online. To obtain your own API key, after creating an account and logging in, follow these steps:
 
-1. Select Programmable Media for image and video API.
-2. On your dashboard, you can copy your API Environment Variable.
+1. Create a new S3 bucket, and within it create a static directory and a media directory.
+2. From the dashboard, copy the bucket details into the `settings.py` file.
 3. Make sure to only copy the value, which is the string after the equals sign.
+4. Add these settings to the `env.py` file to link AWS.
+
+  - `os.environ["AWS_ACCESS_KEY_ID"] = 'your access key'`
+  - `os.environ["AWS_SECRET_ACCESS_KEY"] = 'your secret access key'`
 
 ### Heroku Deployment
 
@@ -558,6 +570,7 @@ After account creation, follow the below deployment steps:
   - `DATABASE_URL`
   - `DISABLE_COLLECTSTATIC`
   - `SECRET_KEY`
+  - AWS CONFIG VARS
 
 After all this, you're still not done because Heroku requires two additional files: `requirements.txt` and `Profile`.
 
@@ -596,7 +609,6 @@ Now, lastly, all you need to do is to navigate to the Deploy tab and hit Deploy.
 - [Sublime Text](https://www.sublimetext.com/) - Used as my text editor of choice.
 - [Balsamiq](https://balsamiq.com) - Used to create wireframes.
 - [Obsidian](https://obsidian.md/) - Used to take notes and create to-do lists.
-- [Adope Premiere Pro](https://www.adobe.com/ie/products/premiere.html) - Used to crop, resize, and edit images.
 - [W3C HTML Validator](https://validator.w3.org/) - Used to validate HTML code.
 - [W3C JigSaw Validator](https://jigsaw.w3.org/css-validator/) - Used to Validate CSS code.
 - [JSHint](https://jshint.com/) - Used to validate JS code.
@@ -604,18 +616,12 @@ Now, lastly, all you need to do is to navigate to the Deploy tab and hit Deploy.
 - [WAVE WebAIM](https://wave.webaim.org/) - Used to check accessibility.
 - [Google Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) - Used to check performance, SEO, accessibility, and best practices.
 - [Mozilla Firefox Developer Tools](https://www.mozilla.org/en-US/firefox/new/) - Used to check and test the project.
-- [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php) - Used to create the Multi Device Website Mockup image.
 - [Google Fonts](https://fonts.google.com/) - Fonts were imported from here.
 - [Font Awesome](https://fontawesome.com/) - Icons are used from here.
 - [Favicon.io](https://favicon.io/) - Used to create a favicon.
 - [ShareX](https://getsharex.com/) - Used to take screenshots and gifs.
 
 ## Credits
-
-- [GeeksForGeeks](https://www.geeksforgeeks.org/) - Has some of the best Djano and Python tutorials and walkthrough projects, which were an incredible help.
-- [Videezy](https://www.videezy.com/abstract/50298-futuristic-globe-world-earth-planet-in-cyberspace-with-binary-code) - Videezy is the go to place for lovely, high quality videos that are free to use even commericially with just good attribution. It's exactly where I found the holographic rotating planet earth.
-
-- [BattleScribe](https://www.battlescribe.net) - This website of course was inspired by none other than BattleScribe. This is what motivated me and have me an inkling of an idea of how to build it, although it still requires a lot more work, I believe my work is cut out for me.
 
 - [Jeremy (CodePen)](https://codepen.io/thefewunshaken/details/BEBYLd) - This was the only example of dynamically changing text I could find handled via vanilla JavaScript, which was what I utilised for this project. Not much was changed, because not much could have been changed whilst keeping the entire functionality. It's a very simple but powerful tool.
 
@@ -634,5 +640,7 @@ Now, lastly, all you need to do is to navigate to the Deploy tab and hit Deploy.
 - Rose S. - Rose was instrumental in helping me proofread this readme, testing.md, and agile.md. You've saved me so much time and hassle, after looking at it for so long I just can't spot errors any longer... so, thank you so much, Rose! You're wonderful!
 
 - My family and friends, who have been incredibly supportive and have been instrumental in keeping me motivated throughout this project. Thank you all so much! All of you who helped proofread, test, provide feedback on the website, code, and etc... I couldn't have done it without you all!
+
+- The Code Intsitute Tuturs - No matter what I did or how hard I tried, I could not discern what the issue was with the confirmation emails not sending. It was the tutor support that saved me, taught me, and in good time, too!
 
 - The Code Institute community on Slack - Easy, straightforward, and always willing to help and provide advice.
