@@ -298,9 +298,12 @@ This is the prototype of the project, which changes over the course of project d
 
 ### Database
 
-![neon shore - EDR](docs/schema/database.png)
+<details>
+  <summary>ERD</summary>
+  <img src="docs/schema/erd.png" alt="ERD of neon shore">
+</details>
 
-This EDR was obtained via [pgAdmin]() by being connected to the database on elephantSQL
+This EDR was obtained via [DbVisualizer](https://www.dbvis.com/) by being connected to the database on elephantSQL. It constains all of Django default models such as allauth.
 
 ## Agile Development Process
 
@@ -531,6 +534,8 @@ Extensive testing has been carried out during and post-development and is availa
 
 8. Populate the store with more products.
 
+9. Add more transitions, especially to show items being added to the bag and display a figure over the bag to indicate the amount of products within it.
+
 ## Deployment
 
 ### ElephantSQL
@@ -603,6 +608,10 @@ Now, lastly, all you need to do is to navigate to the Deploy tab and hit Deploy.
   - jQuery was used to create the fullscreen navigation menu.
 - FontAwesome
   - All the icons present throughout all the pages are from this wonderful package.
+- SweetAlert
+  - This was used to implement the flash messages.
+- SwiperJS
+  - SwiperJS was used to implement the carousel/slider found the landing page.
 
 ### Tools
 
@@ -620,22 +629,27 @@ Now, lastly, all you need to do is to navigate to the Deploy tab and hit Deploy.
 - [Font Awesome](https://fontawesome.com/) - Icons are used from here.
 - [Favicon.io](https://favicon.io/) - Used to create a favicon.
 - [ShareX](https://getsharex.com/) - Used to take screenshots and gifs.
+- [SVGrepo](https://www.svgrepo.com/) - SVGs were used from here.
 
 ## Credits
 
-- [Jeremy (CodePen)](https://codepen.io/thefewunshaken/details/BEBYLd) - This was the only example of dynamically changing text I could find handled via vanilla JavaScript, which was what I utilised for this project. Not much was changed, because not much could have been changed whilst keeping the entire functionality. It's a very simple but powerful tool.
+- [Aysenur Turk (CodePen)](https://codepen.io/TurkAysenur/pen/gORaboY) - This was the pen that inspired the design at the beginning and spurred it on. While some elements of it were retained, the majority of it was changed.
 
-- [Rob McFadzean (CodePen)](https://codepen.io/breadz/details/zrMRoo) - It was here that the inspiration for the fullscreen navigation menu was taken from. It's very simple and effective, using only a bit of jQuery. The overall feel and design was changed considerably.
+- [John Heiner (CodePen)](https://codepen.io/johnheiner/pen/EyaLQW) - The ocean button I created was heavily inspired by the gradient button found here.
 
-- [Robin Selmer (CodePen)](https://codepen.io/robinselmer/pen/OKwvqE) - This was the general button design that was used throughout the project. It's the corner decorators that give the button such a unique feeling, allowing it to look like a reticle focusing in and out. The design was mostly kept the same but it was changed where possible.
+- [Goodkatz (CodePen)](https://codepen.io/goodkatz/pen/LYPGxQz) - The waves footer was taken from here, and while not much of it was changed aside from its colour due to its complexitiy, it proved to be a very valuable learning experience working with it.
 
-- [Ivan Villamil (CodePen)](https://codepen.io/ivillamil/pen/jWjgzE) - The roster tables present in neon shore were loosely based on these tables in terms of design, but it was the smaller viewport responsiveness that was borrowed and adapted to the my own style and changed quite a bit in the end.
+- [Rafaela Lucas (CodePen)](https://codepen.io/rafaelavlucas/pen/oNNKxvw) - The profile menu was derived from this pen. While it has the complexitiy of a navigation menu, I have developed a much better understanding of how to create such menus now. As well as how to design lighter coloured variants, with a different reliance on brighter colours.
 
-- [Rebai Adnen (CodePen)](https://codepen.io/adnenrebai/pen/KNqQJP) - The very beautiful and sleek 404 page was gotten from here, cleaned up where possible, and adjusted to suit neon shore. Working with this, I've learned quite a bit with regards as to how to manipulate SVGs.
+- [Fabio Ottaviani (CodePen)](https://codepen.io/supah/pen/podyMBE) - The painterlike animation was gotten from here. It opened up a whole new of animations via GSAP for me and taught me how to manipulate these animations effectively, in order to create the desired effect I was after.
+
+- [Rune Sejer Hoffmann (CodePen)](https://codepen.io/RSH87/pen/rmgYbo) - This was the pen that was used for the mobile navigation. It was altered a great deal to suit my needs instead of it being a fullscreen navigation.
 
 ## Acknowledgments
 
-- [Simon Waldron](https://github.com/saikez) - Simon acted as my client, my mentor, my tutor support, and my best friend throughout this entire project. He helped guide me when I was stuck, helped me learn many good practices, how to quickly and efficiently research topics, how to troubleshoot, explained agile methodologies, helped me setup JIRA, and even allowed me to use his pre-configured e-mail server so that users would have the option to reset their passwords. Thank you so much, Simon, it was an absolute pleasure designing this for you and I'm very eager to work not for you but together with you in the near future.
+- [Simon Waldron](https://github.com/saikez) - Simon acted as my mentor, my tutor support, and my best friend throughout this entire project. He helped guide me when I was stuck, helped me learn many good practices, how to quickly and efficiently research topics, how to troubleshoot, explained agile methodologies, and helped me whenever I got well and truly stuck. Thank you so much, Simon, you are absolute gem of a human being and a legend amongst developers!
+
+- expuella - expuella has been both a hugely supportive pillar in my life and a very dear friend. She's helped with design decisions, advised on a lot of aspects, supported me through the highs and lows of coding, and of course, allowed me to use her works for this project. Thank you so much!
 
 - Rose S. - Rose was instrumental in helping me proofread this readme, testing.md, and agile.md. You've saved me so much time and hassle, after looking at it for so long I just can't spot errors any longer... so, thank you so much, Rose! You're wonderful!
 
