@@ -56,19 +56,17 @@ Google Lighthouse was used to assess the performance of this website. All tests 
 
 [W3C Markup Validation Service](https://validator.w3.org/nu/) was used to validate all the HTML. Each file was checked by text input first and then by address afterwards. No errors were found, aside from errors pertaining to templating. A few errors were flagged but as they were svg warnings and those aren't parsed correctly, they were filtered.
 
-![HTML](docs/testing/html.png)
-
 ### CSS
 
 [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate both CSS stylesheets. No errors were found.
 
-![Style CSS](docs/testing/style-css.png)
+![Style CSS](docs/testing/css.png)
 
 ### JS
 
 [JSHint](https://jshint.com/) was used to validate JavaScript code. It detected a few unused variables, specifically, `Swiper`, `gsap`, and `$`. The first two are imported from their own scripts and `$` is from jQuery.
 
-![JavaScript](docs/testing/jshint.png)
+![JavaScript](docs/testing/js.png)
 
 ### PEP8
 
